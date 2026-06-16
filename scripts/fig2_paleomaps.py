@@ -14,8 +14,8 @@ from shapely.geometry import Point
 from shapely.ops import unary_union
 from shapely.prepared import prep
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent; DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True); CACHE=REPO/"gplately_data"
-TIMES=[(1100,"a","Stenian"),(900,"b","Tonian"),(660,"c","Cryogenian"),
-       (370,"d","Late Devonian"),(150,"e","Jurassic"),(30,"f","Oligocene")]
+TIMES=[(900,"a","Tonian"),(660,"b","Cryogenian"),(370,"c","Late Devonian"),
+       (150,"d","Jurassic"),(99,"e","Cretaceous"),(30,"f","Oligocene")]
 WIN_DEP=40    # +/- Myr window for deposits
 WIN_OCC=60    # +/- Myr window for occurrences (denser context layer)
 # harmonised colours: primary (blue), metamorphic (green), volcanogenic (red), karst (grey)
@@ -24,11 +24,11 @@ OCOL={'A':'#3b6fb6','B':'#3b6fb6','C':'#1b7837'}
 # key named deposits to label on each panel (name substrings; see caption for ages)
 # each item: a name substring (match+label) or (match_substring, display_label)
 # (name substring -> acronym plotted on the map; acronyms defined in the caption)
-LABELS={1100:[("Wafangzi","WF")],
-        900:[("Nagpur","NB")],
+LABELS={900:[("Nagpur","NB")],
         660:[("Datangpo","DT"),("Urucum","UR")],
         370:[("Karazhal","KZ"),("Xialei","XL")],
         150:[("Molango","ML"),("Úrkút","UK")],
+        99:[("Groote","GE")],
         30:[("Nikopol","NK"),("Chiatura","CH"),("Tokmak","BT","0.20c/0.40c")]}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
