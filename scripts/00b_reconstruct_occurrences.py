@@ -28,12 +28,17 @@ print(f"{len(o)} reliable-age occurrences to reconstruct (A/B/C, 0-1800 Ma)")
 pmm=PlateModelManager(); model=pmm.get_model("Cao2024",data_dir=str(CACHE))
 rotm=model.get_rotation_model()
 recon=gplately.PlateReconstruction(rotm,model.get_topologies(),model.get_static_polygons())
-part=pygplates.PlatePartitioner(model.get_static_polygons(),rotm)
+# Partition against CONTINENTAL polygons (the set drawn in Fig. 2), so reconstructed
+# occurrences stay on shown continental crust; off-continent points (plate_id 0) are
+# dropped below, removing occurrences that would otherwise float in the ocean.
+part=pygplates.PlatePartitioner(model.get_continental_polygons(),rotm)
 pid=np.zeros(len(o),dtype=int)
 for i,(la,lo) in enumerate(zip(o.lat,o.lon)):
     pp=part.partition_point(pygplates.PointOnSphere(float(la),float(lo)))
     if pp is not None: pid[i]=pp.get_feature().get_reconstruction_plate_id()
 o["plate_id"]=pid
+print(f"plate-ID assignment: {(o.plate_id!=0).sum()}/{len(o)} on continental crust; "
+      f"{(o.plate_id==0).sum()} off-continent (dropped)")
 o["age_round"]=o.age_mid.round().astype(int); o["paleo_lat"]=np.nan; o["paleo_lon"]=np.nan
 for t,g in o.groupby("age_round"):
     gg=g[g.plate_id!=0]

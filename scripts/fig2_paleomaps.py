@@ -19,8 +19,11 @@ DCOL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
 OCOL={'A':'#3b6fb6','B':'#3b6fb6','C':'#1b7837'}
 # key named deposits to label on each panel (name substrings; see caption for ages)
 # each item: a name substring (match+label) or (match_substring, display_label)
-LABELS={660:["Datangpo","Urucum"],370:["Karazhal","Xialei"],150:["Molango","Úrkút"],
-        30:["Nikopol","Chiatura",("Tokmak","Bol'she-Tokmak")]}
+# (name substring -> acronym plotted on the map; acronyms defined in the caption)
+LABELS={660:[("Datangpo","DT"),("Urucum","UR")],
+        370:[("Karazhal","KZ"),("Xialei","XL")],
+        150:[("Molango","ML"),("Úrkút","UK")],
+        30:[("Nikopol","NK"),("Chiatura","CH"),("Tokmak","BT")]}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
 dep=pd.read_csv(DATA/"mn_deposits_reconstructed_geochem.csv").dropna(subset=["paleo_lat","paleo_lon"])
@@ -44,10 +47,9 @@ for k,(t,L,nm) in enumerate(TIMES):
             continents=model.get_continental_polygons(),COBs=model.get_COBs(),time=float(t))
     fig.basemap(region="d",projection="W0/10c",frame=["af"])
     fig.coast(land=None,water="white")
-    # continents as clean fills — no internal craton/terrane subdivision lines
+    # continents as clean gray fills — no outlines, no internal subdivision lines
     engine.plot_geo_data_frame(fig,gplot.get_continents(),fill="gray90",pen=None)
-    # plate-boundary backbone kept but thin and light so it doesn't dissect the map
-    engine.plot_geo_data_frame(fig,gplot.get_all_topological_sections(),pen="0.2p,gray75")
+    # (plate-boundary backbone omitted for clarity; only subduction zones drawn below)
     try:
         tl,tr=gplot.get_subduction_direction(); engine.plot_subduction_zones(fig,tl,tr,color="black")
     except Exception: pass
@@ -79,8 +81,8 @@ for i,(lab,c) in enumerate(items):
     fig.plot(x=[x],y=[1.3],style="c0.18c",fill=c,pen="0.4p,black")
     fig.text(x=x+0.35,y=1.3,text=lab,font="10p,Helvetica,black",justify="ML",no_clip=True)
 fig.plot(x=[0.6],y=[0.5],style="c0.10c",fill="gray30")
-fig.text(x=0.95,y=0.5,text="occurrence (n=1384)",font="10p,Helvetica,black",justify="ML",no_clip=True)
+fig.text(x=0.95,y=0.5,text=f"Mn occurrence data (n={len(occ)})",font="10p,Helvetica,black",justify="ML",no_clip=True)
 fig.plot(x=[11],y=[0.5],style="c0.20c",fill="gray70",pen="0.5p,black")
-fig.text(x=11.4,y=0.5,text="deposit (Maynard, n=140)",font="10p,Helvetica,black",justify="ML",no_clip=True)
+fig.text(x=11.4,y=0.5,text=f"deposit (Maynard, n={len(dep)})",font="10p,Helvetica,black",justify="ML",no_clip=True)
 fig.savefig(str(OUT/"Fig2_paleomaps.pdf")); fig.savefig(str(OUT/"Fig2_paleomaps.png"),dpi=300)
 print("wrote paper_figures/Fig2_paleomaps.pdf/.png")

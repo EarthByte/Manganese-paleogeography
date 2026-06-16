@@ -9,3 +9,7 @@ figures/*.pdf
 
 # runtime logs
 *.log
+
+# video frames and renders
+figures/video_frames/
+*.mp4

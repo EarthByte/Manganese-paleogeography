@@ -37,7 +37,8 @@ manganese_paleogeography/
 │   ├── paleolat_deep_time.py               >1.8 Ga deposit paleolatitude (GPMDB)
 │   ├── latitude_null_test.py               continental-availability null test
 │   ├── occurrence_corroboration.py         high-N occurrence corroboration (Fig 3d)
-│   └── fig1_database.py … fig4_controls.py figure generation (pyGMT)
+│   ├── fig1_database.py … fig4_controls.py figure generation (pyGMT)
+│   └── make_reconstruction_video.py        supplementary video (1.8 Ga→0, 1 Myr)
 └── figures/                   ← script outputs (PDF + PNG)
 ```
 
@@ -65,6 +66,8 @@ python scripts/fig1_database.py
 python scripts/fig2_paleomaps.py
 python scripts/fig3_paleolatitude.py
 python scripts/fig4_controls.py
+# supplementary video (needs ffmpeg; 1 Myr cadence is slow — use --cadence 5 to preview)
+python scripts/make_reconstruction_video.py
 ```
 
 The `data/derived/` products are committed, so figures can be regenerated without

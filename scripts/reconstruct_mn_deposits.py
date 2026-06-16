@@ -32,12 +32,20 @@ pmm=PlateModelManager(); model=pmm.get_model("Cao2024",data_dir=str(CACHE))
 rotm=model.get_rotation_model()
 recon=gplately.PlateReconstruction(rotm,model.get_topologies(),model.get_static_polygons())
 
-part=pygplates.PlatePartitioner(model.get_static_polygons(),rotm)
+# Assign plate IDs by point-in-polygon against the CONTINENTAL polygons — the same
+# set drawn in Fig. 2 — not the broader static-polygon set. This keeps every
+# reconstructed deposit on shown continental crust; points that do not fall on a
+# continental polygon (offshore / coarse coordinates) get plate_id 0 and are dropped,
+# which removes the spurious "deposits in the ocean" artefact.
+part=pygplates.PlatePartitioner(model.get_continental_polygons(),rotm)
 pid=np.zeros(len(d),dtype=int)
 for i,(la,lo) in enumerate(zip(d.latitude,d.longitude)):
     pp=part.partition_point(pygplates.PointOnSphere(float(la),float(lo)))
     if pp is not None: pid[i]=pp.get_feature().get_reconstruction_plate_id()
 d["plate_id"]=pid
+n_off=(d.plate_id==0).sum()
+print(f"plate-ID assignment: {(d.plate_id!=0).sum()}/{len(d)} on continental crust; "
+      f"{n_off} off-continent (dropped — check coordinates if unexpected)")
 
 d["age_round"]=d.age_Ma.round().astype(int); d["paleo_lat"]=np.nan; d["paleo_lon"]=np.nan
 for t,g in d.groupby("age_round"):
