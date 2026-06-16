@@ -26,11 +26,23 @@ LABELS={660:[("Datangpo","DT"),("Urucum","UR")],
         30:[("Nikopol","NK"),("Chiatura","CH"),("Tokmak","BT")]}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
-dep=pd.read_csv(DATA/"mn_deposits_reconstructed_geochem.csv").dropna(subset=["paleo_lat","paleo_lon"])
-occ=pd.read_csv(DATA/"mn_occurrences_reconstructed.csv").dropna(subset=["paleo_lat","paleo_lon"])
+# Use present-day coordinates + plate IDs and reconstruct TO EACH PANEL TIME, so points
+# and continents share one reconstruction time (avoids points drifting off the drawn
+# continents when their formation age differs from the panel age).
+dep=pd.read_csv(DATA/"mn_deposits_reconstructed_geochem.csv")
+dep=dep[(dep.plate_id!=0)&dep.latitude.notna()&dep.longitude.notna()].reset_index(drop=True)
+occ=pd.read_csv(DATA/"mn_occurrences_reconstructed.csv")
+occ=occ[occ.plate_id!=0].reset_index(drop=True)
 pmm=PlateModelManager(); model=pmm.get_model("Cao2024",data_dir=str(CACHE))
 recon=gplately.PlateReconstruction(model.get_rotation_model(),model.get_topologies(),model.get_static_polygons())
 engine=gplately.PygmtPlotEngine()
+
+def recon_to(df,la,lo,t):
+    """Reconstruct present-day points (with plate_id) to time t -> (plon, plat) arrays."""
+    pts=gplately.Points(plate_reconstruction=recon,lons=df[lo].values,lats=df[la].values,
+                        plate_id=df["plate_id"].values)
+    plon,plat=pts.reconstruct(time=float(t),return_array=True)
+    return np.asarray(plon),np.asarray(plat)
 
 def panel(fig,L,t,nm):
     fig.text(text=L,position="TL",offset="-0.0c/-0.2c",justify="TL",no_clip=True,
@@ -53,22 +65,29 @@ for k,(t,L,nm) in enumerate(TIMES):
     try:
         tl,tr=gplot.get_subduction_direction(); engine.plot_subduction_zones(fig,tl,tr,color="black")
     except Exception: pass
-    # density layer: occurrences (small, semi-transparent)
-    so=occ[np.abs(occ.age_mid-t)<=WIN_OCC]
-    for grp,g in so.groupby("group"):
-        fig.plot(x=g.paleo_lon,y=g.paleo_lat,style="c0.10c",fill=OCOL.get(grp,'#bbbbbb'),
-                 pen=None,transparency=15)
-    # highlight layer: curated deposits (large, outlined)
-    sd=dep[np.abs(dep.age_Ma-t)<=WIN_DEP]
-    for tp,g in sd.groupby("deposit_type"):
-        fig.plot(x=g.paleo_lon,y=g.paleo_lat,style="c0.20c",fill=DCOL.get(tp,'gray'),pen="0.5p,black")
-    # label key named deposits
-    for item in LABELS.get(t,[]):
-        key,disp=item if isinstance(item,tuple) else (item,item)
-        rr=sd[sd.deposit_name.str.contains(key,case=False,na=False)].head(1)
-        for _,r in rr.iterrows():
-            fig.text(x=r.paleo_lon,y=r.paleo_lat,text=disp,font="8p,Helvetica-Bold,black",
-                     justify="LM",offset="0.20c/0c",fill="white@25",pen="0.3p,gray60",no_clip=True)
+    # density layer: occurrences within the window, reconstructed to panel time t
+    so=occ[np.abs(occ.age_mid-t)<=WIN_OCC].reset_index(drop=True)
+    if len(so):
+        oplon,oplat=recon_to(so,"lat","lon",t); gv=so.group.values
+        for grp in ("A","B","C"):
+            m=gv==grp
+            if m.any():
+                fig.plot(x=oplon[m],y=oplat[m],style="c0.10c",fill=OCOL[grp],pen=None,transparency=15)
+    # highlight layer: curated deposits within the window, reconstructed to panel time t
+    sd=dep[np.abs(dep.age_Ma-t)<=WIN_DEP].reset_index(drop=True)
+    if len(sd):
+        dplon,dplat=recon_to(sd,"latitude","longitude",t); tv=sd.deposit_type.values
+        for tp in pd.unique(tv):
+            m=tv==tp
+            fig.plot(x=dplon[m],y=dplat[m],style="c0.20c",fill=DCOL.get(tp,'gray'),pen="0.5p,black")
+        # label key named deposits at their reconstructed position
+        for item in LABELS.get(t,[]):
+            key,disp=item if isinstance(item,tuple) else (item,item)
+            idx=sd.index[sd.deposit_name.str.contains(key,case=False,na=False)]
+            if len(idx):
+                j=int(idx[0])
+                fig.text(x=dplon[j],y=dplat[j],text=disp,font="8p,Helvetica-Bold,black",
+                         justify="LM",offset="0.20c/0c",fill="white@25",pen="0.3p,gray60",no_clip=True)
     panel(fig,L,t,nm)
 
 # shared legend (two rows): colour = genesis; symbol size = occurrence vs deposit

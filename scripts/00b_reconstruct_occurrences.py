@@ -46,7 +46,7 @@ for t,g in o.groupby("age_round"):
     pts=gplately.Points(plate_reconstruction=recon,lons=gg.lon.values,lats=gg.lat.values,plate_id=gg.plate_id.values)
     plon,plat=pts.reconstruct(time=float(t),return_array=True)
     o.loc[gg.index,"paleo_lon"]=plon; o.loc[gg.index,"paleo_lat"]=plat
-out=o.dropna(subset=["paleo_lat","paleo_lon"])[["lat","lon","paleo_lat","paleo_lon","age_mid","group"]]
+out=o.dropna(subset=["paleo_lat","paleo_lon"])[["lat","lon","paleo_lat","paleo_lon","age_mid","group","plate_id"]]
 out.to_csv(DATA/"mn_occurrences_reconstructed.csv",index=False)
 print(f"reconstructed {len(out)} occurrences -> data/derived/mn_occurrences_reconstructed.csv "
       f"(A={sum(out.group=='A')}, B={sum(out.group=='B')}, C={sum(out.group=='C')})")
