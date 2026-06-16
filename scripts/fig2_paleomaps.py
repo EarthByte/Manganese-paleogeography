@@ -66,7 +66,7 @@ def on_continent(plon,plat,pu):
 def panel(fig,L,t,nm):
     fig.text(text=L,position="TL",offset="-0.0c/-0.2c",justify="TL",no_clip=True,
              font="15p,Helvetica-Bold,black",fill="white",pen="0.6p,gray40")
-    fig.text(text=f"{t} Ma ({nm})",position="TR",offset="-0.2c/-0.2c",justify="TR",
+    fig.text(text=f"{t} Ma ({nm})",position="TR",offset="-0.2c/0c",justify="TR",
              no_clip=True,font="11p,Helvetica-Bold,black",fill="white",pen="0.5p,gray40")
 
 fig=pygmt.Figure()
