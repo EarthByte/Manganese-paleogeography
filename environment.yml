@@ -1,0 +1,16 @@
+name: gplately-pygmt
+channels: [conda-forge]
+dependencies:
+  - python>=3.10
+  - gplately
+  - pygmt
+  - pygplates
+  - plate_model_manager
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - openpyxl
+  - pip
+  - pip: [access_parser, pyshp]

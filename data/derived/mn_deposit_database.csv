@@ -1,0 +1,141 @@
+deposit_name,country,state,latitude,longitude,deposit_type,age_Ma,age_range,period,host_formation,metamorphic_grade,mineral,source,needs_coords,coord_confidence
+Abbotabad,Pakistan,Hazara,34.15,73.2,sedimentary,517.0,540-520,Cambrian,Hazira,,bixbyite,Maynard2010,False,region
+Adilabad,India,Andhra Pradesh,19.7,79.4,sedimentary,770.0,?,Neoproterozoic,Penganga,,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Akkermanov,Russia,Orenburg,51.2,57.6,sedimentary,328.0,333-323,Carboniferous,,none,rhodochrosite,Maynard2010,False,region
+Ananai,Japan,Shikoku,33.6,133.6,volcanogenic,265.0,270-260,Permian,,,caryoplite,Maynard2010,False,region
+Azul-Carajas,Brazil,Para,-6.1,-50.3,sedimentary,1850.0,1800-1900,Mesoproterozoic,Rio Fresco,,rhodochrosite,Maynard2010,False,lit
+Bald Knob,USA,NC,36.4,-81.4,volcanogenic,750.0,,Neoproterozoic,Ashe,amphibolite,rhodochrosite,Maynard2010,False,lit
+Binkiliç,Turkey,,41.3,28.2,sedimentary,28.0,,Tertiary,,none,cryptomelane,Maynard2010,False,region
+Blue Jay,USA,CA,37.5,-122.3,volcanogenic,158.0,163-153,Jurassic,Franciscan,none,amorphous oxides + braunite,Maynard2010,False,region
+"Bolske (Bolshoi, Bolshe, Bol'she)-Tokmak",Russia,,47.25,35.7,sedimentary,28.0,,Tertiary,,,,Maynard2010,False,lit
+Bonai-Keonjhar,India,North Orissa,21.9,85.6,sedimentary,3200.0,3300-3100,Archean,Iron Ore Group,,cryptomelane,Maynard2010,False,lit
+Bronkhorstfontein,Zuid Afrika,Limpopo,-24.5,29.0,sedimentary,1880.0,1960-1800,Paleoproterozoic,Wyllies Poort,none,cryptomelane,Maynard2010,False,region
+Buckeye-Ladd-Thomas,USA,CA,37.4,-122.2,volcanogenic,145.0,150-140,Cretaceous,Franciscan,blueschist,"braunite, rhodochrosite",Maynard2010,False,region
+Çayirh,Turkey,,40.0,33.0,volcanogenic,85.0,,,,,,Maynard2010,False,country
+Çevretepe-Dozuztekne,Turkey,,40.0,33.0,volcanogenic,85.0,,Cretaceous,Isali,,,Maynard2010,False,country
+Changyang,China,,30.5,111.2,sedimentary,660.0,650-600,Neoproterozoic,,,,Maynard2010,False,region
+Chiatura (Tchiatura)-Kvirila,Georgia,,42.3,43.3,sedimentary,28.0,,Tertiary,,,manganite,Maynard2010,False,auto(PP1802/seed)
+Datangpo,China,Guizhou,28.0,109.0,sedimentary,660.0,650-600,Neoproterozoic,,,,Maynard2010,False,auto(PP1802/seed)
+Dawashan,China,Sichuan,29.0,104.0,sedimentary,444.0,449-439,Ordovician,,,rhodochrosite,Maynard2010,False,region
+Dounan-Baixian-Heishui,China,Yunnan,23.7,103.1,sedimentary,230.0,237-228,Triassic,Falang,,"braunite, rhodochrosite",Maynard2010,False,lit
+Drimos-Aroania,Greece,,38.0,22.2,volcanogenic,152.0,156-151,Jurassic,Lesteena,,pyrolusite,Maynard2010,False,region
+East Carpathians,Romania,,47.0,25.5,volcanogenic,488.0,,Cambro-Ordovician,Tulghes Grp,greenschist,rhodochrosite,Maynard2010,False,region
+Elazig district,Turkey,,38.7,39.2,volcanogenic,44.0,49-40,Eocene,Melafan,,"braunite, jacobsite, bixbyite",Maynard2010,False,lit
+Faizuly,Russia,Magnitogorsk,53.4,59.0,volcanogenic,395.0,397-392,Devonian,Bugulygyr,zeolite,"rhodochrosite, pyroxmangite",Maynard2010,False,lit
+Forari,New Hebrides,,-17.7,168.5,volcanogenic,1.0,0-2,Pleistocene,,,amorphous oxides,Maynard2010,False,lit
+Gambatesa-Molinello,Italy,Liguria,44.4,9.4,volcanogenic,146.0,,Jurassic,Monte Alpe,greenschist,braunite,Maynard2010,False,lit
+Gaoyan,China,Sichuan,28.0,109.0,sedimentary,660.0,,Neoproterozoic,Doushantuo,,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Gonzen,Switzerland,,47.1,9.4,sedimentary,156.0,,Jurassic,Quintner LS,none,rhodochrosite,Maynard2010,False,lit
+Groote Eylandt,Australia,NT,-14.0,136.5,sedimentary,99.0,95,Cretaceous,Mullaman,none,pyrolusite,Maynard2010,False,auto(PP1802/seed)
+Guichi,China,Anhui,30.7,117.5,sedimentary,270.0,,Permian,Gufeng,,rhodochrosite,Maynard2010,False,region
+Hawasina,Oman,,23.2,57.5,volcanogenic,146.0,,Jurassic-Cretaceous,Wahrah,none to greenschist,pyrolusite,Maynard2010,False,region
+Huayuan,China,Hunan,28.6,109.5,sedimentary,660.0,,Neoproterozoic,,,,Maynard2010,False,lit
+Imini,Morocco,,30.7333,-6.9,karst/other,95.0,95-90,Cretaceous,,none,pyrolusite,Maynard2010,False,auto(PP1802/seed)
+Jiaodingshan,China,Sichuan,29.0,104.0,sedimentary,444.0,449-439,Ordovician,,,rhodochrosite,Maynard2010,False,region
+Kalahari - Mamatwan,South Africa,,-27.2,22.9,sedimentary,2250.0,2300-2200 ,Paleoproterozoic,Hotazel,,kutnahorite,Maynard2010,False,lit
+Kalahari - supergene,South Africa,,-27.2,22.9,sedimentary,2250.0,2300-2200 (protore),Paleoproterozoic,Hotazel,,"manganomelane, todorokite",Maynard2010,False,lit
+Kalahari - Wessels,South Africa,,-27.1,22.9,sedimentary,2250.0,2300-2200 (protore),Paleoproterozoic,Hotazel,,hausmannite,Maynard2010,False,lit
+"Karadzhal (Karazhal, Karadjal) all oxide",Kazakhstan,Atasu,48.7,73.3,volcanogenic,375.0,,Devonian,Karadzhal,,"braunite, jacobsite, hausmannite",Maynard2010,False,lit
+Karwendel /Tennengebirge,Austria,,47.5,13.0,sedimentary,161.0,,Jurassic,Strubberg,,rhodochrosite,Maynard2010,False,region
+Krížna,Poland,,49.2,19.9,sedimentary,180.0,,Jurassic,,,Mn calcite,Maynard2010,False,region
+Kyzltash,Russia,Magnitogorsk,53.4,59.0,volcanogenic,385.0,391-374,Devonian,Ulutau,,,Maynard2010,False,lit
+Laba (Labinsk),Russia,,44.6,40.7,sedimentary,28.0,,Tertiary,,none,rhodochrosite,Maynard2010,False,region
+Lijiaying,China,Shaanxi,33.0,108.0,volcanogenic,1400.0,,Mesoproterozoic,Guojiagou,greenschist,braunite,Maynard2010,False,region
+Lucifer,Mexico,Baja Sur,27.0,-112.2,volcanogenic,3.6,,Tertiary,Boleo,none,cryptomelane,Maynard2010,False,region
+Mangyshlak-carb,Kazakhstan,,43.7,51.2,sedimentary,28.0,,Tertiary,,,rhodochrosite,Maynard2010,False,lit
+Mangyshlak-ox,Kazakhstan,,43.7,51.2,sedimentary,28.0,,Tertiary,,,pyrolusite,Maynard2010,False,lit
+Matese-Ciociaria,Italy,Molise,41.5,14.3,volcanogenic,11.0,7-11,Miocene,Pietraroia,none,todorokite,Maynard2010,False,region
+Minle,China,Hunan,28.3,112.5,sedimentary,660.0,650-600,Neoproterozoic,Minle,,rhodochrosite,Maynard2010,False,lit
+Moanda,Gabon,,-1.5667,13.2833,sedimentary,2143.0,2200-2100,Mesoproterozoic,Francevillian FB1,,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+"Moanda, supergene",Gabon,,-1.5,13.2,sedimentary,2143.0,2200-2100,Mesoproterozoic,Francevillian FB1,,,Maynard2010,False,lit
+Mokta (Grand Lahou),Côte d'Ivoire,,5.1,-5.0,sedimentary,2050.0,2100-2000,Paleoproterozoic,,biotite,braunite (after rhodochrosite),Maynard2010,False,region
+Molango,Mexico,Hidalgo,20.8333,-98.7333,sedimentary,156.0,,Jurassic,Taman,none,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Mutun,Bolivia,,-19.1,-57.7,sedimentary,700.0,800-600,Neoproterozoic,Jacadigo,none,cryptomelane,Maynard2010,False,lit
+Nikopol,Ukraine,,47.5667,34.4167,sedimentary,28.0,,Tertiary,,none,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Ningxiang,China,Hunan,28.3,112.6,sedimentary,660.0,650-600,Neoproterozoic,,,,Maynard2010,False,lit
+Nishikal,India,South Orissa,19.5,84.0,sedimentary,3200.0,3300-3100,Archean,Iron Ore Group,granulite,cryptomelane,Maynard2010,False,region
+Noda-Tamagawa (originally rhodochrosite),Japan,Iwate,40.0,141.8,sedimentary,190.0,,Jurassic,Takayahiki,,hausmanite,Maynard2010,False,lit
+Nsuta,Ghana,,5.28,-1.95,sedimentary,2050.0,,Paleoproterozoic,,,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Obrochishte,Bulgaria,,43.4,28.0,sedimentary,28.0,,Tertiary,Ruslar,none,rhodochrosite,Maynard2010,False,lit
+Ocakli,Turkey,,40.0,33.0,volcanogenic,85.0,,Cretaceous,,,,Maynard2010,False,country
+Otjozondu,Namibia,,-21.5,17.5,sedimentary,800.0,,Neoproterozoic,Chuos,amphibolite,braunite,Maynard2010,False,auto(PP1802/seed)
+Postmasburg,South Africa,N Cape,-28.05,23.05,karst/other,2100.0,2250-2000,Paleoproterozoic,Reivilo,greenschist,"braunite, partridgeite",Maynard2010,False,auto(PP1802/seed)
+San Francisco ( Autlan),Mexico,Jalisco,19.8,-104.4,volcanogenic,34.0,37-28,Eocence-Oligocene,,,braunite,Maynard2010,False,lit
+Sandur-Shimoga,India,Karnataka,15.1,76.5,sedimentary,2900.0,3000-2600,Neoarchean,Deogiri,,rhodochrosite,Maynard2010,False,lit
+Serra do Navio,Brazil,,1.0,-52.0,sedimentary,2100.0,,Paleoproterozoic,Amapa series,,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Songtao,China,Guizhou,28.0,109.0,sedimentary,660.0,650-600,Neoproterozoic,,,,Maynard2010,False,auto(PP1802/seed)
+Spława,Poland,,50.0,19.0,sedimentary,94.0,,Cretaceous,Barnaslowka,none,amor oxides,Maynard2010,False,country
+Tambao,Burkina Fasso,,14.7833,-0.0667,sedimentary,2050.0,2100-2050,Paleoproterozoic,,,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Tangganshan,China,,28.0,109.0,sedimentary,660.0,650-600,Neoproterozoic,,,rhodochrosite,Maynard2010,False,region
+Taojiang,China,,28.5,112.2,sedimentary,468.0,472-461,Ordovician,Modaoxi,,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Tennengebirge,Austria,,47.5,13.3,sedimentary,180.0,,Jurassic,Allgäu,Vr max 3.8%,kutnahorite,Maynard2010,False,region
+Tiantaishan,China,Shaanxi,34.0,107.0,sedimentary,525.0,540-510,Cambrian,Tananpo,,,Maynard2010,False,region
+Tiouine,Morocco,,30.9,-7.0,volcanogenic,700.0,,Neoproterozoic,,,braunite,Maynard2010,False,region
+Tokoro,Japan,Hokkaido,44.0,144.0,volcanogenic,125.0,110/120,Cretaceous,Nikoro,,braunite,Maynard2010,False,lit
+Ulukent-Gökçeovacik,Turkey,,37.5,29.3,sedimentary,94.0,,Cretaceous,,,,Maynard2010,False,region
+Um Bogma,Egypt,Sinai,29.0,33.3,karst/other,336.0,345-326,Carboniferous,Um Bogma,none,pyrochroite,Maynard2010,False,lit
+Úrkút-carbonate,Hungary,Transdanubia,47.08,17.64,sedimentary,183.0,183-175,Jurassic,,none,rhodochrosite,Maynard2010,False,lit
+Úrkút-oxide,Hungary,Transdanubia,47.08,17.64,sedimentary,184.0,183-175,Jurassic,,none,cryptomelane,Maynard2010,False,lit
+Urucum,Brazil,Mato Grosso do Sul,-19.1333,-57.55,sedimentary,700.0,800-600,Neoproterozoic,Santa Cruz,none,cryptomelane,Maynard2010,False,auto(PP1802/seed)
+"Usa (Belaya Usa, Usinsk)",Russia,Kuznetskii-Alatau,54.0,88.0,sedimentary,550.0,540-590,Cambrian,,none,rhodochrosite,Maynard2010,False,region
+Vani,Greece,Milos,36.7,24.4,volcanogenic,1.0,2-0,Quaternary,,none,pyrolusite,Maynard2010,False,lit
+Wafangzi (Wafangtzu) - carbonate,China,Liaoning,41.0,119.3,sedimentary,1120.0,1175-1070,Mesoproterozoic,Tieling,none - green,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Wafangzi (Wafangtzu) - oxide,China,Liaoning,41.0,119.3,sedimentary,1120.0,1175-1070,Mesoproterozoic,Tieling,none - green,"manganite, braunite",Maynard2010,False,auto(PP1802/seed)
+Waziristan,Pakistan,Baluchistan,32.0,69.5,volcanogenic,150.0,,Cretaceous,,,braunite,Maynard2010,False,region
+White Oak Mtn,USA,TN,35.1,-85.1,karst/other,345.0,,Carboniferous,Ft Payne,none,"lithiophorite, cryptomelane",Maynard2010,False,region
+Woodie Woodie,Australia,WA,-21.6,121.2,sedimentary,2764.0,2800-2500,Neoarchean,Carrawine,,pyrolusite,Maynard2010,False,auto(PP1802/seed)
+Xialei,China,Guangxi Zhuang,23.2,106.3,sedimentary,367.0,375-360,Devonian,Wuzhistan,,rhodochrosite,Maynard2010,False,lit
+Xiangtan,China,,27.9,112.5,sedimentary,660.0,650-600,Neoproterozoic,,,rhodochrosite,Maynard2010,False,lit
+Ansongo (Takavasita),Mali,,15.7,0.5,volcanogenic,2100.0,2500-1600,Proterozoic,,,"psilomelane, pyrolusite",Maynard2010,False,region
+Batesville,USA,Ark,35.8,-91.6,sedimentary,455.0,490-440,Ordovician,,,"rhodochrosite, hausmannite",Maynard2010,False,lit
+"Bonai district, other",India,North Orissa,21.9,85.6,sedimentary,3200.0,3300-3100,Archean,Iron Ore Group,,braunite,Maynard2010,False,region
+Bou Arfa,Morocco,,32.5,-1.96,karst/other,195.0,203-188,Jurassic,,,"hausmannite, braunite, rhodochrosite",Maynard2010,False,lit
+Coquimbo,Chile,,-29.95,-71.3,volcanogenic,99.0,,Cretaceous,Arqueros,,braunite,Maynard2010,False,region
+East Syan (Nizhneudinsk),Russia,Nizhneudinsk,54.9,99.0,sedimentary,700.0,,Neoproterozoic,Izanskaya,,"braunite, hausmannite",Maynard2010,False,region
+Eastern Cuba,Cuba,,20.4,-75.8,volcanogenic,48.0,56-33,Eocene ,,,manganite,Maynard2010,False,region
+En Kafala,Afar,,11.5,41.0,volcanogenic,1.0,2-0,Quaternary,,,,Maynard2010,False,country
+Falotta,Switzerland,Grison,46.6,9.5,volcanogenic,146.0,,Jurassic,,greenschist,braunite,Maynard2010,False,lit
+Gangpur,India,North Orissa,22.0,84.5,sedimentary,3200.0,3300-3100,Archean,Iron Ore Group,,braunite,Maynard2010,False,lit
+Gucheng,China,,28.0,109.0,sedimentary,700.0,750-650,Neoproterozoic,,,,Maynard2010,False,region
+Harlech Dome,United Kingdom,Wales,52.9,-4.0,sedimentary,520.0,528-510,Cambrian,,chlorite,rhodochrosite,Maynard2010,False,lit
+Jiangkou,China,,27.7,108.8,sedimentary,600.0,,Neoproterozoic,,,,Maynard2010,False,region
+Kampumba-Mansa-Chiwefwe,Zambia,,-11.2,28.9,volcanogenic,1600.0, ca1600,Proterozoic,,,manganite,Maynard2010,False,region
+Kisenge-Kamata-Kapolo,DRC,Katanga,-10.4,23.4,sedimentary,2201.0,>2100,Proterozoic,,,,Maynard2010,False,lit
+Kisovece,Czechoslovakia,,49.0,20.0,sedimentary,28.0,,Tertiary,,,,Maynard2010,False,country
+Langban,Sweden,Varmland,59.86,14.27,volcanogenic,1800.0,,Proterozoic,,,braunite,Maynard2010,False,lit
+Magnitogorsk,Russia,,53.4,59.0,volcanogenic,370.0,385-360,Devonian,,,"braunite, rhodonite",Maynard2010,False,lit
+Maliuba,China,,28.0,109.0,sedimentary,600.0,,Neoproterozoic,,,,Maynard2010,False,region
+Marau,Brazil,Bahia,-14.1,-39.0,volcanogenic,2700.0,,Archean,,,"cryptomelane, lithiophorite",Maynard2010,False,region
+Maripa,Suriname,,5.0,-55.5,volcanogenic,2100.0,,Proterozoic,Paramaca series,,,Maynard2010,False,country
+Matthews Ridge,Guyana,,7.5,-60.2,volcanogenic,2700.0,,Archean,Barama (=Parameca) series,,braunite,Maynard2010,False,lit
+Morro da Mina,Brazil,,-20.5833,-43.8333,sedimentary,2700.0,,Archean,Rio das Velhas,,rhodochrosite,Maynard2010,False,auto(PP1802/seed)
+Nagpur-Bhandara,India,Madhya Pradesh and Maharashtra,21.4,79.5,sedimentary,910.0,986-846,Neoproterozoic,Mansur (Mansar),,,Maynard2010,False,lit
+North Kanara,India,Karnataka,14.8,74.5,volcanogenic,2900.0,3000-2600,Archean,,,braunite,Maynard2010,False,region
+Oldakit,Russia,,56.0,116.0,sedimentary,530.0,540-520,Cambrian,,,,Maynard2010,False,country
+Olympic Peninsula,USA,WA,47.8,-124.0,volcanogenic,40.0,55-34,Eocene,,,"braunite, hausmannite",Maynard2010,False,region
+Panch Mahals,India,,22.8,73.8,sedimentary,2100.0,2500-1600,Proterozoic,,,braunite,Maynard2010,False,region
+Perstentevskii,Khazakstan,Atasu,48.7,73.3,volcanogenic,370.0,375-360,Devonian,Karadzhal,chlorite,"braunite, jacobsite, hausmannite (after rhodochrosite)",Maynard2010,False,region
+Polunochnoe (Polunochnoye),Russia,,60.9,60.4,sedimentary,60.0,,Tertiary,,,rhodochrosite,Maynard2010,False,lit
+Quinquinhe,Angola,,-12.0,16.0,sedimentary,900.0,970-570,Neoproterozoic,,,"manganite, rhodonite",Maynard2010,False,country
+Ravensthorpe,Australia,WA,-33.6,120.0,volcanogenic,2764.0,3000-2600,Neoarchean,,,pyrolusite,Maynard2010,False,lit
+Sagan-Zaba,Russia,,52.8,106.3,sedimentary,2700.0,3000-2601,Neoarchean,Ozersk,amphibolite,Mn-calcite,Maynard2010,False,lit
+Soloviejo,Spain,Huelva,37.7,-6.7,volcanogenic,335.0,345-326,Carboniferous,Manganiferous Fmn,,"rhodonite, rhodochrosite, pyrolusite",Maynard2010,False,region
+Takhta-Karacha,Uzbekistan,Zeravshan,39.5,67.0,sedimentary,421.0,,Silurian,,,rhodochrosite,Maynard2010,False,region
+Tanncherfi-Narguechoum,Morocco,,34.0,-2.9,volcanogenic,256.0,,Permian,,,,Maynard2010,False,region
+Tiere,Burkina Fasso,,14.5,-0.2,sedimentary,2300.0,2500-1600,Proterozoic,,,,Maynard2010,False,country
+Tiharatine,Morocco,,30.9,-7.0,karst/other,195.0,203-188,Jurassic,,,,Maynard2010,False,region
+Timna,Israel,,29.8,35.0,karst/other,501.0,530-510,Cambrian,Timna,none,pyrolusite,Maynard2010,False,lit
+Uda River,,,54.0,98.0,volcanogenic,530.0,540-520,Cambrian,,,braunite,Maynard2010,False,country
+Ultevis,Sweden,,67.0,18.0,volcanogenic,1500.0,970-1600,Proterozoic,,,braunite,Maynard2010,False,region
+Ulu-Telyak (Teliak),Russia,Urals,54.9,56.9,sedimentary,258.0,254-260,Permian,Artinsk,,rhodochrosite,Maynard2010,False,region
+Urandi,Brazil,Bahia,-14.8,-42.7,sedimentary,3265.0,3300-3010,Archean,,,jacobsite,Maynard2010,False,lit
+Ushkatyn III,Kazakhstan,Atasu,48.7,73.3,volcanogenic,370.0,375-360,Devonian,Karadzhal,chlorite,"braunite, jacobsite, hausmannite (after rhodochrosite)",Maynard2010,False,lit
+Xinrong,China,Guangdong,22.5,111.5,karst/other,381.0,409-363,Devonian,,none,cryptomelane,Maynard2010,False,lit
+Derbent,Turkey,,40.0,33.0,volcanogenic,94.0,94,Cretaceous,Artova ophiolite,,"pyrolusite, braunite",Maynard2010,False,country
+Eymir,Turkey,,40.0,33.0,volcanogenic,94.0,94,Cretaceous,Artova ophiolite,,"pyrolusite, braunite",Maynard2010,False,country
+Katsuyama,Japan,,35.1,134.0,volcanogenic,179.0,183-176,Jurassic,,,,Maynard2010,False,region
+Manuels River,Canada,Newfoundland,47.5,-52.9,sedimentary,517.0,530-510,Cambrian,,none,rhodochrosite,Maynard2010,False,lit
+Pipji - karstic?,Switzerland,,46.2,7.6,sedimentary,230.0,237-228,Triassic,Barrhorn Series,none,"kutnahorite, jacobsite",Maynard2010,False,region
+Vittinki,Finland,,62.8,22.8,volcanogenic,1950.0,2100-1890,Proterozoic,Vittinki Grp,amphibolite-granulite,"rhodoniite, pyroxmangite",Maynard2010,False,region
+Cuyuna IF,USA,MI ,46.5,-93.9,sedimentary,2060.0,2219-1910,Proterozoic,Animikie Group,,"psilomelane, manganite",Maynard2010,False,lit
+Nigerian IF,Nigeria,,10.0,8.0,sedimentary,2300.0,,Proterozoic,Maru schist,amphibolite,garnet,Maynard2010,False,country

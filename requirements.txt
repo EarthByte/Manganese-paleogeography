@@ -1,0 +1,10 @@
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+openpyxl
+access_parser
+pyshp
+# reconstruction + figures (install via conda, see environment.yml):
+# gplately, pygplates, pygmt, plate_model_manager
