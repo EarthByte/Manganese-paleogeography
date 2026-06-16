@@ -83,7 +83,9 @@ for k,(t,L,nm) in enumerate(TIMES):
     fig.coast(land=None,water="white")
     # continents as clean gray fills — no outlines, no internal subdivision lines
     engine.plot_geo_data_frame(fig,cont,fill="gray90",pen=None)
-    # (plate-boundary backbone omitted for clarity; only subduction zones drawn below)
+    # all closed topological plate boundaries as a thin black backbone; subduction overlain
+    try: engine.plot_geo_data_frame(fig,gplot.get_all_topological_sections(),pen="0.25p,black")
+    except Exception: pass
     try:
         tl,tr=gplot.get_subduction_direction(); engine.plot_subduction_zones(fig,tl,tr,color="black")
     except Exception: pass

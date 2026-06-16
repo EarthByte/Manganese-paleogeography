@@ -102,6 +102,8 @@ for k,t in enumerate(times):
     fig.basemap(region="d",projection="W0/18c",frame=0)
     fig.coast(land=None,water="white")
     engine.plot_geo_data_frame(fig,cont,fill="gray90",pen=None)
+    try: engine.plot_geo_data_frame(fig,gplot.get_all_topological_sections(),pen="0.25p,black")
+    except Exception: pass
     try:
         tl,tr=gplot.get_subduction_direction(); engine.plot_subduction_zones(fig,tl,tr,color="black")
     except Exception: pass
