@@ -127,8 +127,8 @@ for k,(t,L,nm) in enumerate(TIMES):
 # symbol) distinguish occurrences from deposits — explained in the caption.
 fig.shift_origin(xshift="-11c",yshift="-1.7c")
 fig.basemap(region=[0,21,0,1],projection="X21c/0.8c",frame=0)
-leg=[("sedimentary deposit","#0072B2",0.18,"0.4p,black"),("volcanogenic deposit","#E69F00",0.18,"0.4p,black"),
-     ("karst/supergene deposit","#CC79A7",0.18,"0.4p,black"),
+leg=[("sedimentary","#0072B2",0.18,"0.4p,black"),("volcanogenic","#E69F00",0.18,"0.4p,black"),
+     ("karst/supergene","#CC79A7",0.18,"0.4p,black"),
      (f"Mn occurrences (n={len(occ)})","black",0.09,None)]
 # pack items left-to-right with width proportional to each label, then centre the row
 CH=0.155; GAP=0.5   # approx cm per char at 9p, and inter-item gap
