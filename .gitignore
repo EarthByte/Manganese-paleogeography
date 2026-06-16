@@ -6,3 +6,6 @@ __pycache__/
 figures/*.png
 figures/*.pdf
 *_cache*/
+
+# runtime logs
+*.log
