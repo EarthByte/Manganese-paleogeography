@@ -3,24 +3,24 @@
 00a — Build the Mn-occurrence table (present-day coordinates + genetic group)
 from the raw Hazen-collaborator compilation.
 
-The classified compilation (Mn_occurrences_classified_Hazen.xlsx) carries the
-genesis class but no coordinates; Mn_mineral_coordinates_Hazen.xlsx carries
+The classified compilation (Mn_occurrences_classified.xlsx) carries the
+genesis class but no coordinates; Mn_mineral_coordinates.xlsx carries
 coordinates but no genesis class. They share no clean key, so we join on
 (mineral name, Max Age) — the best available link (recovers coordinates for the
 primary-class subset used downstream). Coordinate-collapse (one (mineral,age) ->
 one coordinate even if it occurs at several localities) is a documented
 limitation; a mindat-ID -> coordinate lookup would supersede this join.
 
-INPUT : data/source/Mn_occurrences_classified_Hazen.xlsx
-        data/source/Mn_mineral_coordinates_Hazen.xlsx
+INPUT : data/source/Mn_occurrences_classified.xlsx
+        data/source/Mn_mineral_coordinates.xlsx
 OUTPUT: data/derived/mn_occurrences_with_coords.csv
 """
 from pathlib import Path
 import pandas as pd
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 SRC=REPO/"data"/"source"; OUT=REPO/"data"/"derived"; OUT.mkdir(parents=True,exist_ok=True)
-CLASSIFIED=SRC/"Mn_occurrences_classified_Hazen.xlsx"
-COORDS=SRC/"Mn_mineral_coordinates_Hazen.xlsx"
+CLASSIFIED=SRC/"Mn_occurrences_classified.xlsx"
+COORDS=SRC/"Mn_mineral_coordinates.xlsx"
 
 def group_of(g):
     g=str(g).lower()

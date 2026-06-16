@@ -18,8 +18,8 @@ manganese_paleogeography/
 ├── data/
 │   ├── raw/                   ← third-party files YOU download (gitignored; see data/README.md)
 │   ├── source/               ← raw Hazen occurrence compilation (collaborator-provided, included)
-│   │   ├── Mn_occurrences_classified_Hazen.xlsx
-│   │   └── Mn_mineral_coordinates_Hazen.xlsx
+│   │   ├── Mn_occurrences_classified.xlsx
+│   │   └── Mn_mineral_coordinates.xlsx
 │   └── derived/               ← compiled products (redistributable, attributed)
 │       ├── mn_deposit_database.csv               140 dated deposits (Maynard)
 │       ├── mn_deposit_geochemistry.csv           per-deposit geochemistry (Maynard)

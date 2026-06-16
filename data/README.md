@@ -21,8 +21,8 @@ then run the scripts. The pipeline reads raw only where necessary; committed
 
 | File | Source | Terms |
 |---|---|---|
-| `Mn_occurrences_classified_Hazen.xlsx` | Global Mn mineral-occurrence compilation with genetic classification (compiled by a Hazen-group collaborator and co-author of this study) | included with permission; cite Hazen et al. |
-| `Mn_mineral_coordinates_Hazen.xlsx` | Companion coordinate/oxidation-state table for the same compilation | included with permission; cite Hazen et al. |
+| `Mn_occurrences_classified.xlsx` | Global Mn mineral-occurrence compilation with genetic classification (compiled by a co-author of this study) | included with permission; cite Bermanec and Hazen |
+| `Mn_mineral_coordinates.xlsx` | Companion coordinate/oxidation-state table for the same compilation | included with permission; cite Bermanec and Hazen |
 
 These are the **raw Hazen occurrence compilation**. Unlike the third-party files
 in `data/raw/`, they were compiled by a study co-author and are included here so
