@@ -11,12 +11,14 @@ from pathlib import Path
 import numpy as np, pandas as pd, pygmt, pygplates, gplately
 from plate_model_manager import PlateModelManager
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent; DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True); CACHE=REPO/"gplately_data"
-TIMES=[(660,"a","Cryogenian"),(280,"b","Pangea"),(150,"c","Jurassic"),(30,"d","Oligocene")]
+TIMES=[(660,"a","Cryogenian"),(370,"b","Late Devonian"),(150,"c","Jurassic"),(30,"d","Oligocene")]
 WIN_DEP=40    # +/- Myr window for deposits
 WIN_OCC=60    # +/- Myr window for occurrences (denser context layer)
 # harmonised colours: primary (blue), metamorphic (green), volcanogenic (red), karst (grey)
 DCOL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
 OCOL={'A':'#3b6fb6','B':'#3b6fb6','C':'#1b7837'}
+# key named deposits to label on each panel (name substrings; see caption for ages)
+LABELS={660:["Datangpo","Urucum"],370:["Karazhal","Xialei"],150:["Molango","Úrkút"],30:["Nikopol","Chiatura"]}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
 dep=pd.read_csv(DATA/"mn_deposits_reconstructed_geochem.csv").dropna(subset=["paleo_lat","paleo_lon"])
@@ -40,20 +42,28 @@ for k,(t,L,nm) in enumerate(TIMES):
             continents=model.get_continental_polygons(),COBs=model.get_COBs(),time=float(t))
     fig.basemap(region="d",projection="W0/10c",frame=["af"])
     fig.coast(land=None,water="white")
-    engine.plot_geo_data_frame(fig,gplot.get_continents(),fill="gray90",pen="0.2p,gray40")
-    engine.plot_geo_data_frame(fig,gplot.get_all_topological_sections(),pen="0.4p,gray60")
+    # continents as clean fills — no internal craton/terrane subdivision lines
+    engine.plot_geo_data_frame(fig,gplot.get_continents(),fill="gray90",pen=None)
+    # plate-boundary backbone kept but thin and light so it doesn't dissect the map
+    engine.plot_geo_data_frame(fig,gplot.get_all_topological_sections(),pen="0.2p,gray75")
     try:
         tl,tr=gplot.get_subduction_direction(); engine.plot_subduction_zones(fig,tl,tr,color="black")
     except Exception: pass
     # density layer: occurrences (small, semi-transparent)
     so=occ[np.abs(occ.age_mid-t)<=WIN_OCC]
     for grp,g in so.groupby("group"):
-        fig.plot(x=g.paleo_lon,y=g.paleo_lat,style="c0.07c",fill=OCOL.get(grp,'#bbbbbb'),
-                 pen=None,transparency=35)
+        fig.plot(x=g.paleo_lon,y=g.paleo_lat,style="c0.10c",fill=OCOL.get(grp,'#bbbbbb'),
+                 pen=None,transparency=15)
     # highlight layer: curated deposits (large, outlined)
     sd=dep[np.abs(dep.age_Ma-t)<=WIN_DEP]
     for tp,g in sd.groupby("deposit_type"):
         fig.plot(x=g.paleo_lon,y=g.paleo_lat,style="c0.20c",fill=DCOL.get(tp,'gray'),pen="0.5p,black")
+    # label key named deposits
+    for key in LABELS.get(t,[]):
+        rr=sd[sd.deposit_name.str.contains(key,case=False,na=False)].head(1)
+        for _,r in rr.iterrows():
+            fig.text(x=r.paleo_lon,y=r.paleo_lat,text=key,font="8p,Helvetica-Bold,black",
+                     justify="LM",offset="0.20c/0c",fill="white@25",pen="0.3p,gray60",no_clip=True)
     panel(fig,L,t,nm)
 
 # shared legend (two rows): colour = genesis; symbol size = occurrence vs deposit
@@ -65,7 +75,7 @@ for i,(lab,c) in enumerate(items):
     x=0.5+i*5.4
     fig.plot(x=[x],y=[1.3],style="c0.18c",fill=c,pen="0.4p,black")
     fig.text(x=x+0.35,y=1.3,text=lab,font="10p,Helvetica,black",justify="ML",no_clip=True)
-fig.plot(x=[0.6],y=[0.5],style="c0.07c",fill="gray30")
+fig.plot(x=[0.6],y=[0.5],style="c0.10c",fill="gray30")
 fig.text(x=0.95,y=0.5,text="occurrence (n=1384)",font="10p,Helvetica,black",justify="ML",no_clip=True)
 fig.plot(x=[11],y=[0.5],style="c0.20c",fill="gray70",pen="0.5p,black")
 fig.text(x=11.4,y=0.5,text="deposit (Maynard, n=140)",font="10p,Helvetica,black",justify="ML",no_clip=True)
