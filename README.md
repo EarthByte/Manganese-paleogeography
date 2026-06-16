@@ -14,10 +14,10 @@ manganese_paleogeography/
 ├── requirements.txt           ← Python environment
 ├── environment.yml            ← conda env (gplately + pygmt stack)
 ├── .gitignore
-├── LICENSE                    ← code license (MIT); data terms in data/README.md
+├── LICENSE                    ← MIT (applies to the entire repo: code and data)
 ├── data/
 │   ├── raw/                   ← third-party files YOU download (gitignored; see data/README.md)
-│   ├── source/               ← raw Hazen occurrence compilation (collaborator-provided, included)
+│   ├── source/               ← Mn occurrence compilation (co-author contribution, included)
 │   │   ├── Mn_occurrences_classified.xlsx
 │   │   └── Mn_mineral_coordinates.xlsx
 │   └── derived/               ← compiled products (redistributable, attributed)
@@ -26,9 +26,9 @@ manganese_paleogeography/
 │       ├── mn_deposits_reconstructed_geochem.csv 0–1.8 Ga deposits, paleo-coords
 │       ├── mn_deeptime_paleolat_Q3.csv           >1.8 Ga deposit paleolatitudes (GPMDB 2022)
 │       ├── deeptime_poles_used.csv               only the Q≥3 GPMDB poles actually used
-│       └── mn_occurrences_reconstructed.csv      Hazen occurrences, reconstructed
+│       └── mn_occurrences_reconstructed.csv      occurrences, reconstructed
 ├── scripts/
-│   ├── 00a_build_occurrence_table.py       Hazen raw → occurrence table (+coords)
+│   ├── 00a_build_occurrence_table.py       raw occurrence files → table (+coords)
 │   ├── 00b_reconstruct_occurrences.py      reconstruct occurrences (Cao 2024)
 │   ├── 01_build_database_from_maynard.py   Maynard raw → deposit DB + geochemistry
 │   ├── 02_fill_coordinates.py              add deposit coordinates
@@ -54,7 +54,7 @@ python scripts/01_build_database_from_maynard.py
 python scripts/02_fill_coordinates.py
 python scripts/reconstruct_mn_deposits.py      # needs internet (fetches Cao 2024)
 python scripts/paleolat_deep_time.py           # needs data/raw/gpmdb_2022.csv (GPMDB CSV export; Pisarevsky et al. 2022, gpmdb.net)
-# Occurrence chain (Hazen):
+# Occurrence chain:
 python scripts/00a_build_occurrence_table.py   # data/source -> occurrence table
 python scripts/00b_reconstruct_occurrences.py  # reconstruct via Cao 2024
 # Null tests:

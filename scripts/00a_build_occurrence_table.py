@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 00a — Build the Mn-occurrence table (present-day coordinates + genetic group)
-from the raw Hazen-collaborator compilation.
+from the raw Mn occurrence compilation.
 
 The classified compilation (Mn_occurrences_classified.xlsx) carries the
 genesis class but no coordinates; Mn_mineral_coordinates.xlsx carries

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Figure 2 (Geology) — paleogeographic reconstruction of the Mn record (0-1.8 Ga).
-Density layer: reliable-age Hazen Mn OCCURRENCES (primary A,B + metamorphic C;
+Density layer: reliable-age Mn OCCURRENCES (primary A,B + metamorphic C;
 small dots) reconstructed via Cao 2024. Highlight layer: curated Maynard
 DEPOSITS (large outlined symbols) coloured by genetic type. Supergene
 occurrences are excluded (host-age positions unreliable). Helvetica, no titles,
@@ -66,7 +66,7 @@ for i,(lab,c) in enumerate(items):
     fig.plot(x=[x],y=[1.3],style="c0.18c",fill=c,pen="0.4p,black")
     fig.text(x=x+0.35,y=1.3,text=lab,font="10p,Helvetica,black",justify="ML",no_clip=True)
 fig.plot(x=[0.6],y=[0.5],style="c0.07c",fill="gray30")
-fig.text(x=0.95,y=0.5,text="occurrence (Hazen, n=1384)",font="10p,Helvetica,black",justify="ML",no_clip=True)
+fig.text(x=0.95,y=0.5,text="occurrence (n=1384)",font="10p,Helvetica,black",justify="ML",no_clip=True)
 fig.plot(x=[11],y=[0.5],style="c0.20c",fill="gray70",pen="0.5p,black")
 fig.text(x=11.4,y=0.5,text="deposit (Maynard, n=140)",font="10p,Helvetica,black",justify="ML",no_clip=True)
 fig.savefig(str(OUT/"Fig2_paleomaps.pdf")); fig.savefig(str(OUT/"Fig2_paleomaps.png"),dpi=300)

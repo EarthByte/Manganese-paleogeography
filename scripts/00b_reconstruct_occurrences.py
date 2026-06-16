@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-00b — Reconstruct the Hazen Mn occurrences to their formation ages (Cao 2024),
+00b — Reconstruct the Mn occurrences to their formation ages (Cao 2024),
 producing the derived occurrence file used by Fig. 2 (density layer) and the
 occurrence corroboration (Fig. 3d).
 

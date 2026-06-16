@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 06 — Occurrence-scale corroboration of the primary-Mn paleolatitude result.
-Independent, high-N test: the Hazen Mn OCCURRENCE record, restricted to primary
+Independent, high-N test: the Mn OCCURRENCE record, restricted to primary
 genesis (A = marine hydrogenetic oxide, B = burial diagenetic carbonate; the
 occurrence-scale equivalent of Maynard "sedimentary"), declustered to one point
 per 1deg x 100 Myr cell, reconstructed via Cao 2024, and tested against a
