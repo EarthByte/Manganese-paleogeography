@@ -18,7 +18,9 @@ WIN_OCC=60    # +/- Myr window for occurrences (denser context layer)
 DCOL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
 OCOL={'A':'#3b6fb6','B':'#3b6fb6','C':'#1b7837'}
 # key named deposits to label on each panel (name substrings; see caption for ages)
-LABELS={660:["Datangpo","Urucum"],370:["Karazhal","Xialei"],150:["Molango","Úrkút"],30:["Nikopol","Chiatura"]}
+# each item: a name substring (match+label) or (match_substring, display_label)
+LABELS={660:["Datangpo","Urucum"],370:["Karazhal","Xialei"],150:["Molango","Úrkút"],
+        30:["Nikopol","Chiatura",("Tokmak","Bol'she-Tokmak")]}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
 dep=pd.read_csv(DATA/"mn_deposits_reconstructed_geochem.csv").dropna(subset=["paleo_lat","paleo_lon"])
@@ -59,10 +61,11 @@ for k,(t,L,nm) in enumerate(TIMES):
     for tp,g in sd.groupby("deposit_type"):
         fig.plot(x=g.paleo_lon,y=g.paleo_lat,style="c0.20c",fill=DCOL.get(tp,'gray'),pen="0.5p,black")
     # label key named deposits
-    for key in LABELS.get(t,[]):
+    for item in LABELS.get(t,[]):
+        key,disp=item if isinstance(item,tuple) else (item,item)
         rr=sd[sd.deposit_name.str.contains(key,case=False,na=False)].head(1)
         for _,r in rr.iterrows():
-            fig.text(x=r.paleo_lon,y=r.paleo_lat,text=key,font="8p,Helvetica-Bold,black",
+            fig.text(x=r.paleo_lon,y=r.paleo_lat,text=disp,font="8p,Helvetica-Bold,black",
                      justify="LM",offset="0.20c/0c",fill="white@25",pen="0.3p,gray60",no_clip=True)
     panel(fig,L,t,nm)
 
