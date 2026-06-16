@@ -42,8 +42,8 @@ ap.add_argument("--fps",type=int,default=20,help="frames per second (default 20)
 ap.add_argument("--reuse-frames",action="store_true",help="keep existing frame PNGs")
 args=ap.parse_args()
 
-DCOL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
-OCOL={'A':'#3b6fb6','B':'#3b6fb6','C':'#1b7837'}
+DCOL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
+OCC_COL="black"
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
 # --- load present-day data ---
@@ -111,10 +111,8 @@ for k,t in enumerate(times):
     eo=occ[occ.age_mid>=t]
     if len(eo):
         plon,plat=reconstruct_to(eo,"lat","lon",t); kk=on_continent(plon,plat,pu)
-        plon,plat,gv=plon[kk],plat[kk],eo.group.values[kk]
-        for grp in ["A","B","C"]:
-            m=gv==grp
-            if m.any(): fig.plot(x=plon[m],y=plat[m],style="c0.10c",fill=OCOL[grp],pen=None,transparency=20)
+        plon,plat=plon[kk],plat[kk]
+        fig.plot(x=plon,y=plat,style="c0.09c",fill=OCC_COL,pen=None,transparency=30)
     # deposits formed by time t, reconstructed to t, kept only if on continent
     ed=dep[dep.age_Ma>=t]
     if len(ed):

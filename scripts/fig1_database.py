@@ -13,8 +13,8 @@ db=pd.read_csv(DATA/"mn_deposit_database.csv")
 # present-day Mn occurrence compilation (reliable-age primary A/B + metamorphic C)
 occ=pd.read_csv(DATA/"mn_occurrences_with_coords.csv")
 occ=occ[occ.group.isin(["A","B","C"])].dropna(subset=["lat","lon"])
-COL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
-OCOL={'A':'#3b6fb6','B':'#3b6fb6','C':'#1b7837'}
+COL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
+OCC_COL="black"
 LAB={'sedimentary':'sedimentary','volcanogenic':'volcanogenic','karst/other':'karst / supergene'}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica")
 
@@ -26,12 +26,9 @@ fig=pygmt.Figure()
 # ---- (a) present-day map ----
 fig.basemap(region="d",projection="W0/18c",frame=["af"])
 fig.coast(land="gray92",water="white",resolution="l",area_thresh=10000)
-# occurrence layer (present-day): small dots, primary A/B blue, metamorphic C green
-ob=occ[occ.group.isin(["A","B"])]; oc=occ[occ.group=="C"]
-fig.plot(x=ob.lon,y=ob.lat,style="c0.08c",fill=OCOL['A'],pen=None,transparency=35,
-         label=f"Mn occurrence data: primary (n={len(ob)})")
-fig.plot(x=oc.lon,y=oc.lat,style="c0.08c",fill=OCOL['C'],pen=None,transparency=35,
-         label=f"Mn occurrence data: metamorphic (n={len(oc)})")
+# occurrence layer (present-day): small black dots
+fig.plot(x=occ.lon,y=occ.lat,style="c0.07c",fill=OCC_COL,pen=None,transparency=35,
+         label=f"Mn occurrences (n={len(occ)})")
 # deposits (large outlined symbols), on top
 for t,g in db.groupby("deposit_type"):
     fig.plot(x=g.longitude,y=g.latitude,style="c0.22c",fill=COL.get(t,'gray'),

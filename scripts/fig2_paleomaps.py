@@ -18,9 +18,9 @@ TIMES=[(900,"a","Tonian"),(660,"b","Cryogenian"),(370,"c","Late Devonian"),
        (150,"d","Jurassic"),(99,"e","Cretaceous"),(30,"f","Oligocene")]
 WIN_DEP=40    # +/- Myr window for deposits
 WIN_OCC=60    # +/- Myr window for occurrences (denser context layer)
-# harmonised colours: primary (blue), metamorphic (green), volcanogenic (red), karst (grey)
-DCOL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
-OCOL={'A':'#3b6fb6','B':'#3b6fb6','C':'#1b7837'}
+# colour-blind-safe deposit-type palette (Okabe-Ito); occurrences are plain black dots
+DCOL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}
+OCC_COL="black"
 # key named deposits to label on each panel (name substrings; see caption for ages)
 # each item: a name substring (match+label) or (match_substring, display_label)
 # (name substring -> acronym plotted on the map; acronyms defined in the caption)
@@ -95,11 +95,8 @@ for k,(t,L,nm) in enumerate(TIMES):
         oplon,oplat=recon_to(so,"lat","lon",t)
         keep=on_continent(oplon,oplat,pu)
         if (~keep).any(): print(f"  {t} Ma: removed {(~keep).sum()} occurrence(s) off continent")
-        oplon,oplat,gv=oplon[keep],oplat[keep],so.group.values[keep]
-        for grp in ("A","B","C"):
-            m=gv==grp
-            if m.any():
-                fig.plot(x=oplon[m],y=oplat[m],style="c0.10c",fill=OCOL[grp],pen=None,transparency=15)
+        oplon,oplat=oplon[keep],oplat[keep]
+        fig.plot(x=oplon,y=oplat,style="c0.09c",fill=OCC_COL,pen=None,transparency=30)
     # highlight layer: curated deposits in window, reconstructed to t, kept only if on continent
     sd=dep[np.abs(dep.age_Ma-t)<=WIN_DEP].reset_index(drop=True)
     if len(sd):
@@ -130,10 +127,9 @@ for k,(t,L,nm) in enumerate(TIMES):
 # symbol) distinguish occurrences from deposits — explained in the caption.
 fig.shift_origin(xshift="-11c",yshift="-1.7c")
 fig.basemap(region=[0,21,0,1],projection="X21c/0.8c",frame=0)
-leg=[("primary","#3b6fb6",0.16,None),("metamorphic","#1b7837",0.16,None),
-     ("volcanogenic","#d6322a",0.16,None),("karst/supergene","#7a7a7a",0.16,None),
-     (f"Mn occurrences (n={len(occ)})","gray30",0.09,None),
-     (f"Mn deposits (n={len(dep)})","gray70",0.20,"0.5p,black")]
+leg=[("sedimentary deposit","#0072B2",0.18,"0.4p,black"),("volcanogenic deposit","#E69F00",0.18,"0.4p,black"),
+     ("karst/supergene deposit","#CC79A7",0.18,"0.4p,black"),
+     (f"Mn occurrences (n={len(occ)})","black",0.09,None)]
 # pack items left-to-right with width proportional to each label, then centre the row
 CH=0.155; GAP=0.5   # approx cm per char at 9p, and inter-item gap
 w=[0.30+len(lab)*CH+GAP for (lab,_,_,_) in leg]
