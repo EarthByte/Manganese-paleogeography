@@ -2,9 +2,9 @@
 
 A global, georeferenced database of manganese ore deposits through deep time, and
 its first paleogeographic reconstruction (0–1.8 Ga via the Cao et al. 2024 plate
-model; >1.8 Ga via paleomagnetic paleolatitudes). Supports the manuscript
-*"The paleogeography of manganese deposition over 1.8 billion years"* (in prep.,
-target: Geology).
+model; >1.8 Ga via paleomagnetic paleolatitudes). This repository holds only the
+data and the analysis/figure code; the manuscript text is maintained separately
+and is not included here.
 
 ## What's here
 
@@ -81,13 +81,7 @@ the raw sources (only steps that read `data/raw/` need them).
   (Pisarevsky et al. 2022), filtered on the database Van der Voo (1990) quality sum
   Q ≥ 3. The poles actually used are exported to `deeptime_poles_used.csv`.
 
-## Caveats
-Deposit inventory biased toward economic accumulations and densest in the
-Phanerozoic; deep-time ages largely stratigraphic; reconstruction bounded at
-1.8 Ga; deep-time paleomagnetic coverage sparse (paleolatitude only). See the
-manuscript Discussion for full caveats.
-
 ## Citation
-If you use this database or code, please cite the manuscript (in prep.) and the
-original data sources (Maynard 2010; Pisarevsky et al. 2022; Schulz et al. 2017;
-Cao et al. 2024). A Zenodo DOI will be minted on release.
+If you use this database or code, please cite the accompanying manuscript (once
+published) and the original data sources (Maynard 2010; Pisarevsky et al. 2022;
+Schulz et al. 2017; Cao et al. 2024). A Zenodo DOI will be minted on release.
