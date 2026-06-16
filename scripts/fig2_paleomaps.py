@@ -14,7 +14,8 @@ from shapely.geometry import Point
 from shapely.ops import unary_union
 from shapely.prepared import prep
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent; DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True); CACHE=REPO/"gplately_data"
-TIMES=[(660,"a","Cryogenian"),(370,"b","Late Devonian"),(150,"c","Jurassic"),(30,"d","Oligocene")]
+TIMES=[(1100,"a","Stenian"),(900,"b","Tonian"),(660,"c","Cryogenian"),
+       (370,"d","Late Devonian"),(150,"e","Jurassic"),(30,"f","Oligocene")]
 WIN_DEP=40    # +/- Myr window for deposits
 WIN_OCC=60    # +/- Myr window for occurrences (denser context layer)
 # harmonised colours: primary (blue), metamorphic (green), volcanogenic (red), karst (grey)
@@ -23,10 +24,12 @@ OCOL={'A':'#3b6fb6','B':'#3b6fb6','C':'#1b7837'}
 # key named deposits to label on each panel (name substrings; see caption for ages)
 # each item: a name substring (match+label) or (match_substring, display_label)
 # (name substring -> acronym plotted on the map; acronyms defined in the caption)
-LABELS={660:[("Datangpo","DT"),("Urucum","UR")],
+LABELS={1100:[("Wafangzi","WF")],
+        900:[("Nagpur","NB")],
+        660:[("Datangpo","DT"),("Urucum","UR")],
         370:[("Karazhal","KZ"),("Xialei","XL")],
         150:[("Molango","ML"),("Úrkút","UK")],
-        30:[("Nikopol","NK"),("Chiatura","CH"),("Tokmak","BT")]}
+        30:[("Nikopol","NK"),("Chiatura","CH"),("Tokmak","BT","0.20c/0.40c")]}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
 # Use present-day coordinates + plate IDs and reconstruct TO EACH PANEL TIME, so points
@@ -68,9 +71,10 @@ def panel(fig,L,t,nm):
 
 fig=pygmt.Figure()
 for k,(t,L,nm) in enumerate(TIMES):
-    if k==1: fig.shift_origin(xshift="11c")
-    elif k==2: fig.shift_origin(xshift="-11c",yshift="-6.2c")
-    elif k==3: fig.shift_origin(xshift="11c")
+    # 2 columns x 3 rows: even index (>0) starts a new row at the left column
+    if k>0:
+        if k%2==0: fig.shift_origin(xshift="-11c",yshift="-6.2c")
+        else: fig.shift_origin(xshift="11c")
     gplot=gplately.PlotTopologies(plate_reconstruction=recon,coastlines=model.get_coastlines(),
             continents=model.get_continental_polygons(),COBs=model.get_COBs(),time=float(t))
     cont=gplot.get_continents()                 # continents reconstructed to time t
@@ -109,26 +113,29 @@ for k,(t,L,nm) in enumerate(TIMES):
             fig.plot(x=dplon[m],y=dplat[m],style="c0.20c",fill=DCOL.get(tp,'gray'),pen="0.5p,black")
         # label key named deposits at their reconstructed position
         for item in LABELS.get(t,[]):
-            key,disp=item if isinstance(item,tuple) else (item,item)
+            if isinstance(item,tuple):
+                key=item[0]; disp=item[1]; off=item[2] if len(item)>2 else "0.20c/0c"
+            else: key=disp=item; off="0.20c/0c"
             idx=sd.index[sd.deposit_name.str.contains(key,case=False,na=False)]
             if len(idx):
                 j=int(idx[0])
                 fig.text(x=dplon[j],y=dplat[j],text=disp,font="8p,Helvetica-Bold,black",
-                         justify="LM",offset="0.20c/0c",fill="white@25",pen="0.3p,gray60",no_clip=True)
+                         justify="LM",offset=off,fill="white@25",pen="0.3p,gray60",no_clip=True)
     panel(fig,L,t,nm)
 
-# shared legend (two rows): colour = genesis; symbol size = occurrence vs deposit
-fig.shift_origin(xshift="-11c",yshift="-1.9c")
-fig.basemap(region=[0,22,0,2],projection="X22c/1.7c",frame=0)
-items=[("primary (sed./marine)","#3b6fb6"),("metamorphic","#1b7837"),
-       ("volcanogenic","#d6322a"),("karst / supergene","#7a7a7a")]
-for i,(lab,c) in enumerate(items):
-    x=0.5+i*5.4
-    fig.plot(x=[x],y=[1.3],style="c0.18c",fill=c,pen="0.4p,black")
-    fig.text(x=x+0.35,y=1.3,text=lab,font="10p,Helvetica,black",justify="ML",no_clip=True)
-fig.plot(x=[0.6],y=[0.5],style="c0.10c",fill="gray30")
-fig.text(x=0.95,y=0.5,text=f"Mn occurrence data (n={len(occ)})",font="10p,Helvetica,black",justify="ML",no_clip=True)
-fig.plot(x=[11],y=[0.5],style="c0.20c",fill="gray70",pen="0.5p,black")
-fig.text(x=11.4,y=0.5,text=f"deposit (Maynard, n={len(dep)})",font="10p,Helvetica,black",justify="ML",no_clip=True)
+# shared legend: one centered line, same width as the two-column plot (~21 cm).
+# Colour = genesis (applies to both layers); the two right-hand entries (small/large
+# symbol) distinguish occurrences from deposits — explained in the caption.
+fig.shift_origin(xshift="-11c",yshift="-1.7c")
+fig.basemap(region=[0,21,0,1],projection="X21c/0.8c",frame=0)
+leg=[("primary","#3b6fb6",0.16,None),("metamorphic","#1b7837",0.16,None),
+     ("volcanogenic","#d6322a",0.16,None),("karst/supergene","#7a7a7a",0.16,None),
+     (f"Mn occurrences (n={len(occ)})","gray30",0.09,None),
+     (f"Mn deposits (n={len(dep)})","gray70",0.20,"0.5p,black")]
+x0=0.4; dx=3.45
+for i,(lab,c,sz,pen) in enumerate(leg):
+    x=x0+i*dx
+    fig.plot(x=[x],y=[0.5],style=f"c{sz}c",fill=c,pen=(pen if pen else None))
+    fig.text(x=x+0.28,y=0.5,text=lab,font="9p,Helvetica,black",justify="ML",no_clip=True)
 fig.savefig(str(OUT/"Fig2_paleomaps.pdf")); fig.savefig(str(OUT/"Fig2_paleomaps.png"),dpi=300)
 print("wrote paper_figures/Fig2_paleomaps.pdf/.png")
