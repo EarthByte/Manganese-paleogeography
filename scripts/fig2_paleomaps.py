@@ -134,10 +134,13 @@ leg=[("primary","#3b6fb6",0.16,None),("metamorphic","#1b7837",0.16,None),
      ("volcanogenic","#d6322a",0.16,None),("karst/supergene","#7a7a7a",0.16,None),
      (f"Mn occurrences (n={len(occ)})","gray30",0.09,None),
      (f"Mn deposits (n={len(dep)})","gray70",0.20,"0.5p,black")]
-x0=0.4; dx=3.45
-for i,(lab,c,sz,pen) in enumerate(leg):
-    x=x0+i*dx
+# pack items left-to-right with width proportional to each label, then centre the row
+CH=0.155; GAP=0.5   # approx cm per char at 9p, and inter-item gap
+w=[0.30+len(lab)*CH+GAP for (lab,_,_,_) in leg]
+x=max(0.1,(21-sum(w))/2)
+for (lab,c,sz,pen),wi in zip(leg,w):
     fig.plot(x=[x],y=[0.5],style=f"c{sz}c",fill=c,pen=(pen if pen else None))
-    fig.text(x=x+0.28,y=0.5,text=lab,font="9p,Helvetica,black",justify="ML",no_clip=True)
+    fig.text(x=x+0.30,y=0.5,text=lab,font="9p,Helvetica,black",justify="ML",no_clip=True)
+    x+=wi
 fig.savefig(str(OUT/"Fig2_paleomaps.pdf")); fig.savefig(str(OUT/"Fig2_paleomaps.png"),dpi=300)
 print("wrote paper_figures/Fig2_paleomaps.pdf/.png")
