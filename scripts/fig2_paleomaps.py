@@ -122,18 +122,18 @@ for k,(t,L,nm) in enumerate(TIMES):
                          justify="LM",offset=off,fill="white@25",pen="0.3p,gray60",no_clip=True)
     panel(fig,L,t,nm)
 
-# shared legend: one centered line, same width as the two-column plot (~21 cm).
-# Colour = genesis (applies to both layers); the two right-hand entries (small/large
-# symbol) distinguish occurrences from deposits — explained in the caption.
-fig.shift_origin(xshift="-11c",yshift="-1.7c")
-fig.basemap(region=[0,21,0,1],projection="X21c/0.8c",frame=0)
+# shared legend: a tight box sized to its content (not the full plot width), centred
+# under the two-column plot. Colour = deposit type; small black dot = occurrences.
 leg=[("sedimentary","#0072B2",0.18,"0.4p,black"),("volcanogenic","#E69F00",0.18,"0.4p,black"),
      ("karst/supergene","#CC79A7",0.18,"0.4p,black"),
      (f"Mn occurrences (n={len(occ)})","black",0.09,None)]
-# pack items left-to-right with width proportional to each label, then centre the row
-CH=0.155; GAP=0.5   # approx cm per char at 9p, and inter-item gap
-w=[0.30+len(lab)*CH+GAP for (lab,_,_,_) in leg]
-x=max(0.1,(21-sum(w))/2)
+CH=0.16; GAP=0.45; PAD=0.35   # approx cm/char at 9p, inter-item gap, box side padding
+w=[0.32+len(lab)*CH+GAP for (lab,_,_,_) in leg]
+content=sum(w)-GAP; W=content+2*PAD
+fig.shift_origin(xshift=f"{(21-W)/2-11}c",yshift="-1.7c")
+fig.basemap(region=[0,W,0,1],projection=f"X{W}c/0.85c",frame=0)
+fig.plot(x=[0,W,W,0],y=[0.06,0.06,0.94,0.94],fill="white",pen="0.6p,gray50",close=True)
+x=PAD
 for (lab,c,sz,pen),wi in zip(leg,w):
     fig.plot(x=[x],y=[0.5],style=f"c{sz}c",fill=c,pen=(pen if pen else None))
     fig.text(x=x+0.30,y=0.5,text=lab,font="9p,Helvetica,black",justify="ML",no_clip=True)
