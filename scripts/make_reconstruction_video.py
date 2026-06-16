@@ -27,6 +27,9 @@ import argparse
 from pathlib import Path
 import numpy as np, pandas as pd, pygmt, pygplates, gplately
 from plate_model_manager import PlateModelManager
+from shapely.geometry import Point
+from shapely.ops import unary_union
+from shapely.prepared import prep
 
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; FR=OUT/"video_frames"; CACHE=REPO/"gplately_data"
@@ -73,6 +76,17 @@ def reconstruct_to(df,la,lo,t):
     plon,plat=pts.reconstruct(time=float(t),return_array=True)
     return np.asarray(plon),np.asarray(plat)
 
+def cont_prep(cont_gdf,buf=0.5):
+    try: return prep(unary_union(list(cont_gdf.geometry)).buffer(buf))
+    except Exception: return None
+
+def on_continent(plon,plat,pu):
+    """Keep only points that sit on a continent at this time (removes ocean points and
+    deep-time cases where a continental polygon's time-of-appearance postdates the point)."""
+    if pu is None: return np.ones(len(plon),dtype=bool)
+    return np.fromiter((pu.covers(Point(float(a),float(b))) for a,b in zip(plon,plat)),
+                       bool,count=len(plon))
+
 times=list(range(args.tmax,-1,-args.cadence))
 if times[-1]!=0: times.append(0)
 FR.mkdir(exist_ok=True)
@@ -83,26 +97,29 @@ for k,t in enumerate(times):
     if args.reuse_frames and png.exists(): continue
     gplot=gplately.PlotTopologies(plate_reconstruction=recon,coastlines=model.get_coastlines(),
             continents=model.get_continental_polygons(),COBs=model.get_COBs(),time=float(t))
+    cont=gplot.get_continents(); pu=cont_prep(cont)
     fig=pygmt.Figure()
     fig.basemap(region="d",projection="W0/18c",frame=0)
     fig.coast(land=None,water="white")
-    engine.plot_geo_data_frame(fig,gplot.get_continents(),fill="gray90",pen=None)
+    engine.plot_geo_data_frame(fig,cont,fill="gray90",pen=None)
     try:
         tl,tr=gplot.get_subduction_direction(); engine.plot_subduction_zones(fig,tl,tr,color="black")
     except Exception: pass
-    # occurrences already formed by time t
+    # occurrences formed by time t, reconstructed to t, kept only if on continent
     eo=occ[occ.age_mid>=t]
     if len(eo):
-        plon,plat=reconstruct_to(eo,"lat","lon",t)
+        plon,plat=reconstruct_to(eo,"lat","lon",t); kk=on_continent(plon,plat,pu)
+        plon,plat,gv=plon[kk],plat[kk],eo.group.values[kk]
         for grp in ["A","B","C"]:
-            m=eo.group.values==grp
+            m=gv==grp
             if m.any(): fig.plot(x=plon[m],y=plat[m],style="c0.10c",fill=OCOL[grp],pen=None,transparency=20)
-    # deposits already formed by time t
+    # deposits formed by time t, reconstructed to t, kept only if on continent
     ed=dep[dep.age_Ma>=t]
     if len(ed):
-        plon,plat=reconstruct_to(ed,"latitude","longitude",t)
-        for tp in ed.deposit_type.unique():
-            m=ed.deposit_type.values==tp
+        plon,plat=reconstruct_to(ed,"latitude","longitude",t); kk=on_continent(plon,plat,pu)
+        plon,plat,tvv=plon[kk],plat[kk],ed.deposit_type.values[kk]
+        for tp in np.unique(tvv):
+            m=tvv==tp
             fig.plot(x=plon[m],y=plat[m],style="c0.20c",fill=DCOL.get(tp,'gray'),pen="0.5p,black")
     fig.text(text=f"{t:.0f} Ma  (Cao et al. 2024)",position="TL",offset="0.3c/-0.3c",
              justify="TL",font="16p,Helvetica-Bold,black",fill="white",pen="0.6p,gray40",no_clip=True)

@@ -10,6 +10,9 @@ occurrences are excluded (host-age positions unreliable). Helvetica, no titles,
 from pathlib import Path
 import numpy as np, pandas as pd, pygmt, pygplates, gplately
 from plate_model_manager import PlateModelManager
+from shapely.geometry import Point
+from shapely.ops import unary_union
+from shapely.prepared import prep
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent; DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True); CACHE=REPO/"gplately_data"
 TIMES=[(660,"a","Cryogenian"),(370,"b","Late Devonian"),(150,"c","Jurassic"),(30,"d","Oligocene")]
 WIN_DEP=40    # +/- Myr window for deposits
@@ -44,6 +47,19 @@ def recon_to(df,la,lo,t):
     plon,plat=pts.reconstruct(time=float(t),return_array=True)
     return np.asarray(plon),np.asarray(plat)
 
+def cont_prep(cont_gdf,buf=0.5):
+    """Prepared (buffered) union of the reconstructed continents for fast point tests."""
+    try: return prep(unary_union(list(cont_gdf.geometry)).buffer(buf))
+    except Exception: return None
+
+def on_continent(plon,plat,pu):
+    """Boolean mask: which reconstructed points fall on continental crust at this time.
+    Catches both residual ocean points and deep-time cases where a continental polygon's
+    time-of-appearance is younger than the deposit (so no continent underlies the point)."""
+    if pu is None: return np.ones(len(plon),dtype=bool)
+    return np.fromiter((pu.covers(Point(float(a),float(b))) for a,b in zip(plon,plat)),
+                       bool,count=len(plon))
+
 def panel(fig,L,t,nm):
     fig.text(text=L,position="TL",offset="-0.0c/-0.2c",justify="TL",no_clip=True,
              font="15p,Helvetica-Bold,black",fill="white",pen="0.6p,gray40")
@@ -57,26 +73,37 @@ for k,(t,L,nm) in enumerate(TIMES):
     elif k==3: fig.shift_origin(xshift="11c")
     gplot=gplately.PlotTopologies(plate_reconstruction=recon,coastlines=model.get_coastlines(),
             continents=model.get_continental_polygons(),COBs=model.get_COBs(),time=float(t))
+    cont=gplot.get_continents()                 # continents reconstructed to time t
+    pu=cont_prep(cont)                           # for the on-continent point test
     fig.basemap(region="d",projection="W0/10c",frame=["af"])
     fig.coast(land=None,water="white")
     # continents as clean gray fills — no outlines, no internal subdivision lines
-    engine.plot_geo_data_frame(fig,gplot.get_continents(),fill="gray90",pen=None)
+    engine.plot_geo_data_frame(fig,cont,fill="gray90",pen=None)
     # (plate-boundary backbone omitted for clarity; only subduction zones drawn below)
     try:
         tl,tr=gplot.get_subduction_direction(); engine.plot_subduction_zones(fig,tl,tr,color="black")
     except Exception: pass
-    # density layer: occurrences within the window, reconstructed to panel time t
+    # density layer: occurrences in window, reconstructed to t, kept only if on continent
     so=occ[np.abs(occ.age_mid-t)<=WIN_OCC].reset_index(drop=True)
     if len(so):
-        oplon,oplat=recon_to(so,"lat","lon",t); gv=so.group.values
+        oplon,oplat=recon_to(so,"lat","lon",t)
+        keep=on_continent(oplon,oplat,pu)
+        if (~keep).any(): print(f"  {t} Ma: removed {(~keep).sum()} occurrence(s) off continent")
+        oplon,oplat,gv=oplon[keep],oplat[keep],so.group.values[keep]
         for grp in ("A","B","C"):
             m=gv==grp
             if m.any():
                 fig.plot(x=oplon[m],y=oplat[m],style="c0.10c",fill=OCOL[grp],pen=None,transparency=15)
-    # highlight layer: curated deposits within the window, reconstructed to panel time t
+    # highlight layer: curated deposits in window, reconstructed to t, kept only if on continent
     sd=dep[np.abs(dep.age_Ma-t)<=WIN_DEP].reset_index(drop=True)
     if len(sd):
-        dplon,dplat=recon_to(sd,"latitude","longitude",t); tv=sd.deposit_type.values
+        dplon,dplat=recon_to(sd,"latitude","longitude",t)
+        keep=on_continent(dplon,dplat,pu)
+        if (~keep).any():
+            print(f"  {t} Ma: deposit(s) off continent (check / time-of-appearance): "
+                  +", ".join(sd.deposit_name[~keep].tolist()))
+        sd=sd[keep].reset_index(drop=True); dplon,dplat=dplon[keep],dplat[keep]
+        tv=sd.deposit_type.values
         for tp in pd.unique(tv):
             m=tv==tp
             fig.plot(x=dplon[m],y=dplat[m],style="c0.20c",fill=DCOL.get(tp,'gray'),pen="0.5p,black")
