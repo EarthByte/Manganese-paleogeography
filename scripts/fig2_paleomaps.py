@@ -29,7 +29,7 @@ LABELS={900:[("Nagpur","NB")],
         370:[("Karazhal","KZ"),("Xialei","XL")],
         150:[("Molango","ML"),("Úrkút","UK")],
         99:[("Groote","GE")],
-        30:[("Nikopol","NK"),("Chiatura","CH"),("Tokmak","BT","0.20c/0.40c")]}
+        30:[("Nikopol","NK","0.18c/0.42c"),("Chiatura","CH","0.18c/-0.42c"),("Tokmak","BT","0.18c/0.0c")]}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
 # Use present-day coordinates + plate IDs and reconstruct TO EACH PANEL TIME, so points
@@ -118,7 +118,7 @@ for k,(t,L,nm) in enumerate(TIMES):
             idx=sd.index[sd.deposit_name.str.contains(key,case=False,na=False)]
             if len(idx):
                 j=int(idx[0])
-                fig.text(x=dplon[j],y=dplat[j],text=disp,font="8p,Helvetica-Bold,black",
+                fig.text(x=dplon[j],y=dplat[j],text=disp,font="11p,Helvetica-Bold,black",
                          justify="LM",offset=off,fill="white@25",pen="0.3p,gray60",no_clip=True)
     panel(fig,L,t,nm)
 
@@ -127,16 +127,16 @@ for k,(t,L,nm) in enumerate(TIMES):
 leg=[("sedimentary","#0072B2",0.18,"0.4p,black"),("volcanogenic","#E69F00",0.18,"0.4p,black"),
      ("karst/supergene","#CC79A7",0.18,"0.4p,black"),
      (f"Mn occurrences (n={len(occ)})","black",0.09,None)]
-CH=0.16; GAP=0.45; PAD=0.35   # approx cm/char at 9p, inter-item gap, box side padding
-w=[0.32+len(lab)*CH+GAP for (lab,_,_,_) in leg]
+CH=0.20; GAP=0.5; PAD=0.40    # approx cm/char at 11p, inter-item gap, box side padding
+w=[0.40+len(lab)*CH+GAP for (lab,_,_,_) in leg]
 content=sum(w)-GAP; W=content+2*PAD
-fig.shift_origin(xshift=f"{(21-W)/2-11}c",yshift="-1.7c")
-fig.basemap(region=[0,W,0,1],projection=f"X{W}c/0.85c",frame=0)
+fig.shift_origin(xshift=f"{(21-W)/2-11}c",yshift="-1.8c")
+fig.basemap(region=[0,W,0,1],projection=f"X{W}c/0.95c",frame=0)
 fig.plot(x=[0,W,W,0],y=[0.06,0.06,0.94,0.94],fill="white",pen="0.6p,gray50",close=True)
 x=PAD
 for (lab,c,sz,pen),wi in zip(leg,w):
     fig.plot(x=[x],y=[0.5],style=f"c{sz}c",fill=c,pen=(pen if pen else None))
-    fig.text(x=x+0.30,y=0.5,text=lab,font="9p,Helvetica,black",justify="ML",no_clip=True)
+    fig.text(x=x+0.34,y=0.5,text=lab,font="11p,Helvetica,black",justify="ML",no_clip=True)
     x+=wi
 fig.savefig(str(OUT/"Fig2_paleomaps.pdf")); fig.savefig(str(OUT/"Fig2_paleomaps.png"),dpi=300)
 print("wrote paper_figures/Fig2_paleomaps.pdf/.png")
