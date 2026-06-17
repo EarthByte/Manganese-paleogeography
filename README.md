@@ -86,5 +86,24 @@ the raw sources (only steps that read `data/raw/` need them).
 
 ## Citation
 If you use this database or code, please cite the accompanying manuscript (once
-published) and the original data sources (Maynard 2010; Pisarevsky et al. 2022;
-Schulz et al. 2017; Cao et al. 2024). A Zenodo DOI will be minted on release.
+published) and the original data sources listed under References. A Zenodo DOI will
+be minted on release.
+
+## References
+- **Maynard, J.B., 2010.** The chemistry of manganese ores through time: a signal of increasing
+  diversity of Earth-surface environments. *Economic Geology* 105, 535–552.
+  doi:10.2113/gsecongeo.105.3.535 — *source of the manganese-deposit compilation and geochemistry.*
+- **Pisarevsky, S.A., Li, Z.X., Tetley, M.G., Liu, Y., Beardmore, J.P., 2022.** An updated
+  internet-based Global Paleomagnetic Database. *Earth-Science Reviews* 235, 104258.
+  doi:10.1016/j.earscirev.2022.104258 — *paleomagnetic poles for the >1.8 Ga paleolatitudes.*
+- **Schulz, K.J., DeYoung, J.H. Jr., Seal, R.R. II, Bradley, D.C. (eds.), 2017.** Critical mineral
+  resources of the United States — economic and environmental geology and prospects for future
+  supply. *U.S. Geological Survey Professional Paper 1802.* doi:10.3133/pp1802 — *USGS
+  critical-mineral compilation, used only to assign/cross-check present-day deposit coordinates
+  (21 deposits flagged `auto(PP1802/seed)`); not a scientific input to the analysis.*
+- **Cao, X., Collins, A.S., Pisarevsky, S.A., Flament, N., Li, S., Hasterok, D., Müller, R.D., 2024.**
+  Earth's tectonic and plate boundary evolution over 1.8 billion years. *Geoscience Frontiers* 15,
+  101922. doi:10.1016/j.gsf.2024.101922 — *plate model used for the 0–1.8 Ga reconstructions.*
+- **Mather, B.R., Müller, R.D., Zahirovic, S., et al., 2024.** Deep time spatio-temporal data analysis
+  using pyGPlates with PlateTectonicTools and GPlately. *Geoscience Data Journal* 11, 3–10.
+  doi:10.1002/gdj3.185 — *GPlately / pyGPlates reconstruction software.*
