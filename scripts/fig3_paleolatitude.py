@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np, pandas as pd, pygmt
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True)
-COL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
+COL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica")
 def panel(fig,L):
     fig.text(text=L,position="TL",offset="0.2c/-0.2c",justify="TL",no_clip=True,
@@ -22,7 +22,7 @@ deep=deep[deep.n_Q3>0]
 fig=pygmt.Figure()
 # (a) |paleolat| vs age, 0-1.8 Ga
 fig.basemap(region=[0,1800,0,90],projection="X9c/6c",
-            frame=["xa300f100+lage (Ma)","ya30f10+l@~\\174@~paleolatitude@~\\174@~ (\\260)","WSrt"])
+            frame=["xa300f100+lAge (Ma)","ya30f10+l@~\\174@~paleolatitude@~\\174@~ (\\260)","WSrt"])
 fig.plot(x=[540,540,720,720],y=[0,90,90,0],fill="#c8e6c9@50",close=True,pen=None)
 for t,g in rec.groupby("deposit_type"):
     fig.plot(x=g.age_Ma,y=g.abspaleolat,style="c0.16c",fill=COL.get(t,'gray'),pen="0.3p,black",label=t)
@@ -34,7 +34,7 @@ panel(fig,"a")
 # NOTE: run latitude_null_test.py first to generate latitude_null_sample.csv
 fig.shift_origin(xshift="11c")
 fig.basemap(region=[0,90,0,1],projection="X6c/6c",
-            frame=["xa30f10+l@~\\174@~paleolat@~\\174@~ (\\260)","ya0.5f0.1+lcumulative fraction","WSrt"])
+            frame=["xa30f10+l@~\\174@~paleolat@~\\174@~ (\\260)","ya0.5f0.1+lCumulative fraction","WSrt"])
 nullf=DATA/"latitude_null_sample.csv"
 if nullf.exists():
     nv=np.sort(pd.read_csv(nullf)["abs_paleolat"].values)
@@ -48,7 +48,7 @@ panel(fig,"b")
 # (c) >1.8 Ga Q>=3 paleolatitudes
 fig.shift_origin(xshift="8c")
 fig.basemap(region=[1800,2900,0,90],projection="X7c/6c",
-            frame=["xa300f100+lage (Ma)","ya30f10","wSrt"])
+            frame=["xa300f100+lAge (Ma)","ya30f10","wSrt"])
 fig.plot(x=[2060,2060,2400,2400],y=[0,90,90,0],fill="#ffe0b2@50",close=True,pen=None)
 for t,g in deep.groupby("type"):
     fig.plot(x=g.age_Ma,y=g.abs_paleolat_Q3,style="t0.22c",fill=COL.get(t,'gray'),pen="0.4p,black")

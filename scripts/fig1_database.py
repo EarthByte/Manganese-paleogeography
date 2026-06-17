@@ -44,7 +44,7 @@ eras=[("Arch",2500,4000),("Paleop",1600,2500),("Meso",1000,1600),
 types=['sedimentary','volcanogenic','karst/other']
 with pygmt.config(FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica"):
     fig.basemap(region=[-0.5,len(eras)-0.5,0,1],projection="X8.2c/5c",
-                frame=["ya0.2f0.1+lfraction of deposits","WSrt"])  # era labels added manually below
+                frame=["ya0.2f0.1+lFraction of deposits","WSrt"])  # era labels added manually below
 # custom era tick labels
 for i,(nm,a,b) in enumerate(eras):
     fig.text(x=i,y=-0.06,text=nm,font="9p,Helvetica,black",no_clip=True)
@@ -63,7 +63,7 @@ fig.shift_origin(xshift="10.5c")
 edges=np.arange(0,2800,100); cnt,_=np.histogram(db.age_Ma,bins=edges); cen=(edges[:-1]+edges[1:])/2
 with pygmt.config(FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica"):
     fig.basemap(region=[0,2700,0,cnt.max()*1.15],projection="X-8.2c/5c",
-                frame=["xa500f100+lage (Ma)","yaf+ldeposits / 100 Myr","WSrt"])
+                frame=["xa500f100+lAge (Ma)","yaf+lDeposits / 100 Myr","WSrt"])
 fig.plot(x=[2060,2060,2400,2400],y=[0,cnt.max()*1.15,cnt.max()*1.15,0],
          fill="#ffe0b2@40",close=True,pen=None)   # GOE band
 fig.plot(x=[540,540,720,720],y=[0,cnt.max()*1.15,cnt.max()*1.15,0],

@@ -10,8 +10,10 @@ from pathlib import Path
 import numpy as np, pandas as pd, pygmt
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True)
-COL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
-pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica")
+COL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
+SH={'sedimentary':'sedi','volcanogenic':'volc','karst/other':'karst'}           # x-axis category labels
+pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica",
+             MAP_LABEL_OFFSET="0.45c")
 def panel(fig,L):
     fig.text(text=L,position="TL",offset="0.2c/-0.2c",justify="TL",no_clip=True,
              font="16p,Helvetica-Bold,black",fill="white",pen="0.6p,gray40")
@@ -29,7 +31,7 @@ fig=pygmt.Figure()
 # (a) counts by type x phase (grouped bars)
 ph=['assembly','dispersal/other']
 fig.basemap(region=[-0.5,1.5,0,db.groupby(['phase']).size().max()*1.15],projection="X7c/6c",
-            frame=["yaf+lnumber of deposits","WSrt"])  # x annotated manually below (category axis)
+            frame=["yaf+lNumber of deposits","WSrt"])  # x annotated manually below (category axis)
 w=0.22
 for j,t in enumerate(types):
     for i,p in enumerate(ph):
@@ -54,7 +56,7 @@ for i,t in enumerate(types):
     fig.plot(x=np.full(len(vv),i)+np.random.uniform(-.12,.12,len(vv)),y=vv,
              style="c0.10c",fill=COL[t],pen="0.2p,black",transparency=30)
     fig.plot(x=[i-0.25,i+0.25],y=[np.median(vv)]*2,pen="2p,black")
-    fig.text(x=i,y=0.06,text=t.split('/')[0][:4],font="9p,Helvetica,black",no_clip=True)
+    fig.text(x=i,y=0.06,text=SH[t],font="9p,Helvetica,black",no_clip=True)
 panel(fig,"b")
 
 # (c) schematic placeholder frame (annotate; final cartoon in Illustrator)
