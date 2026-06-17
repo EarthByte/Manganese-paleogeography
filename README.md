@@ -77,7 +77,7 @@ the raw sources (only steps that read `data/raw/` need them).
 - **Deposit inventory**: 140 dated Mn deposits from Maynard (2010), with genetic
   type, age, host, metamorphic grade, tonnage, and bulk geochemistry.
 - **Coordinates**: district-scale (≤~0.5°), from deposit/district names + USGS
-  PP1802; each row carries a `coord_confidence` flag.
+  PP1802 (Schulz et al. 2017); each row carries a `coord_confidence` flag.
 - **0–1.8 Ga reconstruction**: plate-ID by point-in-polygon, reconstructed to
   formation age in Cao et al. (2024) via GPlately/pyGPlates.
 - **>1.8 Ga paleolatitude**: same-craton (site ≤15°), coeval (±150 Myr) GPMDB poles
