@@ -3,12 +3,12 @@ Azul-Carajas,1850.0,10071,4208,Velho Guilherme Suite,"Antonio, P.Y.J., D’Agrel
 Azul-Carajas,1850.0,10069,4208,Carajás Dykes,"Antonio, P.Y.J., D’Agrella-Filho, M.S., Nédélec, A., Poujol, M., Sanchez, C., Dantas, E.L., Dall’Agnol, R., Teixeira, M.F.B., Proietti, A., Martínez Dopico, C.I., Oliveira, D.C., Silva, F.F., Marangoanha, B., Trindade, R.I.F.",2021,South America,-7.0,-51.0,-23.3,328.7,5.0,1879.0,1884.0,1881.5,7.0,1.1373713976580773
 Azul-Carajas,1850.0,9911,4100,Santa Rosa and Sobreiro formations,"Antonio, P.Y.J., D’Agrella-Filho, M.S., Trindade, R.I.F., Nédélec, A., de Oliveira, D.C., da Silva, F.F., Roverato, M., Lana, C.",2017,South America,-6.7,-52.1,-24.7,319.7,9.6,1872.0,1906.0,1889.0,7.0,1.8867189346845363
 Azul-Carajas,1850.0,9910,4100,Velho Guilherme Suite,"Antonio, P.Y.J., D’Agrella-Filho, M.S., Trindade, R.I.F., Nédélec, A., de Oliveira, D.C., da Silva, F.F., Roverato, M., Lana, C.",2017,South America,-6.6,-52.0,-31.1,220.1,12.4,1840.0,1880.0,1860.0,7.0,1.7619949104438415
-Azul-Carajas,1850.0,9499,3841,Avanavero Sills,"Bispo-Santos, F., D’Agrella-Filho, M.S., Trindade, R.I.F., Janikian, L., Reis, N.J.",2014,South America,4.5,-60.3,48.4,207.9,13.0,1786.0,1792.0,1789.0,6.0,14.56210195306046
+Azul-Carajas,1850.0,9499,3841,Avanavero Sills,"Bispo-Santos, F., D’Agrella-Filho, M.S., Trindade, R.I.F., Janikian, L., Reis, N.J.",2014,South America,4.5,-60.3,48.4,207.9,13.0,1786.0,1792.0,1789.0,6.0,14.562101953060434
 Azul-Carajas,1850.0,9486,3828,Surumu Volcanics,"Bispo-Santos, F., D’Agrella-Filho, M.S., Janikian, L., Reis, N.J., Trindade, R.I.F., Reis, M.A.A.A.",2014,South America,4.4,-60.8,27.4,234.8,10.1,1960.0,1980.0,1970.0,6.0,14.838013123801423
 Azul-Carajas,1850.0,9300,3699,Colider Suite,"Bispo-Santos, F., D'Agrella-Filho, M.S., Pacca, I.I.G., Janikian, L., Trindade, R.I.F., Elming, S.-A., Silva, J.A., Barros, M.A.S., Pinho, F.E.C.",2008,South America,-9.6,-54.9,63.3,118.8,9.8,1782.0,1796.0,1789.0,4.0,5.745280121910182
 Azul-Carajas,1850.0,8975,3536,French Guiana Granite and Amphibolite,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,South America,2.6,-52.6,5.0,230.0,19.9,1968.0,2017.0,1992.5,4.0,8.998048600534064
 Azul-Carajas,1850.0,8493,3315,Uaua Dykes,"D'Agrella-Filho, M.S., Pacca, I.G.",1998,South America,-10.0,-39.4,23.8,331.4,4.1,1952.0,2014.0,1983.0,4.0,11.473249924084007
-Azul-Carajas,1850.0,3004,701,Kabaledo Dykes,"Veldkamp, J., Mulder, F.G., Zijderveld, J.D.A.",1971,South America,5.0,-57.5,44.0,210.0,20.2,1650.0,1850.0,1750.0,3.0,13.22433003721464
+Azul-Carajas,1850.0,3004,701,Kabaledo Dykes,"Veldkamp, J., Mulder, F.G., Zijderveld, J.D.A.",1971,South America,5.0,-57.5,44.0,210.0,20.2,1650.0,1850.0,1750.0,3.0,13.224330037214669
 Bronkhorstfontein,1880.0,9971,4143,Black Hills Dykes,"Djeutchou, C., de Kock, M.O., Wabo, H., Gaitán, C.E., Söderlund, U., Gumsley, A.P.",2021,Africa,-24.5,30.5,15.3,14.9,,1839.0,1871.0,1855.0,7.0,1.3649352025600807
 Bronkhorstfontein,1880.0,9694,3958,Hartley Magmatic Province,"Semami, A.F., de Kock, M., Söderlund, U., Gumsley, A., Da Silva, R., Beukes, N., Armstrong, R.",2016,Africa,-26.7,26.0,22.7,328.6,14.6,1915.0,1927.0,1921.0,4.0,3.486816032461632
 Bronkhorstfontein,1880.0,9423,3784,Black Hills Dykes,"Lubnina, N.V., Ernst, R., Klausen, M, Söderlund, U.",2010,Africa,-24.3,30.8,9.4,352.0,11.5,1835.0,1875.0,1855.0,6.0,1.6513736083411217
@@ -24,7 +24,7 @@ Bronkhorstfontein,1880.0,9262,3683,Post-Waterberg Dolerites and Basalts,"Hanson,
 Bronkhorstfontein,1880.0,9024,3553,Hartley Lava,"Evans, D.A.D., Beukes, N.J., Kirschvink, J.L.",2002,Africa,-27.9,22.8,12.5,332.8,10.3,1924.0,1932.0,1928.0,4.0,6.518083668215299
 Bronkhorstfontein,1880.0,8755,3441,Kalahari Manganese Ores,"Evans, D.A.D., Gutzmer, J., Beukes, N.J., Kirschvink, J.L.",2001,Africa,-27.3,23.0,16.1,317.8,5.9,1800.0,1900.0,1850.0,3.0,6.079174769433352
 Bronkhorstfontein,1880.0,8097,3088,Mashonaland Dolerites,"Bates,M.P., Jones,D.L.",1996,Africa,-18.0,32.0,8.0,338.0,5.0,1870.0,1885.0,1877.5,6.0,7.074978319741866
-Bronkhorstfontein,1880.0,9416,3781,Vredefort Impact Structure,"Hart, R.J., Hargraves, R.B., Andreoli, M.A,G., Tredoux, M., Doucoure, C.M.",1995,Africa,-27.6,27.6,21.7,49.0,16.0,2019.0,2027.0,2023.0,4.0,3.3453432796645495
+Bronkhorstfontein,1880.0,9416,3781,Vredefort Impact Structure,"Hart, R.J., Hargraves, R.B., Andreoli, M.A,G., Tredoux, M., Doucoure, C.M.",1995,Africa,-27.6,27.6,21.7,49.0,16.0,2019.0,2027.0,2023.0,4.0,3.34534327966455
 Bronkhorstfontein,1880.0,8241,3172,Great Dyke related intrusions,"Mushayandebvu,M.F., Jones,D.L., Briden,J.C.",1995,Africa,-20.5,30.0,30.5,2.6,9.2,1900.0,2000.0,1950.0,3.0,4.105243597676648
 Bronkhorstfontein,1880.0,7548,2903,Northern Bushveld Complex,"Hattingh,P.J., Pauls,N.D.",1994,Africa,-24.0,29.0,7.9,359.3,33.6,1800.0,2000.0,1900.0,3.0,0.5000000000005914
 Bronkhorstfontein,1880.0,7547,2903,Northern Bushveld Complex,"Hattingh,P.J., Pauls,N.D.",1994,Africa,-24.0,29.0,1.6,22.3,8.6,1800.0,2000.0,1900.0,4.0,0.5000000000005914
@@ -69,47 +69,47 @@ Mokta (Grand Lahou),2050.0,5732,2196,Metamorphic Rocks,"Onstott, T.C., Dorbor, J
 Mokta (Grand Lahou),2050.0,432,1338,Harper Amphibolite,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,Africa,4.6,-7.8,3.0,92.0,14.0,1900.0,2000.0,1950.0,3.0,2.8344128236569324
 Mokta (Grand Lahou),2050.0,431,1338,Harper Amphibolite,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,Africa,4.6,-7.8,10.0,253.0,7.0,1900.0,2000.0,1950.0,3.0,2.8344128236569324
 Mokta (Grand Lahou),2050.0,2523,252,Dolerite intrusions,"Piper, J.D.A., Lomax, K.",1973,Africa,5.3,-2.0,53.0,216.0,14.0,2000.0,2200.0,2100.0,4.0,2.99433558136834
-Mokta (Grand Lahou),2050.0,2524,252,"Dolerite dyke, Obuasi","Piper, J.D.A., Lomax, K.",1973,Africa,6.2,-1.7,56.0,249.0,11.0,2000.0,2200.0,2100.0,3.0,3.463246585321361
+Mokta (Grand Lahou),2050.0,2524,252,"Dolerite dyke, Obuasi","Piper, J.D.A., Lomax, K.",1973,Africa,6.2,-1.7,56.0,249.0,11.0,2000.0,2200.0,2100.0,3.0,3.4632465853213614
 Nsuta,2050.0,8977,3536,Ferke Batholith,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,Africa,7.9,-5.6,25.0,263.0,18.9,1980.0,2020.0,2000.0,4.0,4.4731411302470905
-Nsuta,2050.0,8976,3536,Ivory Coast Intrusions,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,Africa,6.1,-5.1,82.0,112.0,16.1,2070.0,2100.0,2085.0,3.0,3.2399329213385
+Nsuta,2050.0,8976,3536,Ivory Coast Intrusions,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,Africa,6.1,-5.1,82.0,112.0,16.1,2070.0,2100.0,2085.0,3.0,3.2399329213385006
 Nsuta,2050.0,5732,2196,Metamorphic Rocks,"Onstott, T.C., Dorbor, J.",1987,Africa,7.5,-8.5,17.5,269.1,,2044.0,2056.0,2050.0,5.0,6.877020149853087
 Nsuta,2050.0,432,1338,Harper Amphibolite,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,Africa,4.6,-7.8,3.0,92.0,14.0,1900.0,2000.0,1950.0,3.0,5.867750937974135
 Nsuta,2050.0,431,1338,Harper Amphibolite,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,Africa,4.6,-7.8,10.0,253.0,7.0,1900.0,2000.0,1950.0,3.0,5.867750937974135
 Nsuta,2050.0,2523,252,Dolerite intrusions,"Piper, J.D.A., Lomax, K.",1973,Africa,5.3,-2.0,53.0,216.0,14.0,2000.0,2200.0,2100.0,4.0,0.05365397793096277
 Nsuta,2050.0,2524,252,"Dolerite dyke, Obuasi","Piper, J.D.A., Lomax, K.",1973,Africa,6.2,-1.7,56.0,249.0,11.0,2000.0,2200.0,2100.0,3.0,0.9530338132568833
-Postmasburg,2100.0,9996,4160,Bushveld Complex,"Wabo, H., de Kock, M.O., Belyanin, G.",2020,Africa,-25.8,28.8,26.6,36.0,6.7,2050.0,2068.0,2059.0,5.0,5.597770575394711
-Postmasburg,2100.0,9914,4103,Ongeluk Formation,"Gumsley, A.P., Chamberlain, K.R., Bleeker, W., Söderlund, U., de Kock, M.O., Larsson, E.R., Bekker, A.",2017,Africa,-28.0,23.0,4.1,282.9,6.2,2222.0,2228.0,2225.0,6.0,0.0666939747489267
-Postmasburg,2100.0,9913,4102,Hekpoort Formation,"Humbert, F., Sonnette, L., de Kock, M.O., Robion, P., Horng, C.S., Cousture, A., Wabo, H.",2017,Africa,-26.3,27.6,-44.1,40.0,5.2,2222.0,2228.0,2225.0,4.0,4.409389408871997
+Postmasburg,2100.0,9996,4160,Bushveld Complex,"Wabo, H., de Kock, M.O., Belyanin, G.",2020,Africa,-25.8,28.8,26.6,36.0,6.7,2050.0,2068.0,2059.0,5.0,5.597770575394645
+Postmasburg,2100.0,9914,4103,Ongeluk Formation,"Gumsley, A.P., Chamberlain, K.R., Bleeker, W., Söderlund, U., de Kock, M.O., Larsson, E.R., Bekker, A.",2017,Africa,-28.0,23.0,4.1,282.9,6.2,2222.0,2228.0,2225.0,6.0,0.06669397474346196
+Postmasburg,2100.0,9913,4102,Hekpoort Formation,"Humbert, F., Sonnette, L., de Kock, M.O., Robion, P., Horng, C.S., Cousture, A., Wabo, H.",2017,Africa,-26.3,27.6,-44.1,40.0,5.2,2222.0,2228.0,2225.0,4.0,4.409389408871914
 Postmasburg,2100.0,9920,4108,Phalaborwa pyroxenite,"Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2011,Africa,-23.96,31.13,27.7,35.8,5.2,2059.0,2061.0,2060.0,3.0,8.331190717166896
-Postmasburg,2100.0,9688,3957,"Bushveld Complex, Western Main Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-25.0,27.5,15.5,28.2,2.0,2052.0,2057.0,2054.5,5.0,5.014721828669865
-Postmasburg,2100.0,9689,3957,"Bushveld Complex, Eastern Main Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-25.0,29.7,18.3,40.5,3.3,2052.0,2057.0,2054.5,6.0,6.6845096367979036
+Postmasburg,2100.0,9688,3957,"Bushveld Complex, Western Main Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-25.0,27.5,15.5,28.2,2.0,2052.0,2057.0,2054.5,5.0,5.014721828669792
+Postmasburg,2100.0,9689,3957,"Bushveld Complex, Eastern Main Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-25.0,29.7,18.3,40.5,3.3,2052.0,2057.0,2054.5,6.0,6.684509636797849
 Postmasburg,2100.0,9418,3782,Vredefort Impact Structure Combined,"Salminen, J., Pesonen, L.J., Reimold, W.U., Donadini, F., Gibso, R.L.",2009,Africa,-26.9,27.3,22.8,41.6,5.6,2019.0,2027.0,2023.0,4.0,3.941835026246054
 Postmasburg,2100.0,9693,3957,Bushveld Complex Combined,"Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-24.5,28.0,19.2,30.8,,2052.0,2057.0,2054.5,6.0,5.6824322899115876
 Postmasburg,2100.0,9692,3957,"Bushveld Complex, Northern Main Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-24.0,28.9,17.5,28.8,3.8,2052.0,2057.0,2054.5,4.0,6.634180215674123
-Postmasburg,2100.0,9690,3957,"Bushveld Complex, Critical Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-25.0,29.7,22.1,31.0,6.8,2052.0,2057.0,2054.5,5.0,6.6845096367979036
-Postmasburg,2100.0,9691,3957,"Bushveld Complex, Upper Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-25.0,29.7,22.1,25.6,7.8,2052.0,2057.0,2054.5,5.0,6.6845096367979036
+Postmasburg,2100.0,9690,3957,"Bushveld Complex, Critical Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-25.0,29.7,22.1,31.0,6.8,2052.0,2057.0,2054.5,5.0,6.684509636797849
+Postmasburg,2100.0,9691,3957,"Bushveld Complex, Upper Zone","Letts, S., Torsvik, T.H., Webb, S.J., Ashwal, L.D.",2009,Africa,-25.0,29.7,22.1,25.6,7.8,2052.0,2057.0,2054.5,5.0,6.684509636797849
 Postmasburg,2100.0,9417,3782,Vredefort Impact Structure,"Salminen, J., Pesonen, L.J., Reimold, W.U., Donadini, F., Gibso, R.L.",2009,Africa,-26.9,27.3,25.4,43.8,8.1,2019.0,2027.0,2023.0,4.0,3.941835026246054
-Postmasburg,2100.0,9685,3955,Upper Swaershoek Formation and Alma Formation,"de Kock, M.O., Evans, D.A.D., Dorland, H.C., Beukes, N.J., Gutzmer, J.",2006,Africa,-24.5,28.5,10.5,150.4,8.5,1930.0,2054.0,1992.0,5.0,6.038838520624768
-Postmasburg,2100.0,9684,3955,Lower Swaershoek Formation,"de Kock, M.O., Evans, D.A.D., Dorland, H.C., Beukes, N.J., Gutzmer, J.",2006,Africa,-24.7,28.6,36.5,51.3,10.5,2050.0,2058.0,2054.0,5.0,5.994161616747128
+Postmasburg,2100.0,9685,3955,Upper Swaershoek Formation and Alma Formation,"de Kock, M.O., Evans, D.A.D., Dorland, H.C., Beukes, N.J., Gutzmer, J.",2006,Africa,-24.5,28.5,10.5,150.4,8.5,1930.0,2054.0,1992.0,5.0,6.038838520624708
+Postmasburg,2100.0,9684,3955,Lower Swaershoek Formation,"de Kock, M.O., Evans, D.A.D., Dorland, H.C., Beukes, N.J., Gutzmer, J.",2006,Africa,-24.7,28.6,36.5,51.3,10.5,2050.0,2058.0,2054.0,5.0,5.994161616747068
 Postmasburg,2100.0,9402,3767,Vredefort Impact Dykes,"Carporzen, L., Gilder, S.A., Hart, R.J.",2005,Africa,-27.8,27.4,21.1,48.4,3.9,2019.0,2027.0,2023.0,4.0,3.851406296473359
 Postmasburg,2100.0,9403,3767,Vredefort Impact Pseudotachylite,"Carporzen, L., Gilder, S.A., Hart, R.J.",2005,Africa,-27.8,27.4,22.3,45.1,1.9,2019.0,2027.0,2023.0,3.0,3.851406296473359
-Postmasburg,2100.0,9227,3654,"Bushveld Intrusion, well WP-16","Pechersky, D.M., Zakharov, V.S., Lyubushin, A.A.",2004,Africa,-25.7,27.52,12.0,35.4,4.4,2032.0,2088.0,2060.0,5.0,4.627613248895534
-Postmasburg,2100.0,9023,3553,Gamagara Formation and Wolhaarkop Paleosol,"Evans, D.A.D., Beukes, N.J., Kirschvink, J.L.",2002,Africa,-28.0,23.0,2.2,81.9,9.2,2060.0,2200.0,2130.0,4.0,0.0666939747489267
-Postmasburg,2100.0,8754,3441,Kalahari Manganese Ores,"Evans, D.A.D., Gutzmer, J., Beukes, N.J., Kirschvink, J.L.",2001,Africa,-27.3,23.0,-8.2,111.1,11.0,2210.0,2240.0,2225.0,3.0,0.7513059637642164
-Postmasburg,2100.0,8250,3175,Ongeluk Lavas,"Evans, D.A., Benkes, N.J., Kirschvink, J.L.",1997,Africa,-28.0,23.0,0.5,280.7,6.6,2209.0,2235.0,2222.0,6.0,0.0666939747489267
+Postmasburg,2100.0,9227,3654,"Bushveld Intrusion, well WP-16","Pechersky, D.M., Zakharov, V.S., Lyubushin, A.A.",2004,Africa,-25.7,27.52,12.0,35.4,4.4,2032.0,2088.0,2060.0,5.0,4.627613248895455
+Postmasburg,2100.0,9023,3553,Gamagara Formation and Wolhaarkop Paleosol,"Evans, D.A.D., Beukes, N.J., Kirschvink, J.L.",2002,Africa,-28.0,23.0,2.2,81.9,9.2,2060.0,2200.0,2130.0,4.0,0.06669397474346196
+Postmasburg,2100.0,8754,3441,Kalahari Manganese Ores,"Evans, D.A.D., Gutzmer, J., Beukes, N.J., Kirschvink, J.L.",2001,Africa,-27.3,23.0,-8.2,111.1,11.0,2210.0,2240.0,2225.0,3.0,0.7513059637637313
+Postmasburg,2100.0,8250,3175,Ongeluk Lavas,"Evans, D.A., Benkes, N.J., Kirschvink, J.L.",1997,Africa,-28.0,23.0,0.5,280.7,6.6,2209.0,2235.0,2222.0,6.0,0.06669397474346196
 Postmasburg,2100.0,9416,3781,Vredefort Impact Structure,"Hart, R.J., Hargraves, R.B., Andreoli, M.A,G., Tredoux, M., Doucoure, C.M.",1995,Africa,-27.6,27.6,21.7,49.0,16.0,2019.0,2027.0,2023.0,4.0,4.048753074456772
-Postmasburg,2100.0,8241,3172,Great Dyke related intrusions,"Mushayandebvu,M.F., Jones,D.L., Briden,J.C.",1995,Africa,-20.5,30.0,30.5,2.6,9.2,1900.0,2000.0,1950.0,3.0,9.850843464393385
-Postmasburg,2100.0,6466,2513,Bushveld Complex Upper Zone,"Hattingh, P.J.",1989,Africa,-25.0,29.5,-16.1,211.5,11.0,2038.0,2062.0,2050.0,5.0,6.525870318546032
+Postmasburg,2100.0,8241,3172,Great Dyke related intrusions,"Mushayandebvu,M.F., Jones,D.L., Briden,J.C.",1995,Africa,-20.5,30.0,30.5,2.6,9.2,1900.0,2000.0,1950.0,3.0,9.850843464393346
+Postmasburg,2100.0,6466,2513,Bushveld Complex Upper Zone,"Hattingh, P.J.",1989,Africa,-25.0,29.5,-16.1,211.5,11.0,2038.0,2062.0,2050.0,5.0,6.525870318545976
 Postmasburg,2100.0,1122,1619,Bushveld Complex Merensky Reef Footwall,"Hattingh,P.J.",1986,Africa,-25.5,27.5,-39.5,227.0,10.9,2038.0,2062.0,2050.0,5.0,4.720178382330554
-Postmasburg,2100.0,561,1407,Bushveld Complex Main Zone,"Hattingh, P.J.",1986,Africa,-25.6,27.5,9.2,27.3,2.8,2038.0,2062.0,2050.0,5.0,4.665460289053899
-Postmasburg,2100.0,1507,1805,Bushveld Complex Main Zone,"Hattingh, P.J.",1986,Africa,-25.0,30.0,20.2,32.9,4.7,2038.0,2062.0,2050.0,6.0,6.924309959317826
-Postmasburg,2100.0,435,1340,Limpopo Belt Metamorphics,"Morgan,G.E.",1985,Africa,-22.0,28.5,26.1,22.3,6.7,1941.0,2019.0,1980.0,4.0,7.806998494262284
-Postmasburg,2100.0,835,1522,Limpopo Belt gneisses,"Morgan,G.E., Briden,J.C.",1981,Africa,-22.0,29.0,26.0,22.0,7.8,1900.0,2100.0,2000.0,3.0,8.100659279648568
-Postmasburg,2100.0,834,1522,"Palabora igneous complex, Group 2","Morgan,G.E., Briden,J.C.",1981,Africa,-24.0,31.1,4.0,356.0,7.0,1900.0,2100.0,2000.0,4.0,8.287078683007563
-Postmasburg,2100.0,833,1522,"Palabora igneous complex, Group 1","Morgan,G.E., Briden,J.C.",1981,Africa,-24.0,31.1,35.0,45.0,8.1,1900.0,2100.0,2000.0,4.0,8.287078683007563
-Postmasburg,2100.0,2429,715,Transvaal System Lavas,"Briden,J.C.",1976,Africa,-25.5,29.2,40.0,194.0,15.7,2150.0,2350.0,2250.0,5.0,6.052657529462803
+Postmasburg,2100.0,561,1407,Bushveld Complex Main Zone,"Hattingh, P.J.",1986,Africa,-25.6,27.5,9.2,27.3,2.8,2038.0,2062.0,2050.0,5.0,4.665460289053821
+Postmasburg,2100.0,1507,1805,Bushveld Complex Main Zone,"Hattingh, P.J.",1986,Africa,-25.0,30.0,20.2,32.9,4.7,2038.0,2062.0,2050.0,6.0,6.924309959317774
+Postmasburg,2100.0,435,1340,Limpopo Belt Metamorphics,"Morgan,G.E.",1985,Africa,-22.0,28.5,26.1,22.3,6.7,1941.0,2019.0,1980.0,4.0,7.806998494262236
+Postmasburg,2100.0,835,1522,Limpopo Belt gneisses,"Morgan,G.E., Briden,J.C.",1981,Africa,-22.0,29.0,26.0,22.0,7.8,1900.0,2100.0,2000.0,3.0,8.100659279648523
+Postmasburg,2100.0,834,1522,"Palabora igneous complex, Group 2","Morgan,G.E., Briden,J.C.",1981,Africa,-24.0,31.1,4.0,356.0,7.0,1900.0,2100.0,2000.0,4.0,8.287078683007518
+Postmasburg,2100.0,833,1522,"Palabora igneous complex, Group 1","Morgan,G.E., Briden,J.C.",1981,Africa,-24.0,31.1,35.0,45.0,8.1,1900.0,2100.0,2000.0,4.0,8.287078683007518
+Postmasburg,2100.0,2429,715,Transvaal System Lavas,"Briden,J.C.",1976,Africa,-25.5,29.2,40.0,194.0,15.7,2150.0,2350.0,2250.0,5.0,6.052657529462743
 Postmasburg,2100.0,2564,211,Orange River Lavas,"Piper, J.D.A.",1975,Africa,-29.0,18.0,19.0,254.0,16.0,1900.0,2150.0,2025.0,3.0,4.53712295059645
-Postmasburg,2100.0,3044,627,Vredefort Ring Dykes,"Hargraves,R.B.",1970,Africa,-27.0,27.0,22.0,27.0,12.0,2019.0,2027.0,2023.0,3.0,3.6566546563527633
+Postmasburg,2100.0,3044,627,Vredefort Ring Dykes,"Hargraves,R.B.",1970,Africa,-27.0,27.0,22.0,27.0,12.0,2019.0,2027.0,2023.0,3.0,3.656654656352664
 Postmasburg,2100.0,3771,390,Bushveld Gabbro,"Gough, D.I., Van Niekerk, C.B.",1959,Africa,-25.5,28.0,23.0,36.0,9.0,2038.0,2062.0,2050.0,5.0,5.101403897390108
 Sandur-Shimoga,2900.0,10154,4272,Bangalore Dykes,"Pivarunas, A.F., Meert, J.G., Pandit, M.J., Sinha, A.",2019,Asia,12.9,78.5,2.0,73.0,7.0,2743.0,2763.0,2753.0,6.0,2.9334832184681985
 Sandur-Shimoga,2900.0,9904,4095,Singhbhum Newer Dykes 2760,"Kumar, A., Parashuramulu, V., Shankar, R., Besse, J.",2017,Asia,22.5,86.8,14.0,78.0,6.0,2760.0,2764.0,2762.0,5.0,12.232211957559553
@@ -122,9 +122,9 @@ Serra do Navio,2100.0,9413,3779,Paleoproterozoic Guiana Shield Rocks I,"Thevenia
 Serra do Navio,2100.0,8974,3536,French Guiana Granite and Metasediments,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,South America,3.7,-53.2,62.0,241.0,13.2,1987.0,2041.0,2014.0,6.0,2.9542023361133416
 Serra do Navio,2100.0,8975,3536,French Guiana Granite and Amphibolite,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,South America,2.6,-52.6,5.0,230.0,19.9,1968.0,2017.0,1992.5,4.0,1.7086899562941382
 Serra do Navio,2100.0,8692,3418,Oyapok Tonalite and Meta-Ultrabasite,"Nomade, S., Chen, Y., Feraud, G., Pouclet, A., Theveniaut, H.",2001,South America,3.1,-52.3,-28.0,346.0,9.9,1973.0,2052.0,2012.5,5.0,2.1212908178105465
-Serra do Navio,2100.0,430,1338,La Encrucijada Granite Pluton,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,South America,8.2,-63.0,37.0,216.0,15.0,1900.0,2000.0,1950.0,3.0,13.1109852354506
-Serra do Navio,2100.0,429,1338,La Encrucijada Granite Pluton,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,South America,8.2,-63.0,55.0,188.0,4.0,1900.0,2000.0,1950.0,3.0,13.1109852354506
-Tambao,2050.0,8977,3536,Ferke Batholith,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,Africa,7.9,-5.6,25.0,263.0,18.9,1980.0,2020.0,2000.0,4.0,8.76199340517587
+Serra do Navio,2100.0,430,1338,La Encrucijada Granite Pluton,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,South America,8.2,-63.0,37.0,216.0,15.0,1900.0,2000.0,1950.0,3.0,13.110985235450572
+Serra do Navio,2100.0,429,1338,La Encrucijada Granite Pluton,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,South America,8.2,-63.0,55.0,188.0,4.0,1900.0,2000.0,1950.0,3.0,13.110985235450572
+Tambao,2050.0,8977,3536,Ferke Batholith,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,Africa,7.9,-5.6,25.0,263.0,18.9,1980.0,2020.0,2000.0,4.0,8.761993405175872
 Tambao,2050.0,8976,3536,Ivory Coast Intrusions,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,Africa,6.1,-5.1,82.0,112.0,16.1,2070.0,2100.0,2085.0,3.0,9.992470220881547
 Tambao,2050.0,5732,2196,Metamorphic Rocks,"Onstott, T.C., Dorbor, J.",1987,Africa,7.5,-8.5,17.5,269.1,,2044.0,2056.0,2050.0,5.0,11.018336870939399
 Tambao,2050.0,432,1338,Harper Amphibolite,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,Africa,4.6,-7.8,3.0,92.0,14.0,1900.0,2000.0,1950.0,3.0,12.713757859930976
@@ -133,12 +133,12 @@ Tambao,2050.0,2372,1075,Aftout Plutons,"Lomax, K.",1975,Africa,26.1,-5.8,5.0,272
 Tambao,2050.0,2373,1075,Aftout Plutons,"Lomax, K.",1975,Africa,26.2,-5.9,6.0,270.1,7.8,1950.0,1982.0,1966.0,5.0,12.651276862396598
 Tambao,2050.0,2523,252,Dolerite intrusions,"Piper, J.D.A., Lomax, K.",1973,Africa,5.3,-2.0,53.0,216.0,14.0,2000.0,2200.0,2100.0,4.0,9.672017623257258
 Tambao,2050.0,2524,252,"Dolerite dyke, Obuasi","Piper, J.D.A., Lomax, K.",1973,Africa,6.2,-1.7,56.0,249.0,11.0,2000.0,2200.0,2100.0,3.0,8.731948572493865
-Woodie Woodie,2764.0,9912,4101,Black Range Dykes,"Evans, D.A.D., Smirnov, A.V., Gumsley, A.P.",2017,Australia,-21.8,120.2,-3.8,130.4,8.3,2770.0,2774.0,2772.0,6.0,0.9504120403313253
+Woodie Woodie,2764.0,9912,4101,Black Range Dykes,"Evans, D.A.D., Smirnov, A.V., Gumsley, A.P.",2017,Australia,-21.8,120.2,-3.8,130.4,8.3,2770.0,2774.0,2772.0,6.0,0.9504120403309418
 Woodie Woodie,2764.0,9178,3628,"Pilbara Flood Basalts, Packages 8-10","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,59.1,6.3,6.1,2715.0,2718.0,2716.5,6.0,1.4490225687643483
 Woodie Woodie,2764.0,9177,3628,"Pilbara Flood Basalts, Packages 4-7","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,50.4,318.2,12.5,2725.0,2752.0,2738.5,5.0,1.4490225687643483
 Woodie Woodie,2764.0,9176,3628,"Pilbara Flood Basalts, Package 2","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,46.5,332.7,10.0,2760.0,2770.0,2765.0,4.0,1.4490225687643483
 Woodie Woodie,2764.0,9175,3628,"Pilbara Flood Basalts, Package 1","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,40.8,339.8,2.9,2770.0,2774.0,2772.0,6.0,1.4490225687643483
-Woodie Woodie,2764.0,308,1278,Millindinna Complex,"Schmidt, P.W., Embleton, B.J.J.",1985,Australia,-20.9,117.5,-11.9,161.3,5.2,2850.0,2870.0,2860.0,5.0,3.518651060134318
+Woodie Woodie,2764.0,308,1278,Millindinna Complex,"Schmidt, P.W., Embleton, B.J.J.",1985,Australia,-20.9,117.5,-11.9,161.3,5.2,2850.0,2870.0,2860.0,5.0,3.5186510601342147
 Woodie Woodie,2764.0,309,1278,Mount Jope Volcanics,"Schmidt, P.W., Embleton, B.J.J.",1985,Australia,-22.8,117.3,-40.5,128.7,10.9,2715.0,2772.0,2743.5,5.0,3.8048825125327697
 Woodie Woodie,2764.0,311,1278,Mount Roe Basalt,"Schmidt, P.W., Embleton, B.J.J.",1985,Australia,-21.0,117.8,-52.4,178.0,6.5,2764.0,2778.0,2771.0,6.0,3.223991155275376
 Woodie Woodie,2764.0,1954,1047,Black Range Dyke,"Embleton,B.J.J.",1978,Australia,-21.6,119.4,32.0,334.0,6.0,2770.0,2774.0,2772.0,6.0,1.6735883470945883
@@ -157,23 +157,23 @@ Kisenge-Kamata-Kapolo,2201.0,9692,3957,"Bushveld Complex, Northern Main Zone","L
 Marau,2700.0,10115,4242,Parauapebas Formation Drill Cores,"Martins, P.L.G., Toledo, C.L.B., Silva, A.M., Antonio, P.Y.J., Chemale Jr., F, Assis, L.M., Trindade, R.I.F.",2021,South America,-6.07,-50.19,-44.6,40.5,8.5,2743.0,2761.0,2752.0,6.0,13.624530203932977
 Marau,2700.0,9948,4127,Uaua Dykes,"Salminen, J., Oliveira, E. P., Piispa, E. J., Smirnov, A. V., Trindade,  R. I. F.",2019,South America,-9.9,-39.4,25.0,331.4,5.0,2617.0,2631.0,2624.0,5.0,4.2181756434762585
 Maripa,2100.0,9486,3828,Surumu Volcanics,"Bispo-Santos, F., D’Agrella-Filho, M.S., Janikian, L., Reis, N.J., Trindade, R.I.F., Reis, M.A.A.A.",2014,South America,4.4,-60.8,27.4,234.8,10.1,1960.0,1980.0,1970.0,6.0,5.316108739821828
-Maripa,2100.0,9415,3779,Paleoproterozoic Guiana Shield Rocks III,"Theveniaut, H., Delor, C., Lafon, J.M., Monie, P., Rossi., P., Lahondere, D.",2006,South America,3.7,-52.2,2.7,166.3,10.1,2076.0,2084.0,2080.0,4.0,3.537917381385785
+Maripa,2100.0,9415,3779,Paleoproterozoic Guiana Shield Rocks III,"Theveniaut, H., Delor, C., Lafon, J.M., Monie, P., Rossi., P., Lahondere, D.",2006,South America,3.7,-52.2,2.7,166.3,10.1,2076.0,2084.0,2080.0,4.0,3.5379173813857854
 Maripa,2100.0,9414,3779,Paleoproterozoic Guiana Shield Rocks II,"Theveniaut, H., Delor, C., Lafon, J.M., Monie, P., Rossi., P., Lahondere, D.",2006,South America,3.6,-52.9,-1.8,112.5,11.9,2085.0,2101.0,2093.0,4.0,2.9464639733538704
 Maripa,2100.0,9413,3779,Paleoproterozoic Guiana Shield Rocks I,"Theveniaut, H., Delor, C., Lafon, J.M., Monie, P., Rossi., P., Lahondere, D.",2006,South America,3.6,-53.3,-35.2,34.2,9.4,2142.0,2152.0,2147.0,4.0,2.602411111036154
-Maripa,2100.0,8974,3536,French Guiana Granite and Metasediments,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,South America,3.7,-53.2,62.0,241.0,13.2,1987.0,2041.0,2014.0,6.0,2.6361587024402864
+Maripa,2100.0,8974,3536,French Guiana Granite and Metasediments,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,South America,3.7,-53.2,62.0,241.0,13.2,1987.0,2041.0,2014.0,6.0,2.636158702440425
 Maripa,2100.0,8975,3536,French Guiana Granite and Amphibolite,"Nomade, S., Chen, Y., Pouclet, A., Féraud, G., Théveniaut, H., Daouda, B.Y., Vidal, M., Rigolet, C.",2003,South America,2.6,-52.6,5.0,230.0,19.9,1968.0,2017.0,1992.5,4.0,3.759230362632521
 Maripa,2100.0,8692,3418,Oyapok Tonalite and Meta-Ultrabasite,"Nomade, S., Chen, Y., Feraud, G., Pouclet, A., Theveniaut, H.",2001,South America,3.1,-52.3,-28.0,346.0,9.9,1973.0,2052.0,2012.5,5.0,3.7145605523844036
-Maripa,2100.0,430,1338,La Encrucijada Granite Pluton,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,South America,8.2,-63.0,37.0,216.0,15.0,1900.0,2000.0,1950.0,3.0,8.107456097839318
-Maripa,2100.0,429,1338,La Encrucijada Granite Pluton,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,South America,8.2,-63.0,55.0,188.0,4.0,1900.0,2000.0,1950.0,3.0,8.107456097839318
+Maripa,2100.0,430,1338,La Encrucijada Granite Pluton,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,South America,8.2,-63.0,37.0,216.0,15.0,1900.0,2000.0,1950.0,3.0,8.107456097839227
+Maripa,2100.0,429,1338,La Encrucijada Granite Pluton,"Onstott, T.C., Hargraves, R.B., York, D., Hall, C.",1984,South America,8.2,-63.0,55.0,188.0,4.0,1900.0,2000.0,1950.0,3.0,8.107456097839227
 Morro da Mina,2700.0,9948,4127,Uaua Dykes,"Salminen, J., Oliveira, E. P., Piispa, E. J., Smirnov, A. V., Trindade,  R. I. F.",2019,South America,-9.9,-39.4,25.0,331.4,5.0,2617.0,2631.0,2624.0,5.0,11.504920800289817
-North Kanara,2900.0,10154,4272,Bangalore Dykes,"Pivarunas, A.F., Meert, J.G., Pandit, M.J., Sinha, A.",2019,Asia,12.9,78.5,2.0,73.0,7.0,2743.0,2763.0,2753.0,6.0,4.323327806798401
+North Kanara,2900.0,10154,4272,Bangalore Dykes,"Pivarunas, A.F., Meert, J.G., Pandit, M.J., Sinha, A.",2019,Asia,12.9,78.5,2.0,73.0,7.0,2743.0,2763.0,2753.0,6.0,4.323327806798402
 North Kanara,2900.0,9904,4095,Singhbhum Newer Dykes 2760,"Kumar, A., Parashuramulu, V., Shankar, R., Besse, J.",2017,Asia,22.5,86.8,14.0,78.0,6.0,2760.0,2764.0,2762.0,5.0,13.956372159208646
 North Kanara,2900.0,8143,3118,Banded Hematite Jasper Formation,"Das,A.K., Piper,J.D.A., Mallik,S.B., Sherwood,G.J.",1996,Asia,22.0,85.4,23.8,32.1,12.2,2900.0,3150.0,3025.0,4.0,12.593349541360798
 North Kanara,2900.0,2633,256,Newer Dolerites 3,"Verma, R.K., Prasad, S.N.",1974,Asia,22.5,86.0,29.5,94.1,16.5,2760.0,2764.0,2762.0,3.0,13.331716751980162
 Panch Mahals,2100.0,10247,4328,Belagumba Dyke,"Mamilla, V., Nathi, R.B.",2023,Asia,13.24,76.32,-6.1,325.8,23.6,2200.0,2300.0,2250.0,3.0,9.85487843929364
 Panch Mahals,2100.0,10113,4240,E-W and NW-SE 2.07 Ga Dharwar Dykes,"Nagaraju, E., Parashuramulu, V., Ramesh Babu, N., Narayana, A.C.",2018,Asia,16.0,78.5,57.0,113.0,6.0,2205.0,2209.0,2207.0,6.0,8.115411294303035
 Panch Mahals,2100.0,10104,4232,Dharwar AKLD Dyke,"Nagaraju, E, Parashuramulu, V, Kumar, A., Sarma, S.",2018,Asia,14.0,77.0,-36.0,312.0,6.0,2215.0,2218.0,2216.5,4.0,9.307810921804764
-Panch Mahals,2100.0,10258,4333,NE-SW Dharwar Dykes 2.37 Ga,"Babu, N.R., Venkateshwarlu, M., Shankar, R., Nagaraju, E., Parashuramulu, V.",2018,Asia,17.082,78.571,41.0,200.0,9.0,2060.0,2100.0,2080.0,4.0,7.265374169166391
+Panch Mahals,2100.0,10258,4333,NE-SW Dharwar Dykes 2.37 Ga,"Babu, N.R., Venkateshwarlu, M., Shankar, R., Nagaraju, E., Parashuramulu, V.",2018,Asia,17.082,78.571,41.0,200.0,9.0,2060.0,2100.0,2080.0,4.0,7.265374169166442
 Panch Mahals,2100.0,9852,4059,Cuddapah 2.08 Ga Dykes Combined,"Kumar, A., Parashuramulu, V., Nagaraju, E.",2015,Asia,15.998,78.479,38.0,180.0,6.0,2080.0,2083.0,2081.5,5.0,8.106318634609437
 Panch Mahals,2100.0,9563,3882,Dharwar 2.18 Ga Dykes Combined,"Belica, M.E., Piispa, E.J., Meert, J.G., Pesonen, L.J., Plado, J., Pandit, M.K., Kamenov, G.D., Celestino, M.",2014,Asia,13.7,77.741,67.5,84.5,17.9,2172.0,2182.0,2177.0,5.0,9.83761419097309
 Panch Mahals,2100.0,9562,3882,Dharwar 2.21 Ga Dykes Combined,"Belica, M.E., Piispa, E.J., Meert, J.G., Pesonen, L.J., Plado, J., Pandit, M.K., Kamenov, G.D., Celestino, M.",2014,Asia,14.65,77.914,30.8,120.7,10.9,2210.0,2215.0,2212.5,5.0,9.03150721997443
@@ -183,20 +183,20 @@ Panch Mahals,2100.0,9362,3738,"Bundelkhand Mafic Dykes, NW-SE trending","Pradhan
 Panch Mahals,2100.0,9345,3727,Anantapur E-W older dykes,"Pradhan, V.R., Meert, J.G., Pandit, M.K., Kamenov, G., Gregory, L.C., Malone, S.J.",2010,Asia,13.9,78.1,28.0,176.0,14.0,1700.0,2500.0,2100.0,4.0,9.78887385383284
 Panch Mahals,2100.0,7780,2998,Tiruvannamalai Dykes,"Radhakrishna, T., Joseph, M.",1996,Asia,12.1,79.1,-17.8,235.2,9.4,1630.0,2270.0,1950.0,4.0,11.830297837506482
 Panch Mahals,2100.0,91,1179,"NE Dolerite dykes, Indian Shield","Kumar, A., Bhalla, M.S.",1983,Asia,14.2,77.8,26.8,180.1,4.7,1700.0,2500.0,2100.0,4.0,9.397466477403777
-Panch Mahals,2100.0,92,1179,"ENE Dolerite dykes, Indian Shield","Kumar, A., Bhalla, M.S.",1983,Asia,14.2,77.6,1.3,227.4,4.6,1700.0,2500.0,2100.0,4.0,9.32271804080397
-Ravensthorpe,2764.0,9912,4101,Black Range Dykes,"Evans, D.A.D., Smirnov, A.V., Gumsley, A.P.",2017,Australia,-21.8,120.2,-3.8,130.4,8.3,2770.0,2774.0,2772.0,6.0,11.8013200101318
-Ravensthorpe,2764.0,9178,3628,"Pilbara Flood Basalts, Packages 8-10","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,59.1,6.3,6.1,2715.0,2718.0,2716.5,6.0,11.603016050565962
-Ravensthorpe,2764.0,9177,3628,"Pilbara Flood Basalts, Packages 4-7","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,50.4,318.2,12.5,2725.0,2752.0,2738.5,5.0,11.603016050565962
-Ravensthorpe,2764.0,9176,3628,"Pilbara Flood Basalts, Package 2","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,46.5,332.7,10.0,2760.0,2770.0,2765.0,4.0,11.603016050565962
-Ravensthorpe,2764.0,9175,3628,"Pilbara Flood Basalts, Package 1","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,40.8,339.8,2.9,2770.0,2774.0,2772.0,6.0,11.603016050565962
+Panch Mahals,2100.0,92,1179,"ENE Dolerite dykes, Indian Shield","Kumar, A., Bhalla, M.S.",1983,Asia,14.2,77.6,1.3,227.4,4.6,1700.0,2500.0,2100.0,4.0,9.322718040803972
+Ravensthorpe,2764.0,9912,4101,Black Range Dykes,"Evans, D.A.D., Smirnov, A.V., Gumsley, A.P.",2017,Australia,-21.8,120.2,-3.8,130.4,8.3,2770.0,2774.0,2772.0,6.0,11.801320010131768
+Ravensthorpe,2764.0,9178,3628,"Pilbara Flood Basalts, Packages 8-10","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,59.1,6.3,6.1,2715.0,2718.0,2716.5,6.0,11.60301605056593
+Ravensthorpe,2764.0,9177,3628,"Pilbara Flood Basalts, Packages 4-7","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,50.4,318.2,12.5,2725.0,2752.0,2738.5,5.0,11.60301605056593
+Ravensthorpe,2764.0,9176,3628,"Pilbara Flood Basalts, Package 2","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,46.5,332.7,10.0,2760.0,2770.0,2765.0,4.0,11.60301605056593
+Ravensthorpe,2764.0,9175,3628,"Pilbara Flood Basalts, Package 1","Strik,G., Blake,T.S., Zegers,T.E., White,S.H., Langereis,C.G.",2003,Australia,-22.0,119.7,40.8,339.8,2.9,2770.0,2774.0,2772.0,6.0,11.60301605056593
 Ravensthorpe,2764.0,308,1278,Millindinna Complex,"Schmidt, P.W., Embleton, B.J.J.",1985,Australia,-20.9,117.5,-11.9,161.3,5.2,2850.0,2870.0,2860.0,5.0,12.891591417180138
-Ravensthorpe,2764.0,309,1278,Mount Jope Volcanics,"Schmidt, P.W., Embleton, B.J.J.",1985,Australia,-22.8,117.3,-40.5,128.7,10.9,2715.0,2772.0,2743.5,5.0,11.057603683595547
+Ravensthorpe,2764.0,309,1278,Mount Jope Volcanics,"Schmidt, P.W., Embleton, B.J.J.",1985,Australia,-22.8,117.3,-40.5,128.7,10.9,2715.0,2772.0,2743.5,5.0,11.057603683595548
 Ravensthorpe,2764.0,311,1278,Mount Roe Basalt,"Schmidt, P.W., Embleton, B.J.J.",1985,Australia,-21.0,117.8,-52.4,178.0,6.5,2764.0,2778.0,2771.0,6.0,12.749666136183837
 Ravensthorpe,2764.0,1954,1047,Black Range Dyke,"Embleton,B.J.J.",1978,Australia,-21.6,119.4,32.0,334.0,6.0,2770.0,2774.0,2772.0,6.0,12.011696097998534
-Ravensthorpe,2764.0,1955,1047,Cajuput Dyke,"Embleton,B.J.J.",1978,Australia,-22.0,121.1,46.0,326.0,13.0,2770.0,2774.0,2772.0,4.0,11.64048349891151
+Ravensthorpe,2764.0,1955,1047,Cajuput Dyke,"Embleton,B.J.J.",1978,Australia,-22.0,121.1,46.0,326.0,13.0,2770.0,2774.0,2772.0,4.0,11.640483498911477
 Vittinki,1950.0,10242,4324,Nilsiä Microtonalite Dykes,"Luoto, T., Salminen, J., Mertanen, S., Elming, S-Å., Pesonen, L.J.",2023,Europe,63.14,28.23,45.3,228.4,2.3,1790.0,1860.0,1825.0,4.0,2.4902429259570487
 Vittinki,1950.0,10240,4324,Jalokoski Gabbro,"Luoto, T., Salminen, J., Mertanen, S., Elming, S-Å., Pesonen, L.J.",2023,Europe,67.48,23.41,44.0,235.5,8.1,1860.0,1872.0,1866.0,4.0,4.686962340601335
-Vittinki,1950.0,10239,4324,Svecofennian Gabbros Combined,"Luoto, T., Salminen, J., Mertanen, S., Elming, S-Å., Pesonen, L.J.",2023,Europe,64.0,25.0,47.0,238.0,,1875.0,1891.0,1883.0,5.0,1.5523555548630203
+Vittinki,1950.0,10239,4324,Svecofennian Gabbros Combined,"Luoto, T., Salminen, J., Mertanen, S., Elming, S-Å., Pesonen, L.J.",2023,Europe,64.0,25.0,47.0,238.0,,1875.0,1891.0,1883.0,5.0,1.552355554863255
 Vittinki,1950.0,10238,4324,Mertuanoja Gabbro,"Luoto, T., Salminen, J., Mertanen, S., Elming, S-Å., Pesonen, L.J.",2023,Europe,64.11,24.57,49.1,234.7,5.4,1870.0,1900.0,1885.0,3.0,1.5301661289264956
 Vittinki,1950.0,10237,4324,Ylivieska Gabbro,"Luoto, T., Salminen, J., Mertanen, S., Elming, S-Å., Pesonen, L.J.",2023,Europe,64.04,24.38,47.7,245.7,6.6,1875.0,1891.0,1883.0,4.0,1.4272780150856785
 Vittinki,1950.0,10236,4324,Kiuruvesi Gabbrodiorite,"Luoto, T., Salminen, J., Mertanen, S., Elming, S-Å., Pesonen, L.J.",2023,Europe,63.55,26.26,43.0,229.9,2.8,1881.0,1891.0,1886.0,5.0,1.7318735242748973
@@ -204,14 +204,14 @@ Vittinki,1950.0,9923,4109,Joulovaare Gabbro,"Elming, S-A., Layer, P., Söderlund
 Vittinki,1950.0,9888,4085,Eastern Murman Sills,"Veselovskiy, R.V., Samsonov, A.V., Stepanova, A.V., Salnikova, E.B., Larionova, Yu.O., Travin, A.V., Arzamastsev, A.A., Egorova, S.V., Erofeeva, K, G., Stifeeva, M.V., Shcherbakova, V.V., Shcherbakov, V.P., Zhidkov, G.V., Zakharov, V.S.",2019,Europe,68.54,37.88,54.7,234.7,4.5,1854.0,1870.0,1862.0,5.0,8.417693394859683
 Vittinki,1950.0,9855,4062,Onego Intrusions Combined,"Lubnina, N.V., Pisarevsky, S.A., Stepanova, A.V., Bogdanova, S.V., Sokolov, S.J.",2017,Europe,62.1,34.0,48.0,106.4,,1967.0,1992.0,1979.5,6.0,5.220521774923667
 Vittinki,1950.0,9854,4062,Onego 1975 Ma Intrusions,"Lubnina, N.V., Pisarevsky, S.A., Stepanova, A.V., Bogdanova, S.V., Sokolov, S.J.",2017,Europe,62.1,34.0,44.4,101.5,,1967.0,1985.0,1976.0,6.0,5.220521774923667
-Vittinki,1950.0,9853,4062,Onego 1985 Ma Intrusions,"Lubnina, N.V., Pisarevsky, S.A., Stepanova, A.V., Bogdanova, S.V., Sokolov, S.J.",2017,Europe,62.1,35.9,60.9,144.8,,1976.0,1992.0,1984.0,5.0,6.088584709602333
-Vittinki,1950.0,9687,3956,Keuruu Dykes,"Klein, R., Pesonen, L.J., Mänttäri, I., Heinonen, J.S.",2016,Europe,62.26,24.72,45.7,230.9,5.8,1859.0,1879.0,1869.0,6.0,1.0372441078574681
+Vittinki,1950.0,9853,4062,Onego 1985 Ma Intrusions,"Lubnina, N.V., Pisarevsky, S.A., Stepanova, A.V., Bogdanova, S.V., Sokolov, S.J.",2017,Europe,62.1,35.9,60.9,144.8,,1976.0,1992.0,1984.0,5.0,6.088584709602334
+Vittinki,1950.0,9687,3956,Keuruu Dykes,"Klein, R., Pesonen, L.J., Mänttäri, I., Heinonen, J.S.",2016,Europe,62.26,24.72,45.7,230.9,5.8,1859.0,1879.0,1869.0,6.0,1.037244107857468
 Vittinki,1950.0,9420,3783,Volyn-Dniestr-Bug basic intrusions B-group,"Elming, S-Å., Shumlyanskyy, L., Kravchenko, S., Layer, P., Söderlund, U.",2010,Europe,50.9,27.4,69.2,151.9,11.5,1990.0,2010.0,2000.0,4.0,12.155318011376059
-Vittinki,1950.0,9419,3783,Volyn-Dniestr-Bug basic intrusions A-group,"Elming, S-Å., Shumlyanskyy, L., Kravchenko, S., Layer, P., Söderlund, U.",2010,Europe,49.6,29.8,15.2,184.2,13.7,2041.0,2081.0,2061.0,4.0,13.743104394237761
+Vittinki,1950.0,9419,3783,Volyn-Dniestr-Bug basic intrusions A-group,"Elming, S-Å., Shumlyanskyy, L., Kravchenko, S., Layer, P., Söderlund, U.",2010,Europe,49.6,29.8,15.2,184.2,13.7,2041.0,2081.0,2061.0,4.0,13.743104394237736
 Vittinki,1950.0,10018,4172,"Lake Ladoga, Mean intr. & dykes, A comp.","Mertanen, S., Eklund, O., Shebanov, A., Frank-Kamenetsky, D., Vasilieva, T.",2006,Europe,61.3,30.0,50.9,229.1,,1785.0,1819.0,1802.0,5.0,3.690388528335217
 Vittinki,1950.0,8946,3520,Generalskaya Layered Intrusion,"Arestova, N.A., Khramov, A.N., Gooskova, E.G., Iosifidi, A.G.",2002,Europe,69.4,31.0,51.1,220.1,6.3,1800.0,1840.0,1820.0,3.0,7.374441518596708
-Vittinki,1950.0,8949,3520,Imandra Layered Intrusion,"Arestova, N.A., Khramov, A.N., Gooskova, E.G., Iosifidi, A.G.",2002,Europe,67.6,33.1,44.3,238.0,6.2,1800.0,1840.0,1820.0,5.0,6.442046178830488
-Vittinki,1950.0,8659,3404,Belokorovichy Sediments,"Elming, S-Å., Mikhailova, N.P., Kravchenko, S.",2001,Europe,51.12,28.0,39.2,172.5,7.9,1800.0,2000.0,1900.0,3.0,12.009613106869871
+Vittinki,1950.0,8949,3520,Imandra Layered Intrusion,"Arestova, N.A., Khramov, A.N., Gooskova, E.G., Iosifidi, A.G.",2002,Europe,67.6,33.1,44.3,238.0,6.2,1800.0,1840.0,1820.0,5.0,6.4420461788305445
+Vittinki,1950.0,8659,3404,Belokorovichy Sediments,"Elming, S-Å., Mikhailova, N.P., Kravchenko, S.",2001,Europe,51.12,28.0,39.2,172.5,7.9,1800.0,2000.0,1900.0,3.0,12.009613106869873
 Vittinki,1950.0,8658,3404,Gabbroic dyke in Ostinsk Complex,"Elming, S-Å., Mikhailova, N.P., Kravchenko, S.",2001,Europe,51.3,27.23,53.3,126.9,7.8,1970.0,2030.0,2000.0,4.0,11.74285207375506
 Vittinki,1950.0,8657,3404,Bukinsky Massif,"Elming, S-Å., Mikhailova, N.P., Kravchenko, S.",2001,Europe,50.15,28.37,51.0,155.9,8.1,1930.0,2010.0,1970.0,3.0,13.006876571186826
 Vittinki,1950.0,8684,3415,Ljusdal Batholith,"Mattsson, H., Elming, S.-A.",2001,Europe,61.9,15.2,41.0,187.0,10.0,1810.0,1870.0,1840.0,3.0,3.637560845847161
@@ -226,12 +226,12 @@ Vittinki,1950.0,7412,2850,Voche-Lambina Metamorphic Rocks,"Fedotova,M.A., Khramo
 Vittinki,1950.0,7405,2850,Kolvitza peridotites and schists,"Fedotova,M.A., Khramov,A.N., Pisakin,B.N., Priyatkin,A.A.",1999,Europe,67.2,32.6,44.2,232.6,5.8,1800.0,1900.0,1850.0,3.0,6.029461267906291
 Vittinki,1950.0,8525,2850,Tolstik Dykes and Amphibolite,"Fedotova,M.A., Khramov,A.N., Pisakin,B.N., Priyatkin,A.A.",1999,Europe,66.8,32.4,42.0,241.6,10.4,1800.0,1950.0,1875.0,3.0,5.707617689912805
 Vittinki,1950.0,8523,2850,"Picrite and Country Rock, Moncha Pluton","Fedotova,M.A., Khramov,A.N., Pisakin,B.N., Priyatkin,A.A.",1999,Europe,68.0,32.5,16.6,323.3,8.6,1800.0,2200.0,2000.0,3.0,6.568213976321167
-Vittinki,1950.0,8519,2850,Girvas Lavas and Schists,"Fedotova,M.A., Khramov,A.N., Pisakin,B.N., Priyatkin,A.A.",1999,Europe,62.5,33.5,42.2,264.7,9.5,1850.0,1950.0,1900.0,3.0,4.919295568827958
+Vittinki,1950.0,8519,2850,Girvas Lavas and Schists,"Fedotova,M.A., Khramov,A.N., Pisakin,B.N., Priyatkin,A.A.",1999,Europe,62.5,33.5,42.2,264.7,9.5,1850.0,1950.0,1900.0,3.0,4.919295568827959
 Vittinki,1950.0,8516,2850,Segozero Dolerite Dykes,"Fedotova,M.A., Khramov,A.N., Pisakin,B.N., Priyatkin,A.A.",1999,Europe,63.2,33.5,46.7,261.4,14.1,1800.0,1950.0,1875.0,3.0,4.8684286402717865
 Vittinki,1950.0,8462,3296,Karelian Dykes,"Mertanen, S., Halls, H.C., Vuollo, J.I., Pesonen, L.J., Stepanov, V.S.",1999,Europe,66.0,30.7,52.6,226.6,2.5,1800.0,1900.0,1850.0,4.0,4.672712152607362
 Vittinki,1950.0,8297,3197,Konchozero Sill,"Pisarevsky, S.A., Sokolov, S.J.",1999,Europe,62.1,34.0,50.1,231.9,5.2,1800.0,1900.0,1850.0,3.0,5.220521774923667
 Vittinki,1950.0,8296,3197,Konchozero Sill,"Pisarevsky, S.A., Sokolov, S.J.",1999,Europe,62.1,34.0,-14.2,281.9,11.1,1947.0,2001.0,1974.0,5.0,5.220521774923667
-Vittinki,1950.0,7401,2849,Girvas lavas,"Damm,V.,Gendler,T.S.,Gooskova,E.G.,Khramov,A.N.,Lewandowski,M.,Nozharov,P.,Pavlov,V.I.,Petrova,G.N.,Pisarevsky,S.A.,Sokolov,S.J.",1997,Europe,62.5,33.5,43.1,211.5,8.0,1600.0,2000.0,1800.0,3.0,4.919295568827958
+Vittinki,1950.0,7401,2849,Girvas lavas,"Damm,V.,Gendler,T.S.,Gooskova,E.G.,Khramov,A.N.,Lewandowski,M.,Nozharov,P.,Pavlov,V.I.,Petrova,G.N.,Pisarevsky,S.A.,Sokolov,S.J.",1997,Europe,62.5,33.5,43.1,211.5,8.0,1600.0,2000.0,1800.0,3.0,4.919295568827959
 Vittinki,1950.0,7397,2849,Shoksha suite,"Damm,V.,Gendler,T.S.,Gooskova,E.G.,Khramov,A.N.,Lewandowski,M.,Nozharov,P.,Pavlov,V.I.,Petrova,G.N.,Pisarevsky,S.A.,Sokolov,S.J.",1997,Europe,61.5,35.4,45.1,206.4,5.8,1750.0,1900.0,1825.0,3.0,6.017536558313065
 Vittinki,1950.0,7648,2939,Kuetsyarvi Formation,"Torsvik,T.H., Meert,J.G.",1995,Europe,69.5,29.5,24.7,300.8,17.6,2052.0,2064.0,2058.0,5.0,7.217026016574724
 Vittinki,1950.0,8020,3057,Pansky layered intrusion,"Dudkin,K.O., Turemnov,V.A.",1995,Europe,67.5,34.5,39.7,208.3,8.5,1750.0,1850.0,1800.0,3.0,6.781852011957708
@@ -248,7 +248,7 @@ Vittinki,1950.0,6623,2568,North Finland Layered Intrusions,"Mertanen, S., Pesone
 Vittinki,1950.0,6624,2568,North Finland Layered Intrusions,"Mertanen, S., Pesonen, L.J.",1990,Europe,66.2,28.1,42.0,177.0,8.0,1750.0,1900.0,1825.0,3.0,4.091638006038348
 Vittinki,1950.0,6627,2568,North Finland Diabase Dykes,"Mertanen, S., Pesonen, L.J.",1990,Europe,66.2,28.1,45.0,228.0,12.0,1750.0,1900.0,1825.0,3.0,4.091638006038348
 Vittinki,1950.0,6628,2568,North Finland Diabase Dykes,"Mertanen, S., Pesonen, L.J.",1990,Europe,66.2,28.1,36.0,264.0,10.0,1750.0,1900.0,1825.0,3.0,4.091638006038348
-Vittinki,1950.0,6076,2333,Scourian Metamorphics,"Poppleton,T.J., Piper,J.D.A.",1989,Europe,57.5,-5.7,32.5,38.3,8.6,1700.0,1900.0,1800.0,3.0,14.99191063031734
+Vittinki,1950.0,6076,2333,Scourian Metamorphics,"Poppleton,T.J., Piper,J.D.A.",1989,Europe,57.5,-5.7,32.5,38.3,8.6,1700.0,1900.0,1800.0,3.0,14.991910630317365
 Vittinki,1950.0,5703,2031,Southeast Karelian Intrusions,"Krasnova,A.F., Guskova,E.G.",1989,Europe,62.0,37.5,37.6,225.0,11.0,1000.0,3000.0,2000.0,4.0,6.842039529960656
 Vittinki,1950.0,5702,2031,Southeast Karelian Intrusions,"Krasnova,A.F., Guskova,E.G.",1989,Europe,61.7,36.0,-23.5,44.7,6.0,1000.0,3000.0,2000.0,4.0,6.232187633748012
 Vittinki,1950.0,5701,2031,Southeast Karelian Intrusions,"Krasnova,A.F., Guskova,E.G.",1989,Europe,61.7,36.0,-20.9,44.5,5.0,1000.0,3000.0,2000.0,4.0,6.232187633748012
@@ -263,60 +263,60 @@ Vittinki,1950.0,5767,1742,Svappavaara Gabbro,"Elming, S-Å.",1985,Europe,67.8,21
 Vittinki,1950.0,5769,1742,Dundret Gabbro,"Elming, S-Å.",1985,Europe,67.9,20.6,39.7,174.3,34.9,1875.0,1950.0,1912.5,3.0,5.181057481166318
 Vittinki,1950.0,5770,1742,Dundret Gabbro,"Elming, S-Å.",1985,Europe,67.9,20.6,6.6,278.7,36.2,1875.0,1950.0,1912.5,3.0,5.181057481166318
 Vittinki,1950.0,1334,1742,Svappavaara Gabbro,"Elming, S-Å.",1985,Europe,67.8,21.2,52.2,234.6,5.4,1860.0,1880.0,1870.0,4.0,5.044073364103497
-Vittinki,1950.0,1332,1742,Sangis Gabbro,"Elming, S-Å.",1985,Europe,65.9,23.4,46.5,205.4,2.8,1450.0,2230.0,1840.0,4.0,3.1108238807826862
+Vittinki,1950.0,1332,1742,Sangis Gabbro,"Elming, S-Å.",1985,Europe,65.9,23.4,46.5,205.4,2.8,1450.0,2230.0,1840.0,4.0,3.1108238807826867
 Vittinki,1950.0,1331,1742,Nottrask Gabbro,"Elming, S-Å.",1985,Europe,65.83,21.83,42.6,219.7,3.6,1800.0,1812.0,1806.0,4.0,3.0589335347064806
 Vittinki,1950.0,5600,2156,Karelia Intrusions and Sediments,"Khramov,A.N., Slautsitais,I.P.",1982,Europe,62.2,34.3,55.0,215.0,8.0,1700.0,2100.0,1900.0,3.0,5.336636557058581
 Vittinki,1950.0,1316,1731,Nilsia-Varpaisjarvi Dykes,"Neuvonen, K.J., Korsman, K., Kouvo, O., Paavola, J.",1981,Europe,63.3,28.0,47.3,223.6,3.8,1830.0,1860.0,1845.0,4.0,2.408441818693469
-Vittinki,1950.0,1313,1731,Kiuruvesi Intrusions,"Neuvonen, K.J., Korsman, K., Kouvo, O., Paavola, J.",1981,Europe,63.6,26.52,43.1,235.2,10.0,1881.0,1891.0,1886.0,5.0,1.8579143621996423
+Vittinki,1950.0,1313,1731,Kiuruvesi Intrusions,"Neuvonen, K.J., Korsman, K., Kouvo, O., Paavola, J.",1981,Europe,63.6,26.52,43.1,235.2,10.0,1881.0,1891.0,1886.0,5.0,1.8579143621998384
 Vittinki,1950.0,1312,1731,Haukivesi Intrusives,"Neuvonen, K.J., Korsman, K., Kouvo, O., Paavola, J.",1981,Europe,62.1,28.4,49.0,225.4,3.4,1837.0,1840.0,1838.5,5.0,2.6820797745421885
 Vittinki,1950.0,5739,2203,Keuruu Dykes,"Pesonen, L.J., Neuvonen, K.J.",1981,Europe,62.3,24.7,41.7,228.6,9.0,1830.0,1930.0,1880.0,3.0,1.0084647593048721
-Vittinki,1950.0,5738,2203,Pielavesi Gabbro,"Pesonen, L.J., Neuvonen, K.J.",1981,Europe,63.6,27.6,35.9,238.2,3.8,1878.0,1906.0,1892.0,3.0,2.3066559326813056
+Vittinki,1950.0,5738,2203,Pielavesi Gabbro,"Pesonen, L.J., Neuvonen, K.J.",1981,Europe,63.6,27.6,35.9,238.2,3.8,1878.0,1906.0,1892.0,3.0,2.3066559326814637
 Vittinki,1950.0,5737,2203,Akujarvi Quartz-Diorite,"Pesonen, L.J., Neuvonen, K.J.",1981,Europe,68.6,27.8,41.3,245.5,6.0,1900.0,1925.0,1912.5,3.0,6.149352241060809
-Vittinki,1950.0,829,1520,Bo diorite,"Piper, J.D.A.",1980,Europe,58.5,15.6,59.0,188.0,7.5,1740.0,1880.0,1810.0,3.0,5.5561070532448165
-Vittinki,1950.0,810,1520,Sangis Gabbro,"Piper, J.D.A.",1980,Europe,65.8,23.5,8.0,230.0,17.9,1450.0,2230.0,1840.0,3.0,3.015270265168639
-Vittinki,1950.0,809,1520,Sangis Gabbro,"Piper, J.D.A.",1980,Europe,65.8,23.5,38.0,207.0,18.7,1450.0,2230.0,1840.0,3.0,3.015270265168639
-Vittinki,1950.0,5761,2208,Nordingra-Ornskoldsvik Dykes,"Fridh, B.",1979,Europe,62.4,18.4,67.0,223.0,6.7,1720.0,1980.0,1850.0,3.0,2.063575642599812
+Vittinki,1950.0,829,1520,Bo diorite,"Piper, J.D.A.",1980,Europe,58.5,15.6,59.0,188.0,7.5,1740.0,1880.0,1810.0,3.0,5.556107053244817
+Vittinki,1950.0,810,1520,Sangis Gabbro,"Piper, J.D.A.",1980,Europe,65.8,23.5,8.0,230.0,17.9,1450.0,2230.0,1840.0,3.0,3.0152702651687604
+Vittinki,1950.0,809,1520,Sangis Gabbro,"Piper, J.D.A.",1980,Europe,65.8,23.5,38.0,207.0,18.7,1450.0,2230.0,1840.0,3.0,3.0152702651687604
+Vittinki,1950.0,5761,2208,Nordingra-Ornskoldsvik Dykes,"Fridh, B.",1979,Europe,62.4,18.4,67.0,223.0,6.7,1720.0,1980.0,1850.0,3.0,2.0635756425999885
 Vittinki,1950.0,5743,2204,Menesjarvi Granulite,"Papunen, H., Idman, H., Ilvonen, E., Neuvonen, K.J., Pihlaja, P., Talvitie, J.",1977,Europe,68.8,26.4,33.8,232.2,7.9,1900.0,1925.0,1912.5,3.0,6.1762117376871
 Vittinki,1950.0,5742,2204,Akujarvi Granulite,"Papunen, H., Idman, H., Ilvonen, E., Neuvonen, K.J., Pihlaja, P., Talvitie, J.",1977,Europe,68.6,27.8,26.1,272.1,,1900.0,1925.0,1912.5,3.0,6.149352241060809
-Vittinki,1950.0,2418,711,Scourie Dykes,"Beckmann, G.E.J.",1976,Europe,58.3,-5.3,37.3,274.8,6.7,1750.0,1850.0,1800.0,3.0,14.394933181969305
+Vittinki,1950.0,2418,711,Scourie Dykes,"Beckmann, G.E.J.",1976,Europe,58.3,-5.3,37.3,274.8,6.7,1750.0,1850.0,1800.0,3.0,14.394933181969279
 Vittinki,1950.0,2356,762,Svecokarelian gabbros combined,"Neuvonen, K.J.",1974,Europe,62.7,24.6,45.5,241.1,7.2,1800.0,2000.0,1900.0,3.0,0.8301896981897477
 Vittinki,1950.0,2857,250,Pohjanmaa-Ylivieska Gabbro Combined,"Pesonen,L.J., Stigzelius,E.",1972,Europe,64.1,24.5,38.6,239.8,10.9,1834.0,1934.0,1884.0,4.0,1.5056681159534182
 Vittinki,1950.0,2856,250,Pohjanmaa Gabbros,"Pesonen,L.J., Stigzelius,E.",1972,Europe,64.1,24.6,37.9,239.1,13.4,1834.0,1934.0,1884.0,4.0,1.5286972183557093
-Vittinki,1950.0,2855,250,Ylivieska Gabbro,"Pesonen,L.J., Stigzelius,E.",1972,Europe,64.0,24.3,43.3,242.4,6.8,1834.0,1934.0,1884.0,4.0,1.375086939609628
+Vittinki,1950.0,2855,250,Ylivieska Gabbro,"Pesonen,L.J., Stigzelius,E.",1972,Europe,64.0,24.3,43.3,242.4,6.8,1834.0,1934.0,1884.0,4.0,1.3750869396098928
 Vittinki,1950.0,5608,2132,Shoksha Group,"Katseblin,P.L.",1968,Europe,61.5,35.5,54.2,240.3,3.5,1850.0,1950.0,1900.0,3.0,6.062928591592039
 Vittinki,1950.0,5506,2132,Pedaselsk and Pukhta Groups,"Katseblin,P.L.",1968,Europe,61.5,34.0,44.0,231.0,5.0,1850.0,1950.0,1900.0,4.0,5.383654843965948
-Cuyuna IF,2060.0,9496,3837,"Rabbi Creek, Powder River and South Path Dykes","Kilian, T.M., Bleeker, W., Chamberlain, K., Evans, D.A.D., Cousens, B.",2016,North America,43.9,-107.2,65.5,339.2,5.8,2152.0,2171.0,2161.5,7.0,9.712246263868742
-Cuyuna IF,2060.0,9489,3833,Lac Espirit Dykes,"Buchan, K.L., Goutier, J., Hamilton, M.A.,Ernst, R.E., Matthews, W.",2007,North America,53.4,-77.0,61.2,166.2,3.5,2068.0,2070.0,2069.0,3.0,12.830049312402299
+Cuyuna IF,2060.0,9496,3837,"Rabbi Creek, Powder River and South Path Dykes","Kilian, T.M., Bleeker, W., Chamberlain, K., Evans, D.A.D., Cousens, B.",2016,North America,43.9,-107.2,65.5,339.2,5.8,2152.0,2171.0,2161.5,7.0,9.71224626386878
+Cuyuna IF,2060.0,9489,3833,Lac Espirit Dykes,"Buchan, K.L., Goutier, J., Hamilton, M.A.,Ernst, R.E., Matthews, W.",2007,North America,53.4,-77.0,61.2,166.2,3.5,2068.0,2070.0,2069.0,3.0,12.830049312402268
 Cuyuna IF,2060.0,9213,3644,Biscotasing West Dykes,"Halls, H.C., Davis, D.W.",2004,North America,48.9,-85.0,17.3,224.6,9.0,2167.0,2173.0,2170.0,5.0,6.447798202690967
-Cuyuna IF,2060.0,8994,3545,Wind River Range Quartz Diorite,"Harlan, S.S., Geissman, J.W., Premo, W.R.",2003,North America,42.45,-108.51,84.0,215.0,4.6,2162.0,2178.0,2170.0,4.0,11.16326584636375
-Cuyuna IF,2060.0,8548,3342,Molson Dykes C1,"Halls, H.C., Heaman, L.M.",2000,North America,55.0,-97.5,53.0,180.0,6.2,2089.0,2093.0,2091.0,5.0,8.796858366569218
-Cuyuna IF,2060.0,8429,3278,Clearwater Anorthosite,"Halls, H.C., Hanes, J.A.",1999,North America,57.1,-108.4,6.5,311.8,3.1,1910.0,1924.0,1917.0,5.0,13.826018524677531
-Cuyuna IF,2060.0,8249,3174,"Coleman Member, Gowganda Formation","Williams, G.E., Schmidt, P.W.",1997,North America,47.0,-81.0,36.5,229.5,8.5,2100.0,2200.0,2150.0,5.0,8.842959667758365
-Cuyuna IF,2060.0,8034,3061,Marathon (Fort Frances) Reverse Polarity Dykes,"Buchan, K.L., Halls, H.C., Mortensen, J.K.",1996,North America,49.0,-86.0,51.2,174.7,6.8,2072.0,2081.0,2076.5,6.0,5.866760607199095
-Cuyuna IF,2060.0,8033,3061,Marathon Normal Polarity Dykes,"Buchan, K.L., Halls, H.C., Mortensen, J.K.",1996,North America,49.0,-86.0,42.7,195.8,6.3,2114.0,2135.0,2124.5,5.0,5.866760607199095
-Cuyuna IF,2060.0,8391,3258,Molson C Dykes,"Zhai, Y., Halls, H.C., Bates,M.P.",1994,North America,55.0,-97.5,40.7,203.7,6.1,2120.0,2170.0,2145.0,6.0,8.796858366569218
+Cuyuna IF,2060.0,8994,3545,Wind River Range Quartz Diorite,"Harlan, S.S., Geissman, J.W., Premo, W.R.",2003,North America,42.45,-108.51,84.0,215.0,4.6,2162.0,2178.0,2170.0,4.0,11.163265846363783
+Cuyuna IF,2060.0,8548,3342,Molson Dykes C1,"Halls, H.C., Heaman, L.M.",2000,North America,55.0,-97.5,53.0,180.0,6.2,2089.0,2093.0,2091.0,5.0,8.796858366569303
+Cuyuna IF,2060.0,8429,3278,Clearwater Anorthosite,"Halls, H.C., Hanes, J.A.",1999,North America,57.1,-108.4,6.5,311.8,3.1,1910.0,1924.0,1917.0,5.0,13.826018524677558
+Cuyuna IF,2060.0,8249,3174,"Coleman Member, Gowganda Formation","Williams, G.E., Schmidt, P.W.",1997,North America,47.0,-81.0,36.5,229.5,8.5,2100.0,2200.0,2150.0,5.0,8.842959667758405
+Cuyuna IF,2060.0,8034,3061,Marathon (Fort Frances) Reverse Polarity Dykes,"Buchan, K.L., Halls, H.C., Mortensen, J.K.",1996,North America,49.0,-86.0,51.2,174.7,6.8,2072.0,2081.0,2076.5,6.0,5.866760607199157
+Cuyuna IF,2060.0,8033,3061,Marathon Normal Polarity Dykes,"Buchan, K.L., Halls, H.C., Mortensen, J.K.",1996,North America,49.0,-86.0,42.7,195.8,6.3,2114.0,2135.0,2124.5,5.0,5.866760607199157
+Cuyuna IF,2060.0,8391,3258,Molson C Dykes,"Zhai, Y., Halls, H.C., Bates,M.P.",1994,North America,55.0,-97.5,40.7,203.7,6.1,2120.0,2170.0,2145.0,6.0,8.796858366569303
 Cuyuna IF,2060.0,7189,2771,Biscotasing Dykes,"Buchan, K.L., Mortensen, J.K., Card, K.D.",1993,North America,48.0,-79.0,27.8,223.3,4.5,2165.0,2168.0,2166.5,6.0,10.20822494933302
-Cuyuna IF,2060.0,6451,2505,Groundhog River (Matachewan) Dykes,"Bates,M.P., Halls,H.C.",1991,North America,49.3,-82.0,53.3,255.5,12.3,1850.0,2050.0,1950.0,4.0,8.444194235088585
+Cuyuna IF,2060.0,6451,2505,Groundhog River (Matachewan) Dykes,"Bates,M.P., Halls,H.C.",1991,North America,49.3,-82.0,53.3,255.5,12.3,1850.0,2050.0,1950.0,4.0,8.444194235088629
 Cuyuna IF,2060.0,6444,2501,Kapuskasing Dykes,"Halls, H.C., Palmer, H.C.",1990,North America,47.0,-84.0,61.3,253.0,11.9,2029.0,2057.0,2043.0,6.0,6.797149967024704
-Cuyuna IF,2060.0,6024,2314,Archean Gneiss and Anorthosites,"Symons, D.T.A., Vandall, T.A.",1990,North America,48.0,-83.0,-27.0,54.8,5.0,1870.0,2040.0,1955.0,5.0,7.542606880698125
+Cuyuna IF,2060.0,6024,2314,Archean Gneiss and Anorthosites,"Symons, D.T.A., Vandall, T.A.",1990,North America,48.0,-83.0,-27.0,54.8,5.0,1870.0,2040.0,1955.0,5.0,7.542606880698173
 Cuyuna IF,2060.0,5879,2244,Northeast Diabase Dyke,"Buchan, K.L., Card, C.D., Chandler, F.W.",1989,North America,47.8,-79.7,36.9,214.2,5.8,2000.0,2200.0,2100.0,5.0,9.730143148640005
 Cuyuna IF,2060.0,1739,1918,Fort Frances Dykes,"Halls, H.C.",1986,North America,49.0,-94.0,-42.7,4.2,5.1,2072.0,2081.0,2076.5,4.0,2.5009033258026085
 Cuyuna IF,2060.0,1740,1918,Fort Frances Dykes,"Halls, H.C.",1986,North America,49.0,-94.0,51.0,239.4,4.8,2072.0,2081.0,2076.5,4.0,2.5009033258026085
 Cuyuna IF,2060.0,1741,1919,Mistassini dyke swarm,"Fahrig, W.F., Christie, K.W., Chown, E.H., Janes, D., Machado, N.",1986,North America,51.5,-73.5,50.0,280.0,5.5,2000.0,2200.0,2100.0,4.0,14.229398870704573
-Cuyuna IF,2060.0,1701,1899,Sakami Formation,"Schwarz,E.J., Freda,G.N.",1983,North America,53.9,-73.5,2.0,249.0,6.0,1600.0,2500.0,2050.0,5.0,14.93157229758458
-Cuyuna IF,2060.0,1708,1900,Wabigoon dyke,"Dunlop,D.J.",1983,North America,49.7,-92.9,45.0,238.5,2.0,2000.0,2300.0,2150.0,3.0,3.2688600429427455
+Cuyuna IF,2060.0,1701,1899,Sakami Formation,"Schwarz,E.J., Freda,G.N.",1983,North America,53.9,-73.5,2.0,249.0,6.0,1600.0,2500.0,2050.0,5.0,14.931572297584605
+Cuyuna IF,2060.0,1708,1900,Wabigoon dyke,"Dunlop,D.J.",1983,North America,49.7,-92.9,45.0,238.5,2.0,2000.0,2300.0,2150.0,3.0,3.268860042942857
 Cuyuna IF,2060.0,5859,2237,Adams Mine Iron Ores,"Symons, D.T.A., Quick, A.W., Stupavsky, M.",1981,North America,48.0,-79.9,7.1,271.9,3.7,2000.0,2200.0,2100.0,3.0,9.607031677111225
-Cuyuna IF,2060.0,1274,1715,Superior Province dykes and baked contacts,"Schutts,D.L., Dunlop,D.J.",1981,North America,49.0,-80.5,41.0,230.0,8.0,2125.0,2175.0,2150.0,4.0,9.3360735932495
-Cuyuna IF,2060.0,1271,1715,Kinojevis Group,"Schutts,D.L., Dunlop,D.J.",1981,North America,48.4,-80.5,54.0,241.0,9.0,2125.0,2175.0,2150.0,3.0,9.24573147959968
-Cuyuna IF,2060.0,1639,1868,Nipissing Diabase,"Morris, W.A.",1981,North America,46.5,-81.1,23.9,82.7,11.0,2135.0,2195.0,2165.0,6.0,8.801278186829443
+Cuyuna IF,2060.0,1274,1715,Superior Province dykes and baked contacts,"Schutts,D.L., Dunlop,D.J.",1981,North America,49.0,-80.5,41.0,230.0,8.0,2125.0,2175.0,2150.0,4.0,9.336073593249537
+Cuyuna IF,2060.0,1271,1715,Kinojevis Group,"Schutts,D.L., Dunlop,D.J.",1981,North America,48.4,-80.5,54.0,241.0,9.0,2125.0,2175.0,2150.0,3.0,9.245731479599721
+Cuyuna IF,2060.0,1639,1868,Nipissing Diabase,"Morris, W.A.",1981,North America,46.5,-81.1,23.9,82.7,11.0,2135.0,2195.0,2165.0,6.0,8.801278186829524
 Cuyuna IF,2060.0,5856,2236,Moose Mountain Iron Ores,"Symons, D.T.A., Walley, D.A., Stupavsky, M.",1980,North America,46.9,-81.0,45.1,244.9,16.7,2100.0,2300.0,2200.0,3.0,8.846108688661328
-Cuyuna IF,2060.0,2149,1064,"Superior Province Dykes Combined, West Directions","Irving, E., Naldrett, A.J.",1977,North America,48.0,-80.0,30.0,225.0,4.0,2125.0,2175.0,2150.0,6.0,9.540267541263585
-Cuyuna IF,2060.0,2483,218,Nipissing Diabase Dykes,"Symons, D.T.A.",1971,North America,46.0,-83.0,35.5,228.7,14.0,1900.0,2100.0,2000.0,3.0,7.548028902333836
-Cuyuna IF,2060.0,2983,696,Wind River Dykes,"Spall, H.",1971,North America,42.6,-108.8,43.0,239.0,11.0,1880.0,2060.0,1970.0,3.0,11.29048672988933
-Cuyuna IF,2060.0,3071,649,Nipissing Diabase,"Symons, D.T.A.",1970,North America,47.4,-79.7,-19.0,272.1,5.4,2140.0,2215.0,2177.5,4.0,9.721462982145091
+Cuyuna IF,2060.0,2149,1064,"Superior Province Dykes Combined, West Directions","Irving, E., Naldrett, A.J.",1977,North America,48.0,-80.0,30.0,225.0,4.0,2125.0,2175.0,2150.0,6.0,9.540267541263622
+Cuyuna IF,2060.0,2483,218,Nipissing Diabase Dykes,"Symons, D.T.A.",1971,North America,46.0,-83.0,35.5,228.7,14.0,1900.0,2100.0,2000.0,3.0,7.548028902333884
+Cuyuna IF,2060.0,2983,696,Wind River Dykes,"Spall, H.",1971,North America,42.6,-108.8,43.0,239.0,11.0,1880.0,2060.0,1970.0,3.0,11.290486729889363
+Cuyuna IF,2060.0,3071,649,Nipissing Diabase,"Symons, D.T.A.",1970,North America,47.4,-79.7,-19.0,272.1,5.4,2140.0,2215.0,2177.5,4.0,9.721462982145166
 Cuyuna IF,2060.0,3466,312,"Superior Province Dykes, SW directions","Larochelle,A.",1966,North America,48.5,-78.5,-22.0,238.0,12.9,1600.0,2500.0,2050.0,3.0,10.575439709543193
 Cuyuna IF,2060.0,3465,312,"Superior Province Dykes, N directions","Larochelle,A.",1966,North America,48.5,-78.5,24.0,107.0,,1600.0,2500.0,2050.0,3.0,10.575439709543193
 Cuyuna IF,2060.0,3464,312,"Superior Province Dykes, West Directions","Larochelle,A.",1966,North America,48.5,-78.5,27.0,226.0,4.8,2125.0,2175.0,2150.0,5.0,10.575439709543193
-Cuyuna IF,2060.0,3494,290,Marathon Dykes,"Fahrig, W.F., Gaucher, E.H., Larochelle, A.",1965,North America,49.0,-86.0,29.0,213.2,10.5,2107.0,2131.0,2119.0,3.0,5.866760607199095
-Cuyuna IF,2060.0,3491,290,"Superior Province Dykes, West directions","Fahrig, W.F., Gaucher, E.H., Larochelle, A.",1965,North America,48.0,-78.5,32.3,228.2,6.8,2125.0,2175.0,2150.0,4.0,10.54242521856611
+Cuyuna IF,2060.0,3494,290,Marathon Dykes,"Fahrig, W.F., Gaucher, E.H., Larochelle, A.",1965,North America,49.0,-86.0,29.0,213.2,10.5,2107.0,2131.0,2119.0,3.0,5.866760607199157
+Cuyuna IF,2060.0,3491,290,"Superior Province Dykes, West directions","Fahrig, W.F., Gaucher, E.H., Larochelle, A.",1965,North America,48.0,-78.5,32.3,228.2,6.8,2125.0,2175.0,2150.0,4.0,10.542425218566144
 Cuyuna IF,2060.0,3488,342,Superior Province Dykes,"Strangway,D.W.",1964,North America,48.0,-79.0,17.0,228.0,12.0,2125.0,2175.0,2150.0,4.0,10.20822494933302
