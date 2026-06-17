@@ -3,7 +3,7 @@
   "upload_type": "dataset",
   "license": "MIT",
   "access_right": "open",
-  "description": "A global, georeferenced database of manganese ore deposits through deep time and its first paleogeographic reconstruction (0-1.8 Ga in the Cao et al. 2024 plate model; >1.8 Ga paleolatitudes from the Global Paleomagnetic Database, Pisarevsky et al. 2022), together with all analysis and figure-generation code. Supports the accompanying manuscript.",
+  "description": "A global, georeferenced database of manganese ore deposits through deep time and its paleogeographic reconstruction (0-1.8 Ga in the Cao et al. 2024 plate model; >1.8 Ga paleolatitudes from the Global Paleomagnetic Database, Pisarevsky et al. 2022), together with all analysis and figure-generation code. Supports the accompanying manuscript.",
   "creators": [
     {"name": "Müller, R. Dietmar", "affiliation": "EarthByte Group, School of Geosciences, University of Sydney, Australia"},
     {"name": "Bermanec, Marco", "affiliation": "Department of Earth Sciences, University of Graz, Austria"},

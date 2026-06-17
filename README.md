@@ -1,7 +1,7 @@
 # Manganese paleogeography
 
 A global, georeferenced database of manganese ore deposits through deep time, and
-its first paleogeographic reconstruction (0–1.8 Ga via the Cao et al. 2024 plate
+its paleogeographic reconstruction (0–1.8 Ga via the Cao et al. 2024 plate
 model; >1.8 Ga via paleomagnetic paleolatitudes). This repository holds only the
 data and the analysis/figure code; the manuscript text is maintained separately
 and is not included here.

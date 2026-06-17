@@ -3,7 +3,7 @@ message: "If you use this database or code, please cite the accompanying paper a
 title: "Manganese paleogeography"
 abstract: >-
   A global, georeferenced database of manganese ore deposits through deep time and its
-  first paleogeographic reconstruction (0-1.8 Ga in the Cao et al. 2024 plate model;
+  paleogeographic reconstruction (0-1.8 Ga in the Cao et al. 2024 plate model;
   >1.8 Ga paleolatitudes from the Global Paleomagnetic Database), with all analysis and
   figure-generation code. Supports the accompanying manuscript.
 type: dataset
