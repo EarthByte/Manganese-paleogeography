@@ -59,11 +59,11 @@ for i,t in enumerate(types):
     fig.text(x=i,y=0.06,text=SH[t],font="9p,Helvetica,black",no_clip=True)
 panel(fig,"b")
 
-# (c) restricted-basin redox model sketch (committed asset in ../assets)
+# (c) restricted-basin redox model sketch (committed asset in ../assets).
+# Scaled to 6 cm height to match panels (a) and (b); 4:3 aspect makes it ~8 cm wide.
 IMG=REPO/"assets"/"Fig_4c_restricted_basin_sketch.png"
-fig.shift_origin(xshift="9c")
-fig.basemap(region=[0,1,0,1],projection="X7c/6c",frame=0)
-fig.image(imagefile=str(IMG),position="jTL+w7c")
+fig.shift_origin(xshift="7.5c")   # tighter gap after panel (b)
+fig.image(imagefile=str(IMG),position="jTL+w8c")
 panel(fig,"c")
 fig.savefig(str(OUT/"Fig4_controls.pdf")); fig.savefig(str(OUT/"Fig4_controls.png"),dpi=300)
 print("wrote paper_figures/Fig4_controls.pdf/.png")
