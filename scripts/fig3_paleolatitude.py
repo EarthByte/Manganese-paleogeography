@@ -21,7 +21,7 @@ deep=deep[deep.n_Q3>0]
 
 fig=pygmt.Figure()
 # (a) |paleolat| vs age, 0-1.8 Ga
-fig.basemap(region=[0,1800,0,90],projection="X9c/6c",
+fig.basemap(region=[0,1800,0,90],projection="X8c/6c",
             frame=["xa300f100+lAge (Ma)","ya30f10+l@~\\174@~paleolatitude@~\\174@~ (\\260)","WSrt"])
 fig.plot(x=[540,540,720,720],y=[0,90,90,0],fill="#c8e6c9@50",close=True,pen=None)
 for t,g in rec.groupby("deposit_type"):
@@ -32,8 +32,8 @@ panel(fig,"a")
 
 # (b) cumulative |paleolat| by type vs continental-availability null
 # NOTE: run latitude_null_test.py first to generate latitude_null_sample.csv
-fig.shift_origin(xshift="11c")
-fig.basemap(region=[0,90,0,1],projection="X6c/6c",
+fig.shift_origin(xshift="10c")
+fig.basemap(region=[0,90,0,1],projection="X8c/6c",
             frame=["xa30f10+l@~\\174@~paleolat@~\\174@~ (\\260)","ya0.5f0.1+lCumulative fraction","WSrt"])
 nullf=DATA/"latitude_null_sample.csv"
 if nullf.exists():
@@ -46,9 +46,9 @@ fig.legend(position="JBR+jBR+o0.2c",box="+gwhite@20+p0.5p,gray50")
 panel(fig,"b")
 
 # (c) >1.8 Ga Q>=3 paleolatitudes
-fig.shift_origin(xshift="8c")
-fig.basemap(region=[1800,2900,0,90],projection="X7c/6c",
-            frame=["xa300f100+lAge (Ma)","ya30f10","wSrt"])
+fig.shift_origin(xshift="-10c",yshift="-8.5c")
+fig.basemap(region=[1800,2900,0,90],projection="X8c/6c",
+            frame=["xa300f100+lAge (Ma)","ya30f10+l@~\\174@~paleolatitude@~\\174@~ (\\260)","WSrt"])
 fig.plot(x=[2060,2060,2400,2400],y=[0,90,90,0],fill="#ffe0b2@50",close=True,pen=None)
 for t,g in deep.groupby("type"):
     fig.plot(x=g.age_Ma,y=g.abs_paleolat_Q3,style="t0.22c",fill=COL.get(t,'gray'),pen="0.4p,black")
@@ -58,15 +58,15 @@ panel(fig,"c")
 
 # (d) occurrence-scale corroboration: declustered primary occurrences vs continental null
 # NOTE: run occurrence_corroboration.py first to generate the two CSVs below
-fig.shift_origin(xshift="9c")
-fig.basemap(region=[0,90,0,1],projection="X6c/6c",
-            frame=["xa30f10+l@~\\174@~paleolat@~\\174@~ (\\260)","ya0.5f0.1","wSrt"])
+fig.shift_origin(xshift="10c")
+fig.basemap(region=[0,90,0,1],projection="X8c/6c",
+            frame=["xa30f10+l@~\\174@~paleolat@~\\174@~ (\\260)","ya0.5f0.1+lCumulative fraction","WSrt"])
 onull=DATA/"occurrence_null_sample.csv"; oprim=DATA/"occurrence_primary_declustered.csv"
 if onull.exists() and oprim.exists():
     nv=np.sort(pd.read_csv(onull)["abs_paleolat"].values)
     pv=np.sort(pd.read_csv(oprim)["abs_paleolat"].values)
     fig.plot(x=nv,y=np.linspace(0,1,len(nv)),pen="2.2p,black",label="continental null")
-    fig.plot(x=pv,y=np.linspace(0,1,len(pv)),pen="2.2p,#3b6fb6",label=f"primary occurrences (n={len(pv)})")
+    fig.plot(x=pv,y=np.linspace(0,1,len(pv)),pen="2.2p,#0072B2",label=f"primary occurrences (n={len(pv)})")
     fig.legend(position="JBR+jBR+o0.2c",box="+gwhite@20+p0.5p,gray50")
 panel(fig,"d")
 fig.savefig(str(OUT/"Fig3_paleolatitude.pdf")); fig.savefig(str(OUT/"Fig3_paleolatitude.png"),dpi=300)
