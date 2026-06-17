@@ -39,7 +39,7 @@ for j,t in enumerate(types):
         fig.plot(x=[i+(j-1)*w],y=[n],style=f"b{w}c+b0",fill=COL[t],pen="0.3p,black",
                  label=t if i==0 else None)
 # category labels set a clear gap below the axis (proportional to the y-range)
-for i,p in enumerate(ph): fig.text(x=i,y=-0.06*YMAX,text=p,font="10p,Helvetica,black",no_clip=True)
+for i,p in enumerate(ph): fig.text(x=i,y=-0.06*YMAX,text=p,font="13p,Helvetica,black",no_clip=True)
 fig.legend(position="JTR+jTR+o0.2c",box="+gwhite@20+p0.5p,gray50")
 panel(fig,"a")
 
@@ -57,7 +57,7 @@ for i,t in enumerate(types):
     fig.plot(x=np.full(len(vv),i)+np.random.uniform(-.12,.12,len(vv)),y=vv,
              style="c0.10c",fill=COL[t],pen="0.2p,black",transparency=30)
     fig.plot(x=[i-0.25,i+0.25],y=[np.median(vv)]*2,pen="2p,black")
-    fig.text(x=i,y=0.06,text=SH[t],font="9p,Helvetica,black",no_clip=True)
+    fig.text(x=i,y=0.06,text=SH[t],font="13p,Helvetica,black",no_clip=True)
 panel(fig,"b")
 
 # (c) restricted-basin redox model sketch (committed asset in ../assets).
