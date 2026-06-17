@@ -12,8 +12,7 @@ HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True)
 COL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
 SH={'sedimentary':'sedi','volcanogenic':'volc','karst/other':'karst'}           # x-axis category labels
-pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica",
-             MAP_LABEL_OFFSET="0.45c")
+pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica")
 def panel(fig,L):
     fig.text(text=L,position="TL",offset="0.2c/-0.2c",justify="TL",no_clip=True,
              font="16p,Helvetica-Bold,black",fill="white",pen="0.6p,gray40")
