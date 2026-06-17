@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this database or code, please cite the accompanying paper and this archive."
-title: "Manganese paleogeography: global Mn-deposit database and deep-time reconstruction"
+title: "Manganese paleogeography"
 abstract: >-
   A global, georeferenced database of manganese ore deposits through deep time and its
   first paleogeographic reconstruction (0-1.8 Ga in the Cao et al. 2024 plate model;
@@ -10,7 +10,7 @@ type: dataset
 license: MIT
 version: "1.0.0"
 date-released: "2026-06-17"
-repository-code: "https://github.com/EarthByte/manganese-paleogeography"
+repository-code: "https://github.com/EarthByte/Manganese-paleogeography"
 authors:
   - family-names: Müller
     given-names: R. Dietmar
