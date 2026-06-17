@@ -79,7 +79,8 @@ the raw sources (only steps that read `data/raw/` need them).
 - **Coordinates**: district-scale (≤~0.5°), from deposit/district names + USGS
   PP1802 (Schulz et al. 2017); each row carries a `coord_confidence` flag.
 - **0–1.8 Ga reconstruction**: plate-ID by point-in-polygon, reconstructed to
-  formation age in Cao et al. (2024) via GPlately/pyGPlates.
+  formation age in the Cao et al. (2024) plate model using GPlately/pyGPlates
+  (Mather et al. 2024).
 - **>1.8 Ga paleolatitude**: same-craton (site ≤15°), coeval (±150 Myr) GPMDB poles
   (Pisarevsky et al. 2022), filtered on the database Van der Voo (1990) quality sum
   Q ≥ 3. The poles actually used are exported to `deeptime_poles_used.csv`.
