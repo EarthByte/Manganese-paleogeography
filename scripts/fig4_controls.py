@@ -30,7 +30,8 @@ types=['sedimentary','volcanogenic','karst/other']
 fig=pygmt.Figure()
 # (a) counts by type x phase (grouped bars)
 ph=['assembly','dispersal/other']
-fig.basemap(region=[-0.5,1.5,0,db.groupby(['phase']).size().max()*1.15],projection="X7c/6c",
+YMAX=db.groupby(['phase']).size().max()*1.15
+fig.basemap(region=[-0.5,1.5,0,YMAX],projection="X7c/6c",
             frame=["yaf+lNumber of deposits","WSrt"])  # x annotated manually below (category axis)
 w=0.22
 for j,t in enumerate(types):
@@ -38,7 +39,8 @@ for j,t in enumerate(types):
         n=len(db[(db.phase==p)&(db.deposit_type==t)])
         fig.plot(x=[i+(j-1)*w],y=[n],style=f"b{w}c+b0",fill=COL[t],pen="0.3p,black",
                  label=t if i==0 else None)
-for i,p in enumerate(ph): fig.text(x=i,y=-2.5,text=p,font="10p,Helvetica,black",no_clip=True)
+# category labels set a clear gap below the axis (proportional to the y-range)
+for i,p in enumerate(ph): fig.text(x=i,y=-0.06*YMAX,text=p,font="10p,Helvetica,black",no_clip=True)
 fig.legend(position="JTR+jTR+o0.2c",box="+gwhite@20+p0.5p,gray50")
 panel(fig,"a")
 
