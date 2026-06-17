@@ -59,10 +59,11 @@ for i,t in enumerate(types):
     fig.text(x=i,y=0.06,text=SH[t],font="9p,Helvetica,black",no_clip=True)
 panel(fig,"b")
 
-# (c) schematic placeholder frame (annotate; final cartoon in Illustrator)
+# (c) restricted-basin redox model sketch (committed asset in ../assets)
+IMG=REPO/"assets"/"Fig_4c_restricted_basin_sketch.png"
 fig.shift_origin(xshift="9c")
 fig.basemap(region=[0,1,0,1],projection="X7c/6c",frame=0)
-fig.text(x=0.5,y=0.5,text="synthesis schematic",font="12p,Helvetica-Oblique,gray40",justify="MC")
+fig.image(imagefile=str(IMG),position="jTL+w7c")
 panel(fig,"c")
 fig.savefig(str(OUT/"Fig4_controls.pdf")); fig.savefig(str(OUT/"Fig4_controls.png"),dpi=300)
 print("wrote paper_figures/Fig4_controls.pdf/.png")
