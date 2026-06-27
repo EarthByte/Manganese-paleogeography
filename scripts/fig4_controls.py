@@ -27,16 +27,19 @@ db['phase']=db.age_Ma.apply(lambda a:'assembly' if any(x<=a<y for x,y in assembl
 types=['sedimentary','volcanogenic','karst/other']
 
 fig=pygmt.Figure()
-# (a) counts by type x phase (grouped bars)
+# (a) deposits PER UNIT TIME by type x phase (normalized so the longer dispersal
+#     interval is not favoured simply by its greater time span)
 ph=['assembly','dispersal/other']
-YMAX=db.groupby(['phase']).size().max()*1.15
+SPAN_GYR={'assembly':sum(y-x for x,y in assembly)/1000.0}
+SPAN_GYR['dispersal/other']=(db.age_Ma.max()-sum(y-x for x,y in assembly))/1000.0
+rate=lambda p,t: len(db[(db.phase==p)&(db.deposit_type==t)])/SPAN_GYR[p]
+YMAX=max(rate(p,t) for p in ph for t in types)*1.15
 fig.basemap(region=[-0.5,1.5,0,YMAX],projection="X7c/6c",
-            frame=["yaf+lNumber of deposits","WSrt"])  # x annotated manually below (category axis)
+            frame=["yaf+lDeposits per Gyr","WSrt"])  # x annotated manually below (category axis)
 w=0.22
 for j,t in enumerate(types):
     for i,p in enumerate(ph):
-        n=len(db[(db.phase==p)&(db.deposit_type==t)])
-        fig.plot(x=[i+(j-1)*w],y=[n],style=f"b{w}c+b0",fill=COL[t],pen="0.3p,black",
+        fig.plot(x=[i+(j-1)*w],y=[rate(p,t)],style=f"b{w}c+b0",fill=COL[t],pen="0.3p,black",
                  label=t if i==0 else None)
 # category labels set a clear gap below the axis (proportional to the y-range)
 for i,p in enumerate(ph): fig.text(x=i,y=-0.06*YMAX,text=p,font="13p,Helvetica,black",no_clip=True)
