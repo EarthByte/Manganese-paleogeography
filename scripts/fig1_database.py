@@ -33,7 +33,7 @@ fig.plot(x=occ.lon,y=occ.lat,style="c0.07c",fill=OCC_COL,pen=None,transparency=3
 for t,g in db.groupby("deposit_type"):
     fig.plot(x=g.longitude,y=g.latitude,style="c0.22c",fill=COL.get(t,'gray'),
              pen="0.4p,black",label=f"{LAB.get(t,t)} deposit")
-fig.legend(position="JBL+jBL+o0.2c",box="+gwhite@20+p0.5p,gray50")
+fig.legend(position="JBL+jBL+o0.2c",box="+gwhite+p0.5p,gray50")
 # panel (a) label placed inside the map (left-hand ocean) so the box does not straddle the frame
 fig.text(x=-145,y=45,text="a",font="16p,Helvetica-Bold,black",fill="white",pen="0.6p,gray40",no_clip=True)
 
