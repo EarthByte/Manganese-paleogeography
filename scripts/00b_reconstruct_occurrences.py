@@ -6,9 +6,11 @@ occurrence corroboration (Fig. 3d).
 
 Assigns each occurrence a plate ID by point-in-polygon against the Cao et al.
 (2024) static polygons, reconstructs it to its formation age (age_mid), and
-keeps the reliable-age primary + metamorphic classes (genesis A, B, C).
-Supergene/other occurrences are excluded because their host ages would misplace
-them. Same plate-ID + reconstruction workflow as the deposits (03).
+keeps the primary sedimentary classes only (genesis A = marine/early-diagenetic
+oxide, B = burial-diagenetic carbonate). Metamorphic (C) and supergene/other
+occurrences are excluded: metamorphic phases do not record primary depositional
+redox, and supergene host ages would misplace the point. Same plate-ID +
+reconstruction workflow as the deposits (03).
 
 INPUT : data/derived/mn_occurrences_with_coords.csv   (from 00a)
 OUTPUT: data/derived/mn_occurrences_reconstructed.csv
@@ -21,9 +23,9 @@ HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; CACHE=REPO/"gplately_data"
 
 o=pd.read_csv(DATA/"mn_occurrences_with_coords.csv").dropna(subset=["lat","lon","age_mid"])
-o=o[o.group.isin(["A","B","C"])].reset_index(drop=True)   # reliable-age primary + metamorphic
+o=o[o.group.isin(["A","B"])].reset_index(drop=True)   # primary sedimentary only (oxide + carbonate)
 o=o[(o.age_mid>0)&(o.age_mid<=1800)].reset_index(drop=True)
-print(f"{len(o)} reliable-age occurrences to reconstruct (A/B/C, 0-1800 Ma)")
+print(f"{len(o)} primary-sedimentary occurrences to reconstruct (A/B, 0-1800 Ma)")
 
 pmm=PlateModelManager(); model=pmm.get_model("Cao2024",data_dir=str(CACHE))
 rotm=model.get_rotation_model()
@@ -49,4 +51,4 @@ for t,g in o.groupby("age_round"):
 out=o.dropna(subset=["paleo_lat","paleo_lon"])[["lat","lon","paleo_lat","paleo_lon","age_mid","group","plate_id"]]
 out.to_csv(DATA/"mn_occurrences_reconstructed.csv",index=False)
 print(f"reconstructed {len(out)} occurrences -> data/derived/mn_occurrences_reconstructed.csv "
-      f"(A={sum(out.group=='A')}, B={sum(out.group=='B')}, C={sum(out.group=='C')})")
+      f"(A={sum(out.group=='A')}, B={sum(out.group=='B')})")
