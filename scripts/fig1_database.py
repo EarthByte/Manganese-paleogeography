@@ -60,9 +60,10 @@ panel(fig,"b")
 
 # ---- (c) deposit count per 100 Myr ----
 fig.shift_origin(xshift="10.5c")
-edges=np.arange(0,2800,100); cnt,_=np.histogram(db.age_Ma,bins=edges); cen=(edges[:-1]+edges[1:])/2
+XTOP=int(np.ceil(db.age_Ma.max()/100.0))*100   # cover the oldest deposit (~3265 Ma -> 3300)
+edges=np.arange(0,XTOP+100,100); cnt,_=np.histogram(db.age_Ma,bins=edges); cen=(edges[:-1]+edges[1:])/2
 with pygmt.config(FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica"):
-    fig.basemap(region=[0,2700,0,cnt.max()*1.15],projection="X-8.2c/5c",
+    fig.basemap(region=[0,XTOP,0,cnt.max()*1.15],projection="X-8.2c/5c",
                 frame=["xa500f100+lAge (Ma)","yaf+lDeposits / 100 Myr","WSrt"])
 fig.plot(x=[2060,2060,2400,2400],y=[0,cnt.max()*1.15,cnt.max()*1.15,0],
          fill="#ffe0b2@40",close=True,pen=None)   # GOE band
