@@ -21,7 +21,7 @@ deep=deep[deep.n_Q3>0]
 
 fig=pygmt.Figure()
 # (a) |paleolat| vs age, 0-1.8 Ga
-fig.basemap(region=[0,1800,0,90],projection="X8c/6c",
+fig.basemap(region=[0,1800,0,90],projection="X-8c/6c",   # reversed: old left, young right (matches Fig 1C)
             frame=["xa300f100+lAge (Ma)","ya30f10+l@~\\174@~paleolatitude@~\\174@~ (\\260)","WSrt"])
 fig.plot(x=[540,540,720,720],y=[0,90,90,0],fill="#c8e6c9@50",close=True,pen=None)
 for t,g in rec.groupby("deposit_type"):
@@ -47,7 +47,7 @@ panel(fig,"b")
 
 # (c) >1.8 Ga Q>=3 paleolatitudes
 fig.shift_origin(xshift="-10c",yshift="-8.5c")
-fig.basemap(region=[1800,2900,0,90],projection="X8c/6c",
+fig.basemap(region=[1800,2900,0,90],projection="X-8c/6c",   # reversed: old left, young right (matches Fig 1C)
             frame=["xa300f100+lAge (Ma)","ya30f10+l@~\\174@~paleolatitude@~\\174@~ (\\260)","WSrt"])
 fig.plot(x=[2060,2060,2400,2400],y=[0,90,90,0],fill="#ffe0b2@50",close=True,pen=None)
 for t,g in deep.groupby("type"):
