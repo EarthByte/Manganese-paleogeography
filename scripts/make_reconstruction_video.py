@@ -7,7 +7,7 @@ For each time step t (Ma) it draws the Cao et al. (2024) continents (clean gray
 fills, no outlines) and subduction zones, then plots every deposit and occurrence
 that had already formed by time t (formation age >= t) at its reconstructed
 position at time t. Deposits are large outlined symbols coloured by genetic type;
-occurrences are small black dots (primary sedimentary, genesis A/B only). Plate IDs are
+occurrences are small black dots (sedimentary: primary A/B + gondite-type metased silicate). Plate IDs are
 assigned by point-in-polygon against the CONTINENTAL polygons (the drawn set), so
 points stay on shown crust; off-continent points (plate_id 0) are dropped.
 
@@ -50,7 +50,8 @@ pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p
 dep=pd.read_csv(DATA/"mn_deposit_database.csv").dropna(subset=["latitude","longitude","age_Ma"])
 dep=dep[(dep.age_Ma>0)&(dep.age_Ma<=args.tmax)].reset_index(drop=True)
 occ=pd.read_csv(DATA/"mn_occurrences_with_coords.csv").dropna(subset=["lat","lon","age_mid"])
-occ=occ[occ.group.isin(["A","B"])&(occ.age_mid>0)&(occ.age_mid<=args.tmax)].reset_index(drop=True)
+occ=occ[(occ.group.isin(["A","B"])|(occ.genesis_class=="Metamorphic Mn silicate"))
+        &(occ.age_mid>0)&(occ.age_mid<=args.tmax)].reset_index(drop=True)
 
 pmm=PlateModelManager(); model=pmm.get_model("Cao2024",data_dir=str(CACHE))
 rotm=model.get_rotation_model()

@@ -10,9 +10,12 @@ import numpy as np, pandas as pd, pygmt
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True)
 db=pd.read_csv(DATA/"mn_deposit_database.csv")
-# present-day primary-sedimentary Mn occurrence compilation (oxide A + carbonate B)
+# present-day sedimentary Mn occurrence compilation: primary (oxide A + carbonate B)
+# plus metamorphosed sedimentary (gondite-type 'Metamorphic Mn silicate'); the
+# ambiguous-oxide, supergene, hydrothermal and magmatic classes are excluded.
 occ=pd.read_csv(DATA/"mn_occurrences_with_coords.csv")
-occ=occ[occ.group.isin(["A","B"])].dropna(subset=["lat","lon"])
+occ=occ[occ.group.isin(["A","B"]) |
+        (occ.genesis_class=="Metamorphic Mn silicate")].dropna(subset=["lat","lon"])
 COL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
 OCC_COL="black"
 LAB={'sedimentary':'sedimentary','volcanogenic':'volcanogenic','karst/other':'karst / supergene'}
@@ -28,7 +31,7 @@ fig.basemap(region="d",projection="W0/18c",frame=["af"])
 fig.coast(land="gray92",water="white",resolution="l",area_thresh=10000)
 # occurrence layer (present-day): small black dots
 fig.plot(x=occ.lon,y=occ.lat,style="c0.07c",fill=OCC_COL,pen=None,transparency=35,
-         label=f"primary sedimentary occurrences (n={len(occ)})")
+         label=f"sedimentary Mn occurrences (n={len(occ)})")
 # deposits (large outlined symbols), on top
 for t,g in db.groupby("deposit_type"):
     fig.plot(x=g.longitude,y=g.latitude,style="c0.22c",fill=COL.get(t,'gray'),

@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
 Figure 2 (Geology) — paleogeographic reconstruction of the Mn record (0-1.8 Ga).
-Density layer: primary-sedimentary Mn OCCURRENCES (genesis A oxide + B carbonate;
-small dots) reconstructed via Cao 2024. Highlight layer: curated Maynard
-DEPOSITS (large outlined symbols) coloured by genetic type. Metamorphic and
-supergene occurrences are excluded (do not record primary depositional redox /
-host-age positions unreliable). Helvetica, no titles,
+Density layer: sedimentary Mn OCCURRENCES (small dots) reconstructed via Cao
+2024 — primary (genesis A oxide + B carbonate) plus metamorphosed sedimentary
+(gondite-type 'Metamorphic Mn silicate'), read from mn_occurrences_reconstructed
+(col occ_class). Highlight layer: curated Maynard DEPOSITS (large outlined
+symbols) coloured by genetic type. Ambiguous-oxide, supergene, hydrothermal and
+magmatic occurrences are excluded (protolith not sedimentary / host-age
+positions unreliable). Helvetica, no titles,
 (a)-(d) inset labels + age stamps. Run in gplately-pygmt env.
 """
 from pathlib import Path

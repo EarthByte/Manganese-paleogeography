@@ -5,15 +5,27 @@ producing the derived occurrence file used by Fig. 2 (density layer) and the
 occurrence corroboration (Fig. 3d).
 
 Assigns each occurrence a plate ID by point-in-polygon against the Cao et al.
-(2024) static polygons, reconstructs it to its formation age (age_mid), and
-keeps the primary sedimentary classes only (genesis A = marine/early-diagenetic
-oxide, B = burial-diagenetic carbonate). Metamorphic (C) and supergene/other
-occurrences are excluded: metamorphic phases do not record primary depositional
-redox, and supergene host ages would misplace the point. Same plate-ID +
-reconstruction workflow as the deposits (03).
+(2024) static polygons and reconstructs it to its formation age (age_mid).
+
+Two nested occurrence sets are retained and tagged in the output column
+`occ_class`:
+  * 'primary'  = genesis A (marine hydrogenetic / early-diagenetic oxide) +
+                 B (burial-diagenetic carbonate). These are unmetamorphosed
+                 primary sedimentary phases and constitute the HEADLINE
+                 paleolatitude test (Fig. 3D).
+  * 'metased'  = genesis C restricted to 'Metamorphic Mn silicate'
+                 (gondite-type spessartine-quartz rocks) — METAMORPHOSED
+                 SEDIMENTARY Mn. Metamorphism resets mineralogy but not the
+                 depositional position, so these are valid spatial markers of
+                 sedimentary Mn basins; they extend deep-time coverage and are
+                 used in the Fig. 1/2 spatial layers and as a ROBUSTNESS set.
+Excluded entirely: 'Metamorphic Mn oxide (ambiguous default)' (protolith not
+confidently sedimentary), supergene/other (host-age positions misplace the
+point), and hydrothermal/magmatic/pegmatitic (not sedimentary). The redox /
+mineralogy inferences (Fig. 4) use the stricter 'primary' set only.
 
 INPUT : data/derived/mn_occurrences_with_coords.csv   (from 00a)
-OUTPUT: data/derived/mn_occurrences_reconstructed.csv
+OUTPUT: data/derived/mn_occurrences_reconstructed.csv  (col occ_class: primary|metased)
 ENV   : conda activate gplately-pygmt
 """
 from pathlib import Path
@@ -23,9 +35,14 @@ HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; CACHE=REPO/"gplately_data"
 
 o=pd.read_csv(DATA/"mn_occurrences_with_coords.csv").dropna(subset=["lat","lon","age_mid"])
-o=o[o.group.isin(["A","B"])].reset_index(drop=True)   # primary sedimentary only (oxide + carbonate)
+# primary sedimentary (A/B) + gondite-type metamorphosed sedimentary (C silicate only)
+GONDITE="Metamorphic Mn silicate"
+o["occ_class"]=np.where(o.group.isin(["A","B"]),"primary",
+                np.where((o.group=="C")&(o.genesis_class==GONDITE),"metased",None))
+o=o[o.occ_class.notna()].reset_index(drop=True)
 o=o[(o.age_mid>0)&(o.age_mid<=1800)].reset_index(drop=True)
-print(f"{len(o)} primary-sedimentary occurrences to reconstruct (A/B, 0-1800 Ma)")
+print(f"{len(o)} occurrences to reconstruct: "
+      f"{(o.occ_class=='primary').sum()} primary (A/B) + {(o.occ_class=='metased').sum()} gondite-type metased (0-1800 Ma)")
 
 pmm=PlateModelManager(); model=pmm.get_model("Cao2024",data_dir=str(CACHE))
 rotm=model.get_rotation_model()
@@ -48,7 +65,7 @@ for t,g in o.groupby("age_round"):
     pts=gplately.Points(plate_reconstruction=recon,lons=gg.lon.values,lats=gg.lat.values,plate_id=gg.plate_id.values)
     plon,plat=pts.reconstruct(time=float(t),return_array=True)
     o.loc[gg.index,"paleo_lon"]=plon; o.loc[gg.index,"paleo_lat"]=plat
-out=o.dropna(subset=["paleo_lat","paleo_lon"])[["lat","lon","paleo_lat","paleo_lon","age_mid","group","plate_id"]]
+out=o.dropna(subset=["paleo_lat","paleo_lon"])[["lat","lon","paleo_lat","paleo_lon","age_mid","group","genesis_class","occ_class","plate_id"]]
 out.to_csv(DATA/"mn_occurrences_reconstructed.csv",index=False)
 print(f"reconstructed {len(out)} occurrences -> data/derived/mn_occurrences_reconstructed.csv "
-      f"(A={sum(out.group=='A')}, B={sum(out.group=='B')})")
+      f"(primary A/B={sum(out.occ_class=='primary')}, gondite metased={sum(out.occ_class=='metased')})")
