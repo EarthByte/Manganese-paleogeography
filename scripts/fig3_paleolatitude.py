@@ -38,7 +38,7 @@ fig.basemap(region=[0,90,0,1],projection="X8c/6c",
 nullf=DATA/"latitude_null_sample.csv"
 if nullf.exists():
     nv=np.sort(pd.read_csv(nullf)["abs_paleolat"].values)
-    fig.plot(x=nv,y=np.linspace(0,1,len(nv)),pen="2.2p,black",label="continental null")
+    fig.plot(x=nv,y=np.linspace(0,1,len(nv)),pen="2.2p,black",label="continental reference")
 for t in ['sedimentary','volcanogenic','karst/other']:
     v=np.sort(rec.loc[rec.deposit_type==t,"abspaleolat"].dropna().values)
     if len(v)>=5: fig.plot(x=v,y=np.linspace(0,1,len(v)),pen=f"2p,{COL[t]}",label=t)
@@ -65,8 +65,8 @@ onull=DATA/"occurrence_null_sample.csv"; oprim=DATA/"occurrence_primary_decluste
 if onull.exists() and oprim.exists():
     nv=np.sort(pd.read_csv(onull)["abs_paleolat"].values)
     pv=np.sort(pd.read_csv(oprim)["abs_paleolat"].values)
-    fig.plot(x=nv,y=np.linspace(0,1,len(nv)),pen="2.2p,black",label="continental null")
-    fig.plot(x=pv,y=np.linspace(0,1,len(pv)),pen="2.2p,#0072B2",label=f"primary occurrences (n={len(pv)})")
+    fig.plot(x=nv,y=np.linspace(0,1,len(nv)),pen="2.2p,black",label="continental reference")
+    fig.plot(x=pv,y=np.linspace(0,1,len(pv)),pen="2.2p,#0072B2",label=f"primary sedimentary occurrences ({len(pv)} cells)")
     fig.legend(position="JBR+jBR+o0.2c",box="+gwhite@20+p0.5p,gray50")
 panel(fig,"d")
 fig.savefig(str(OUT/"Fig3_paleolatitude.pdf")); fig.savefig(str(OUT/"Fig3_paleolatitude.png"),dpi=300)

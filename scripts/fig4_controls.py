@@ -42,7 +42,8 @@ for j,t in enumerate(types):
         fig.plot(x=[i+(j-1)*w],y=[rate(p,t)],style=f"b{w}c+b0",fill=COL[t],pen="0.3p,black",
                  label=t if i==0 else None)
 # category labels set a clear gap below the axis (proportional to the y-range)
-for i,p in enumerate(ph): fig.text(x=i,y=-0.06*YMAX,text=p,font="13p,Helvetica,black",no_clip=True)
+DLAB={'assembly':'assembly','dispersal/other':'dispersal/breakup'}  # axis display labels
+for i,p in enumerate(ph): fig.text(x=i,y=-0.06*YMAX,text=DLAB.get(p,p),font="13p,Helvetica,black",no_clip=True)
 fig.legend(position="JTR+jTR+o0.2c",box="+gwhite@20+p0.5p,gray50")
 panel(fig,"a")
 

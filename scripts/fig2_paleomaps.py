@@ -129,7 +129,7 @@ for k,(t,L,nm) in enumerate(TIMES):
 # under the two-column plot. Colour = deposit type; small black dot = occurrences.
 leg=[("sedimentary","#0072B2",0.18,"0.4p,black"),("volcanogenic","#E69F00",0.18,"0.4p,black"),
      ("karst/supergene","#CC79A7",0.18,"0.4p,black"),
-     (f"Mn occurrences (n={len(occ)})","black",0.09,None)]
+     ("sedimentary Mn occurrences","black",0.09,None)]
 CH=0.20; GAP=0.5; PAD=0.40    # approx cm/char at 11p, inter-item gap, box side padding
 w=[0.40+len(lab)*CH+GAP for (lab,_,_,_) in leg]
 content=sum(w)-GAP; W=content+2*PAD
