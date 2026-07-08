@@ -29,13 +29,16 @@ fig=pygmt.Figure()
 # ---- (a) present-day map ----
 fig.basemap(region="d",projection="W0/18c",frame=["af"])
 fig.coast(land="gray92",water="white",resolution="l",area_thresh=10000)
-# occurrence layer (present-day): small black dots
-fig.plot(x=occ.lon,y=occ.lat,style="c0.07c",fill=OCC_COL,pen=None,transparency=35,
-         label=f"sedimentary Mn occurrences (n={len(occ)})")
-# deposits (large outlined symbols), on top
-for t,g in db.groupby("deposit_type"):
-    fig.plot(x=g.longitude,y=g.latitude,style="c0.22c",fill=COL.get(t,'gray'),
-             pen="0.4p,black",label=f"{LAB.get(t,t)} deposit")
+# deposits (large outlined symbols), legend ordered most->least common, each with n
+occ_bg=occ  # occurrence dots drawn as background first (no legend entry), re-added on top below
+fig.plot(x=occ_bg.lon,y=occ_bg.lat,style="c0.07c",fill=OCC_COL,pen=None,transparency=35)
+for t in ['sediment-hosted','volcanic-hosted','karst-hosted']:
+    g=db[db.deposit_type==t]
+    fig.plot(x=g.longitude,y=g.latitude,style="c0.22c",fill=COL[t],
+             pen="0.4p,black",label=f"{LAB.get(t,t)} deposits (n={len(g)})")
+# occurrence legend entry last (with n); a single representative dot keeps the map unchanged
+fig.plot(x=[occ.lon.iloc[0]],y=[occ.lat.iloc[0]],style="c0.07c",fill=OCC_COL,pen=None,
+         transparency=35,label=f"sedimentary Mn occurrences (n={len(occ)})")
 fig.legend(position="JBL+jBL+o0.2c",box="+gwhite+p0.5p,gray50")
 # panel (a) label placed inside the map (left-hand ocean) so the box does not straddle the frame
 fig.text(x=-145,y=45,text="a",font="16p,Helvetica-Bold,black",fill="white",pen="0.6p,gray40",no_clip=True)
