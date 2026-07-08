@@ -75,6 +75,11 @@ fig.plot(x=[2060,2060,2400,2400],y=[0,cnt.max()*1.15,cnt.max()*1.15,0],
          fill="#ffe0b2@40",close=True,pen=None)   # GOE band
 fig.plot(x=[540,540,720,720],y=[0,cnt.max()*1.15,cnt.max()*1.15,0],
          fill="#c8e6c9@40",close=True,pen=None)    # NOE band
+# supercontinent existence intervals (Cao et al., 2024): Nuna 1.60-1.46 Ga, Rodinia 930-780 Ma, Pangea 320-200 Ma
+YB=cnt.max()*1.15
+for nm,lo,hi in [("Nuna",1460,1600),("Rodinia",780,930),("Pangea",200,320)]:
+    fig.plot(x=[lo,lo,hi,hi],y=[0,YB,YB,0],fill="gray75@60",close=True,pen=None)
+    fig.text(x=(lo+hi)/2,y=YB*0.90,text=nm,font="8p,Helvetica-Bold,gray25",no_clip=True)
 fig.plot(x=cen,y=cnt,style="b0.18c+b0",fill="gray35",pen="0.2p,black")
 fig.text(x=2230,y=cnt.max()*1.05,text="GOE",font="9p,Helvetica,black",no_clip=True)
 fig.text(x=630,y=cnt.max()*1.05,text="NOE",font="9p,Helvetica,black",no_clip=True)
