@@ -10,8 +10,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, pygmt
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True)
-COL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
-SH={'sedimentary':'sedi','volcanogenic':'volc','karst/other':'karst'}           # x-axis category labels
+COL={'sediment-hosted':'#0072B2','volcanic-hosted':'#E69F00','karst-hosted':'#CC79A7'}  # colour-blind-safe
+SH={'sediment-hosted':'sediment-hosted','volcanic-hosted':'volcanic-hosted','karst-hosted':'karst-hosted'}           # x-axis category labels
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica")
 def panel(fig,L):
     fig.text(text=L,position="TL",offset="0.2c/-0.2c",justify="TL",no_clip=True,
@@ -24,7 +24,7 @@ geo['Mn_Fe']=geo['MnO(%)']/geo['Fe2O3 t']
 # supercontinent assembly windows (Ma)
 assembly=[(250,340),(500,650),(900,1100),(1500,1900)]
 db['phase']=db.age_Ma.apply(lambda a:'assembly' if any(x<=a<y for x,y in assembly) else 'dispersal/other')
-types=['sedimentary','volcanogenic','karst/other']
+types=['sediment-hosted','volcanic-hosted','karst-hosted']
 
 fig=pygmt.Figure()
 # (a) deposits PER UNIT TIME by type x phase (normalized so the longer dispersal

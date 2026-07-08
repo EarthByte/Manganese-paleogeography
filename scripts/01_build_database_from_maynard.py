@@ -27,7 +27,9 @@ df=df[df['type'].isin(['S','V','K'])].copy()
 df['age_Ma']=pd.to_numeric(df['age_Ma'],errors='coerce'); df=df.dropna(subset=['age_Ma'])
 df['deposit']=df['deposit'].astype(str).str.strip()
 dep=df.drop_duplicates('deposit').copy()
-dep['deposit_type']=dep['type'].map({'S':'sedimentary','V':'volcanogenic','K':'karst/other'})
+dep['deposit_type']=dep['type'].map({'S':'sediment-hosted','V':'volcanic-hosted','K':'karst-hosted'})  # Maynard host classes
+import re as _re
+dep['supergene']=dep['mineral'].astype(str).str.contains(r'cryptomelane|manganite|nsutite|psilomelane|todorokite',case=False,na=False)  # Maynard supergene overprint (mineral-defined)
 dep=dep.rename(columns={'deposit':'deposit_name','formation':'host_formation','metam':'metamorphic_grade'})
 dep[['deposit_name','country','state','deposit_type','age_Ma','host_formation','metamorphic_grade','mineral']]\
    .to_csv(OUT/"mn_deposit_database.csv",index=False)

@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np, pandas as pd, pygmt
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; OUT=REPO/"figures"; OUT.mkdir(exist_ok=True)
-COL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
+COL={'sediment-hosted':'#0072B2','volcanic-hosted':'#E69F00','karst-hosted':'#CC79A7'}  # colour-blind-safe
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica")
 def panel(fig,L):
     fig.text(text=L,position="TL",offset="0.2c/-0.2c",justify="TL",no_clip=True,
@@ -39,7 +39,7 @@ nullf=DATA/"latitude_null_sample.csv"
 if nullf.exists():
     nv=np.sort(pd.read_csv(nullf)["abs_paleolat"].values)
     fig.plot(x=nv,y=np.linspace(0,1,len(nv)),pen="2.2p,black",label="continental reference")
-for t in ['sedimentary','volcanogenic','karst/other']:
+for t in ['sediment-hosted','volcanic-hosted','karst-hosted']:
     v=np.sort(rec.loc[rec.deposit_type==t,"abspaleolat"].dropna().values)
     if len(v)>=5: fig.plot(x=v,y=np.linspace(0,1,len(v)),pen=f"2p,{COL[t]}",label=t)
 fig.legend(position="JBR+jBR+o0.2c",box="+gwhite@20+p0.5p,gray50")

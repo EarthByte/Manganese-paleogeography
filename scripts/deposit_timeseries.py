@@ -7,13 +7,13 @@ age, age_Ma) but at finer, configurable bin widths, on a REGULAR zero-filled gri
 
 OUTPUT (data/derived/): deposit_counts_5Myr.csv, deposit_counts_10Myr.csv
 Columns: bin_center_Ma, age_lo_Ma, age_hi_Ma, n_total, n_sedimentary,
-         n_volcanogenic, n_karst_other
+         n_volcanic_hosted, n_karst_hosted
 """
 from pathlib import Path
 import numpy as np, pandas as pd
 HERE=Path(__file__).resolve().parent; REPO=HERE.parent; DATA=REPO/"data"/"derived"
 db=pd.read_csv(DATA/"mn_deposit_database.csv").dropna(subset=["age_Ma"])
-TYPES=["sedimentary","volcanogenic","karst/other"]
+TYPES=["sediment-hosted","volcanic-hosted","karst-hosted"]
 
 def make(binw):
     amax=float(db.age_Ma.max()); top=(int(amax//binw)+1)*binw

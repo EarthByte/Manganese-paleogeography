@@ -22,7 +22,7 @@ TIMES=[(900,"a","Tonian"),(660,"b","Cryogenian"),(370,"c","Late Devonian"),
 WIN_DEP=40    # +/- Myr window for deposits
 WIN_OCC=60    # +/- Myr window for occurrences (denser context layer)
 # colour-blind-safe deposit-type palette (Okabe-Ito); occurrences are plain black dots
-DCOL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}
+DCOL={'sediment-hosted':'#0072B2','volcanic-hosted':'#E69F00','karst-hosted':'#CC79A7'}
 OCC_COL="black"
 # key named deposits to label on each panel (name substrings; see caption for ages)
 # each item: a name substring (match+label) or (match_substring, display_label)
@@ -127,8 +127,8 @@ for k,(t,L,nm) in enumerate(TIMES):
 
 # shared legend: a tight box sized to its content (not the full plot width), centred
 # under the two-column plot. Colour = deposit type; small black dot = occurrences.
-leg=[("sedimentary","#0072B2",0.18,"0.4p,black"),("volcanogenic","#E69F00",0.18,"0.4p,black"),
-     ("karst/supergene","#CC79A7",0.18,"0.4p,black"),
+leg=[("sediment-hosted","#0072B2",0.18,"0.4p,black"),("volcanic-hosted","#E69F00",0.18,"0.4p,black"),
+     ("karst-hosted","#CC79A7",0.18,"0.4p,black"),
      ("sedimentary Mn occurrences","black",0.09,None)]
 CH=0.20; GAP=0.5; PAD=0.40    # approx cm/char at 11p, inter-item gap, box side padding
 w=[0.40+len(lab)*CH+GAP for (lab,_,_,_) in leg]

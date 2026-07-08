@@ -16,9 +16,9 @@ db=pd.read_csv(DATA/"mn_deposit_database.csv")
 occ=pd.read_csv(DATA/"mn_occurrences_with_coords.csv")
 occ=occ[occ.group.isin(["A","B"]) |
         (occ.genesis_class=="Metamorphic Mn silicate")].dropna(subset=["lat","lon"])
-COL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
+COL={'sediment-hosted':'#0072B2','volcanic-hosted':'#E69F00','karst-hosted':'#CC79A7'}  # colour-blind-safe
 OCC_COL="black"
-LAB={'sedimentary':'sedimentary','volcanogenic':'volcanogenic','karst/other':'karst / supergene'}
+LAB={'sediment-hosted':'sediment-hosted','volcanic-hosted':'volcanic-hosted','karst-hosted':'karst-hosted'}
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="11p,Helvetica",FONT_LABEL="13p,Helvetica")
 
 def panel(fig,L,off="0.2c/-0.2c"):
@@ -44,7 +44,7 @@ fig.text(x=-145,y=45,text="a",font="16p,Helvetica-Bold,black",fill="white",pen="
 fig.shift_origin(yshift="-5.5c")
 eras=[("Arch",2500,4000),("Paleop",1600,2500),("Meso",1000,1600),
       ("Neop",540,1000),("Pz",252,540),("Mz",66,252),("Cz",0,66)]
-types=['sedimentary','volcanogenic','karst/other']
+types=['sediment-hosted','volcanic-hosted','karst-hosted']
 with pygmt.config(FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica"):
     fig.basemap(region=[-0.5,len(eras)-0.5,0,1],projection="X8.2c/5c",
                 frame=["ya0.2f0.1+lFraction of deposits","WSrt"])  # era labels added manually below

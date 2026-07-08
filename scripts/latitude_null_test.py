@@ -65,7 +65,7 @@ pd.Series(null,name="abs_paleolat").to_csv(DATA/"latitude_null_sample.csv",index
 print(f"continental-availability null: {len(null)} points; null median |lat|={np.median(null):.0f}, %<30={100*np.mean(null<30):.0f}%")
 
 lines=[f"Continental-availability null: n={len(null)}, median|lat|={np.median(null):.1f}, %tropical={100*np.mean(null<30):.1f}%",""]
-for t in ['sedimentary','volcanogenic','karst/other']:
+for t in ['sediment-hosted','volcanic-hosted','karst-hosted']:
     v=d.loc[d.deposit_type==t,"paleo_lat"].abs().dropna().values
     if len(v)<5: lines.append(f"{t}: n={len(v)} (too few)"); continue
     ks=stats.ks_2samp(v,null)
@@ -80,7 +80,7 @@ out="\n".join(lines); print(out)
 # figure: CDFs, observed types vs continental null
 fig,ax=plt.subplots(figsize=(7,5))
 x=np.sort(null); ax.plot(x,np.linspace(0,1,len(x)),color="k",lw=2,label="continental-availability null")
-COL={'sedimentary':'#3b6fb6','volcanogenic':'#d6322a','karst/other':'#7a7a7a'}
+COL={'sediment-hosted':'#3b6fb6','volcanic-hosted':'#d6322a','karst-hosted':'#7a7a7a'}
 for t in COL:
     v=np.sort(d.loc[d.deposit_type==t,"paleo_lat"].abs().dropna().values)
     if len(v)>=5: ax.plot(v,np.linspace(0,1,len(v)),color=COL[t],lw=2,label=f"{t} (n={len(v)})")

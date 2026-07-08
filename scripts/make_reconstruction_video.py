@@ -42,7 +42,7 @@ ap.add_argument("--fps",type=int,default=20,help="frames per second (default 20)
 ap.add_argument("--reuse-frames",action="store_true",help="keep existing frame PNGs")
 args=ap.parse_args()
 
-DCOL={'sedimentary':'#0072B2','volcanogenic':'#E69F00','karst/other':'#CC79A7'}  # colour-blind-safe
+DCOL={'sediment-hosted':'#0072B2','volcanic-hosted':'#E69F00','karst-hosted':'#CC79A7'}  # colour-blind-safe
 OCC_COL="black"
 pygmt.config(FONT="Helvetica",FONT_ANNOT_PRIMARY="10p,Helvetica",FONT_LABEL="12p,Helvetica")
 
