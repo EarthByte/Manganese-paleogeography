@@ -81,8 +81,9 @@ for nm,lo,hi in [("Nuna",1460,1600),("Rodinia",780,930),("Pangea",200,320)]:
     fig.plot(x=[lo,lo,hi,hi],y=[0,YB,YB,0],fill="gray75@60",close=True,pen=None)
     fig.text(x=(lo+hi)/2,y=YB*0.90,text=nm,font="8p,Helvetica-Bold,gray25",no_clip=True)
 fig.plot(x=cen,y=cnt,style="b0.18c+b0",fill="gray35",pen="0.2p,black")
-fig.text(x=2230,y=cnt.max()*1.05,text="GOE",font="9p,Helvetica,black",no_clip=True)
-fig.text(x=630,y=cnt.max()*1.05,text="NOE",font="9p,Helvetica,black",no_clip=True)
+# GOE/NOE labels dropped ~1.5 cm (panel is 5 cm for 0..1.15*max -> 1.5 cm ~ 0.345*max)
+fig.text(x=2230,y=cnt.max()*0.70,text="GOE",font="9p,Helvetica,black",no_clip=True)
+fig.text(x=630,y=cnt.max()*0.70,text="NOE",font="9p,Helvetica,black",no_clip=True)
 panel(fig,"c")
 
 fig.savefig(str(OUT/"Fig1_database.pdf")); fig.savefig(str(OUT/"Fig1_database.png"),dpi=300)

@@ -68,13 +68,15 @@ if onull.exists() and oprim.exists():
     pv=np.sort(pd.read_csv(oprim)["abs_paleolat"].values)
     fig.plot(x=nv,y=np.linspace(0,1,len(nv)),pen="2.2p,black")
     fig.plot(x=pv,y=np.linspace(0,1,len(pv)),pen="2.2p,#0072B2")
-    # manual legend confined to the data-free lower-right; occurrence label on two lines
-    bx=44
-    fig.plot(x=[bx,bx,90,90,bx],y=[0.02,0.30,0.30,0.02,0.02],fill="white@15",pen="0.5p,gray50")
+    # manual legend confined to the data-free lower-right; occurrence label on two lines.
+    # bx shifted left (~1 cm) and right border pulled inside the frame (was 90) so the
+    # box no longer straddles the figure edge and the text fits with margin.
+    bx=33; brx=88
+    fig.plot(x=[bx,bx,brx,brx,bx],y=[0.02,0.30,0.30,0.02,0.02],fill="white@15",pen="0.5p,gray50")
     fig.plot(x=[bx+3,bx+9],y=[0.24,0.24],pen="2.2p,black")
     fig.text(x=bx+11,y=0.24,text="continental reference",justify="LM",font="8p,Helvetica,black",no_clip=True)
     fig.plot(x=[bx+3,bx+9],y=[0.13,0.13],pen="2.2p,#0072B2")
-    fig.text(x=bx+11,y=0.15,text="sedimentary occurrences",justify="LM",font="8p,Helvetica,black",no_clip=True)
+    fig.text(x=bx+11,y=0.15,text="sediment-hosted occurrences",justify="LM",font="8p,Helvetica,black",no_clip=True)
     fig.text(x=bx+11,y=0.075,text=f"({len(pv)} cells)",justify="LM",font="8p,Helvetica,black",no_clip=True)
 panel(fig,"d")
 fig.savefig(str(OUT/"Fig3_paleolatitude.pdf")); fig.savefig(str(OUT/"Fig3_paleolatitude.png"),dpi=300)

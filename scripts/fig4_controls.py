@@ -40,17 +40,21 @@ for j,t in enumerate(types):
         fig.plot(x=[i+(j-1)*w],y=[rate(p,t)],style=f"b{w}c+b0",fill=COL[t],pen="0.3p,black")
 DLAB={'assembly':'assembly','dispersal/other':'dispersal/breakup'}
 for i,p in enumerate(ph): fig.text(x=i,y=-0.06*YMAX,text=DLAB.get(p,p),font="13p,Helvetica,black",no_clip=True)
-# three SEPARATE legend boxes (one per host class), small gaps between, upper-right free space
-bh=0.095*YMAX; gap=0.05*YMAX; ytop=0.98*YMAX; lx0,lx1=0.55,1.47
+# ONE legend box around all three host classes, in the upper-left free space:
+# starts right of the panel-(a) label box and sits above the tallest assembly bar
+# (sediment-hosted assembly = 0.55*YMAX), well left of the dispersal bars (x>=0.76).
+lx0,lx1=-0.28,0.60
+ytop=0.97*YMAX; dy=0.095*YMAX; pad=0.075*YMAX
+ybot=ytop-2*pad-2*dy
+fig.plot(x=[lx0,lx0,lx1,lx1,lx0],y=[ybot,ytop,ytop,ybot,ybot],fill="white",pen="0.5p,gray50")
 for k,t in enumerate(types):
-    y1=ytop-k*(bh+gap); y0=y1-bh; sy=(y0+y1)/2
-    fig.plot(x=[lx0,lx0,lx1,lx1,lx0],y=[y0,y1,y1,y0,y0],fill="white",pen="0.5p,gray50")
-    fig.plot(x=[lx0+0.12],y=[sy],style="s0.28c",fill=COL[t],pen="0.3p,black")
-    fig.text(x=lx0+0.24,y=sy,text=t,justify="LM",font="10p,Helvetica,black",no_clip=True)
+    sy=ytop-pad-k*dy
+    fig.plot(x=[lx0+0.07],y=[sy],style="s0.28c",fill=COL[t],pen="0.3p,black")
+    fig.text(x=lx0+0.15,y=sy,text=t,justify="LM",font="10p,Helvetica,black",no_clip=True)
 panel(fig,"a")
 
 # ---------- (b) Mn/Fe by host class (below a) ----------
-fig.shift_origin(yshift="-8c")
+fig.shift_origin(yshift="-7.1c")
 fig.basemap(region=[-0.5,2.5,0.1,200],projection=f"X{W}/6cl",   # log y
             frame=["ya1pf3+lMn/Fe (MnO/Fe@-2@-O@-3@-)","WSrt"])
 for i,t in enumerate(types):
@@ -66,7 +70,7 @@ panel(fig,"b")
 
 # ---------- (c) restricted-basin redox-model sketch (below b) ----------
 IMG=REPO/"assets"/"Fig_4c_restricted_basin_sketch.png"
-fig.shift_origin(yshift="-8c")
+fig.shift_origin(yshift="-6.8c")
 fig.image(imagefile=str(IMG),position=f"jTL+w{W}")
 panel(fig,"c")
 fig.savefig(str(OUT/"Fig4_controls.pdf")); fig.savefig(str(OUT/"Fig4_controls.png"),dpi=300)
