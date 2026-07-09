@@ -1,15 +1,26 @@
 {
-  "title": "Manganese paleogeography",
+  "title": "Manganese paleogeography: a global deep-time manganese deposit database and its paleogeographic reconstruction",
   "upload_type": "dataset",
   "license": "MIT",
   "access_right": "open",
-  "description": "A global, georeferenced database of manganese ore deposits through deep time and its paleogeographic reconstruction (0-1.8 Ga in the Cao et al. 2024 plate model; >1.8 Ga paleolatitudes from the Global Paleomagnetic Database, Pisarevsky et al. 2022), together with all analysis and figure-generation code. Supports the accompanying manuscript.",
+  "description": "A global, georeferenced database of 140 dated manganese ore deposits and 4,264 manganese mineral occurrences, reconstructed through deep time (0-1.8 Ga in the Cao et al. 2024 plate model; >1.8 Ga paleolatitudes from the Global Paleomagnetic Database, Pisarevsky et al. 2022), together with all analysis and figure-generation code. Includes the continental-availability and continental-arc availability null tests and the paleomagnetic pole selection used in the accompanying manuscript. Raw third-party source data (the Maynard 2010 supplement, GPMDB, USGS Professional Paper 1802) are not redistributed here.",
+  "keywords": [
+    "manganese",
+    "paleogeography",
+    "plate tectonics",
+    "paleolatitude",
+    "ocean redox",
+    "Great Oxidation Event",
+    "supercontinent cycle",
+    "mineral evolution",
+    "critical minerals"
+  ],
   "creators": [
-    {"name": "Müller, R. Dietmar", "affiliation": "EarthByte Group, School of Geosciences, University of Sydney, Australia"},
-    {"name": "Bermanec, Marco", "affiliation": "Department of Earth Sciences, University of Graz, Austria"},
-    {"name": "Li, Yan", "affiliation": "College of Chemistry and Molecular Engineering, Peking University, China"},
-    {"name": "Boulila, Slah", "affiliation": "Sorbonne Université, CNRS, ISTeP, Paris, France"},
-    {"name": "Dutkiewicz, Adriana", "affiliation": "EarthByte Group, School of Geosciences, University of Sydney, Australia"},
+    {"name": "Müller, R. Dietmar", "affiliation": "EarthByte Group, School of Geosciences, The University of Sydney, NSW, Australia"},
+    {"name": "Bermanec, Marko", "affiliation": "Department of Earth Sciences, University of Graz, Austria"},
+    {"name": "Li, Yan", "affiliation": "SKLab-DeepMinE, MOEKLab-OBCE, School of Earth and Space Sciences, Peking University, China"},
+    {"name": "Boulila, Slah", "affiliation": "Sorbonne Université, CNRS, Institut des Sciences de la Terre Paris, ISTeP, Paris, France"},
+    {"name": "Dutkiewicz, Adriana", "affiliation": "EarthByte Group, School of Geosciences, The University of Sydney, NSW, Australia"},
     {"name": "Hazen, Robert M.", "affiliation": "Geophysical Laboratory, Carnegie Institution for Science, Washington, DC, USA"}
   ]
 }

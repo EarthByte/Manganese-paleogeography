@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this database or code, please cite the accompanying paper and this archive."
-title: "Manganese paleogeography"
+title: "Manganese paleogeography: a global deep-time manganese deposit database and its paleogeographic reconstruction"
 abstract: >-
   A global, georeferenced database of manganese ore deposits through deep time and its
   paleogeographic reconstruction (0-1.8 Ga in the Cao et al. 2024 plate model;
@@ -9,24 +9,24 @@ abstract: >-
 type: dataset
 license: MIT
 version: "1.0.0"
-date-released: "2026-06-17"
+date-released: "2026-07-10"
 repository-code: "https://github.com/EarthByte/Manganese-paleogeography"
 authors:
   - family-names: Müller
     given-names: R. Dietmar
-    affiliation: "EarthByte Group, School of Geosciences, University of Sydney, Australia"
+    affiliation: "EarthByte Group, School of Geosciences, The University of Sydney, NSW, Australia"
   - family-names: Bermanec
-    given-names: Marco
+    given-names: Marko
     affiliation: "Department of Earth Sciences, University of Graz, Austria"
   - family-names: Li
     given-names: Yan
-    affiliation: "College of Chemistry and Molecular Engineering, Peking University, China"
+    affiliation: "SKLab-DeepMinE, MOEKLab-OBCE, School of Earth and Space Sciences, Peking University, China"
   - family-names: Boulila
     given-names: Slah
-    affiliation: "Sorbonne Université, CNRS, ISTeP, Paris, France"
+    affiliation: "Sorbonne Université, CNRS, Institut des Sciences de la Terre Paris, ISTeP, Paris, France"
   - family-names: Dutkiewicz
     given-names: Adriana
-    affiliation: "EarthByte Group, School of Geosciences, University of Sydney, Australia"
+    affiliation: "EarthByte Group, School of Geosciences, The University of Sydney, NSW, Australia"
   - family-names: Hazen
     given-names: Robert M.
     affiliation: "Geophysical Laboratory, Carnegie Institution for Science, Washington, DC, USA"
