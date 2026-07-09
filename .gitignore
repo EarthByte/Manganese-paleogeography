@@ -3,13 +3,22 @@ gplately_data/
 __pycache__/
 *.pyc
 .DS_Store
-figures/*.png
-figures/*.pdf
 *_cache*/
+
+# figures/: track ONLY the four paper figures (Fig. 1-4); exclude every other
+# rendered figure, the input sketch duplicate, the reconstruction video and its frames.
+figures/*
+!figures/Fig1_database.png
+!figures/Fig1_database.pdf
+!figures/Fig2_paleomaps.png
+!figures/Fig2_paleomaps.pdf
+!figures/Fig3_paleolatitude.png
+!figures/Fig3_paleolatitude.pdf
+!figures/Fig4_controls.png
+!figures/Fig4_controls.pdf
 
 # runtime logs
 *.log
 
-# video frames and renders
-figures/video_frames/
+# video renders
 *.mp4
