@@ -90,8 +90,8 @@ for i,(c,ages,l,_) in enumerate(marks):
     right=_right(i)
     ax=min(ages) if right else max(ages)   # anchor on the OUTERMOST cluster member, not the
     fig.text(x=ax,y=l,text=c,justify="LM" if right else "RM",   # centroid, so the letter never
-             offset="0.17c/0c" if right else "-0.17c/0c",       # lands on one of its own points
-             font="7p,Helvetica-Bold,black",no_clip=True)
+             offset="0.19c/0c" if right else "-0.19c/0c",       # lands on one of its own points
+             font="9p,Helvetica-Bold,black",no_clip=True)
 panel(fig,"c")
 
 # (d) occurrence-scale corroboration: declustered primary occurrences vs continental null
