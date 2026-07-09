@@ -1,0 +1,27 @@
+Volcanic-hosted Mn vs arc availability (Cao et al., 2024)
+============================================================================
+continental arc = trench segment within MAX_DIST_KM of a reconstructed continent
+
+  uniform-by-area sphere             n=200000  median |lat|= 30.1   %tropical= 49.8%
+  all-arc null                       n= 11700  median |lat|= 27.5   %tropical= 54.0%
+  continental-arc null (200 km)      n= 11700  median |lat|= 28.8   %tropical= 52.3%
+  continental-arc null (300 km)      n= 11700  median |lat|= 29.0   %tropical= 51.9%
+  continental-arc null (500 km)      n= 11700  median |lat|= 28.9   %tropical= 52.1%
+  continental-availability null      n= 31500  median |lat|= 35.0   %tropical= 43.2%
+  volcanic-hosted Mn deposits        n=    39  median |lat|= 26.7   %tropical= 56.4%
+  sediment-hosted Mn deposits        n=    59  median |lat|= 38.3   %tropical= 35.6%
+
+volcanic-hosted Mn tested against each null:
+  vs all-arc null                      : KS p=0.0403 ; tropical-frac MC p=0.882  -> MORE tropical
+  vs continental-arc null (200 km)     : KS p=0.0421 ; tropical-frac MC p=0.723  -> MORE tropical
+  vs continental-arc null (300 km)     : KS p=0.0412 ; tropical-frac MC p=0.68  -> MORE tropical
+  vs continental-arc null (500 km)     : KS p=0.0249 ; tropical-frac MC p=0.714  -> MORE tropical
+  vs continental-availability null     : KS p=0.000313 ; tropical-frac MC p=0.134  -> MORE tropical
+  vs uniform-by-area sphere            : KS p=0.00987 ; tropical-frac MC p=0.5  -> MORE tropical
+
+context:
+  continental-arc (300 km) vs continental-availability : KS p=6.68e-93
+  continental-arc (300 km) vs uniform-by-area          : KS p=9.26e-17
+
+A CLIMATE control predicts volcanic-hosted Mn is MORE tropical than its own arcs.
+An ARC-PALEOGEOGRAPHY control predicts it is INDISTINGUISHABLE from them.
