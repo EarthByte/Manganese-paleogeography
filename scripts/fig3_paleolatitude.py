@@ -55,6 +55,43 @@ for t,g in deep.groupby("type"):
     fig.plot(x=g.age_Ma,y=g.abs_paleolat_Q3,style="t0.22c",fill=COL.get(t,'gray'),pen="0.4p,black")
 fig.plot(x=[1800,2900],y=[30,30],pen="0.7p,green3,--")
 fig.text(x=2230,y=86,text="GOE",font="9p,Helvetica,black",no_clip=True)
+
+# --- craton letters next to the points -------------------------------------------------
+# Deposits of the SAME craton that plot within CLUS_CM of each other (e.g. the three
+# coincident Kalahari deposits, the two Moanda entries, the two Dharwar deposits) get a
+# single letter at their centroid. Clustering is done per craton, so a merged label never
+# mixes localities. Letters sit to the right of the symbol, flipping left near the young edge.
+X0,X1,W_CM,H_CM,CLUS_CM=1800.0,2900.0,8.0,6.0,0.45
+pxc=lambda a:(X1-a)/(X1-X0)*W_CM          # reversed x-axis (old left, young right)
+pyc=lambda l: l/90.0*H_CM
+lab=deep.assign(c=deep.craton_code).dropna(subset=["c","abs_paleolat_Q3"])
+lab=lab[lab.c.astype(str).str.len()>0]
+missing=sorted(deep.loc[deep.craton_code.isna()|(deep.craton_code.astype(str)==""),"deposit"])
+if missing: print("WARNING: no craton_code for:",missing)
+marks=[]   # (code, member ages, mean lat, mean age)
+for c,g in lab.groupby("c"):
+    rem=[(r.age_Ma,r.abs_paleolat_Q3) for _,r in g.iterrows()]
+    while rem:
+        a0,l0=rem.pop(0); cl=[(a0,l0)]
+        for q in list(rem):
+            if np.hypot(pxc(q[0])-pxc(a0),pyc(q[1])-pyc(l0))<CLUS_CM:
+                cl.append(q); rem.remove(q)
+        marks.append((c,[v[0] for v in cl],sum(v[1] for v in cl)/len(cl),sum(v[0] for v in cl)/len(cl)))
+def _right(i):
+    """Letter goes right of its cluster, unless that would run into the frame edge or into a
+    neighbouring craton's symbol (Amazonian sits just left of West African at the equator)."""
+    _,_,l,a=marks[i]
+    if pxc(a)>=W_CM-0.9: return False                      # too close to the young (right) edge
+    for j,(_,_,l2,a2) in enumerate(marks):
+        if j!=i and 0<pxc(a2)-pxc(a)<0.55 and abs(pyc(l2)-pyc(l))<0.25:
+            return False                                   # neighbour immediately to the right
+    return True
+for i,(c,ages,l,_) in enumerate(marks):
+    right=_right(i)
+    ax=min(ages) if right else max(ages)   # anchor on the OUTERMOST cluster member, not the
+    fig.text(x=ax,y=l,text=c,justify="LM" if right else "RM",   # centroid, so the letter never
+             offset="0.17c/0c" if right else "-0.17c/0c",       # lands on one of its own points
+             font="7p,Helvetica-Bold,black",no_clip=True)
 panel(fig,"c")
 
 # (d) occurrence-scale corroboration: declustered primary occurrences vs continental null

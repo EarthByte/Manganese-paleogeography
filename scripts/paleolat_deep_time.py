@@ -21,6 +21,23 @@ HERE=Path(__file__).resolve().parent; REPO=HERE.parent
 DATA=REPO/"data"/"derived"; RAW=REPO/"data"/"raw"
 R_SITE=15.0; AGEWIN=150.0
 
+# Craton on which each >1.8 Ga deposit SITS (from its present-day coordinates), with the
+# one-letter code annotated in Fig. 3c. NOTE this is the deposit's craton; the poles used to
+# date it are selected purely by site distance (<=R_SITE), so for some deposits they come from
+# an adjacent block -- the exported `Terrane` column in deeptime_poles_used.csv records the
+# craton of every pole actually used, and should be checked before quoting a craton in text.
+CRATON={'Ansongo (Takavasita)':('West African','W'),'Tambao':('West African','W'),
+        'Mokta (Grand Lahou)':('West African','W'),'Nsuta':('West African','W'),
+        'Serra do Navio':('Amazonian','A'),'Azul-Carajas':('Amazonian','A'),'Maripa':('Amazonian','A'),
+        'Marau':('Sao Francisco','F'),'Morro da Mina':('Sao Francisco','F'),
+        'Kalahari - Wessels':('Kaapvaal','K'),'Kalahari - Mamatwan':('Kaapvaal','K'),
+        'Kalahari - supergene':('Kaapvaal','K'),'Postmasburg':('Kaapvaal','K'),
+        'Bronkhorstfontein':('Kaapvaal','K'),
+        'Moanda':('Congo','C'),'Moanda, supergene':('Congo','C'),'Kisenge-Kamata-Kapolo':('Congo','C'),
+        'Woodie Woodie':('Pilbara','P'),'Ravensthorpe':('Yilgarn','Y'),
+        'Sandur-Shimoga':('Dharwar','D'),'North Kanara':('Dharwar','D'),
+        'Cuyuna IF':('Superior','S'),'Vittinki':('Fennoscandian','B'),'Panch Mahals':('Aravalli','Ar')}
+
 # --- load GPMDB 2022 CSV export ---
 df=pd.read_csv(RAW/"gpmdb_2022.csv")
 num=lambda c: pd.to_numeric(df[c],errors="coerce")
@@ -29,6 +46,7 @@ lo=num("LoMagAge").fillna(num("LowAge")); hi=num("HiMagAge").fillna(num("HighAge
 P=pd.DataFrame({
     "RefNo":df["RefNo"],"ResultNo":df["ResultNo"],"RockName":df["RockName"],
     "Authors":df["Authors"],"Year":df["Year"],"Continent":df["Continent"],
+    "Terrane":df["Terrane"],          # GPMDB craton/terrane of the POLE (provenance check)
     "site_lat":num("SLat"),"site_lon":num("SLon"),
     "pole_lat":num("PLat"),"pole_lon":num("PLon"),"A95":num("A95"),
     "lo_age":lo,"hi_age":hi,"mid_age":0.5*(lo+hi),
@@ -56,10 +74,14 @@ for _,d in deep.iterrows():
     n_all,pl_all=paleolat(d,P); n_q,pl_q=paleolat(d,P[P.Q>=3],record=used)
     rows.append((d.deposit_name,d.age_Ma,d.deposit_type,n_q,pl_q,n_all,pl_all))
 out=pd.DataFrame(rows,columns=["deposit","age_Ma","type","n_Q3","abs_paleolat_Q3","n_all","paleolat_all"]).sort_values("age_Ma")
+out["craton"]=out.deposit.map(lambda d: CRATON.get(d,("",""))[0])
+out["craton_code"]=out.deposit.map(lambda d: CRATON.get(d,("",""))[1])
+miss=sorted(out.loc[(out.n_Q3>0)&(out.craton==""),"deposit"])
+if miss: print("WARNING: plotted deposits without a craton assignment:",miss)
 out.to_csv(DATA/"mn_deeptime_paleolat_Q3.csv",index=False)
 
 # only the Q>=3 poles actually used (one row per deposit-pole selection)
-cols=["deposit","deposit_age_Ma","ResultNo","RefNo","RockName","Authors","Year","Continent",
+cols=["deposit","deposit_age_Ma","ResultNo","RefNo","RockName","Authors","Year","Continent","Terrane",
       "site_lat","site_lon","pole_lat","pole_lon","A95","lo_age","hi_age","mid_age","Q","sd"]
 up=pd.concat(used,ignore_index=True)[cols].rename(columns={"sd":"site_distance_deg"})
 up.to_csv(DATA/"deeptime_poles_used.csv",index=False)
