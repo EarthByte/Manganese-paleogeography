@@ -16,6 +16,7 @@ figures/*
 !figures/Fig3_paleolatitude.pdf
 !figures/Fig4_controls.png
 !figures/Fig4_controls.pdf
+!figures/FigS1_arc_null.png
 
 # runtime logs
 *.log
