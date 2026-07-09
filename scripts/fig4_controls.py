@@ -21,6 +21,39 @@ geo=pd.read_csv(DATA/"mn_deposit_geochemistry.csv").rename(columns={'deposit':'d
 geo['Mn_Fe']=geo['MnO(%)']/geo['Fe2O3 t']
 types=['sediment-hosted','volcanic-hosted','karst-hosted']
 
+# ---- Mn/Fe statistics quoted in the paper (Results + Fig. 4b caption + Supplement) ----
+# Bulk continental crust MnO = 0.10 wt%, FeO(T) = 6.71 wt% (Rudnick & Gao, 2014);
+# Fe2O3(T) = FeO(T) x 1.1113, so the crustal MnO/Fe2O3(T) reference ratio is ~0.0134.
+CRUST_MN_FE=0.10/(6.71*1.1113)
+def mnfe_stats():
+    try:
+        from scipy.stats import kruskal,spearmanr,mannwhitneyu
+    except ImportError:
+        print("scipy not available - skipping Mn/Fe statistics"); return
+    g=geo[['deposit_name','Mn_Fe']].merge(db[['deposit_name','deposit_type','age_Ma','supergene']],on='deposit_name')
+    g=g.replace([np.inf,-np.inf],np.nan).dropna(subset=['Mn_Fe']); g=g[g.Mn_Fe>0]
+    L=["Mn/Fe by host class (Fig. 4b)","="*58,
+       f"bulk continental crust MnO/Fe2O3(T) = {CRUST_MN_FE:.4f}  (Rudnick & Gao, 2014)",""]
+    for t in types:
+        v=g.loc[g.deposit_type==t,'Mn_Fe']
+        L.append(f"  {t:16s} n={len(v):3d}  median {v.median():6.2f}  = {v.median()/CRUST_MN_FE:5.0f}x crustal")
+    H=kruskal(*[g.loc[g.deposit_type==t,'Mn_Fe'].values for t in types])
+    L+=["",f"Kruskal-Wallis across host classes: H={H.statistic:.2f}, p={H.pvalue:.4f}",""]
+    s=g[g.deposit_type=='sediment-hosted']
+    r,p=spearmanr(s.age_Ma,s.Mn_Fe)
+    L.append(f"sediment-hosted Mn/Fe vs age        : rho={r:+.3f}  p={p:.3f}  (n={len(s)})")
+    lat=pd.read_csv(DATA/"mn_deposits_reconstructed_geochem.csv")[['deposit_name','abspaleolat']].dropna().drop_duplicates('deposit_name')
+    m=s.merge(lat,on='deposit_name')
+    r2,p2=spearmanr(m.abspaleolat,m.Mn_Fe)
+    L.append(f"sediment-hosted Mn/Fe vs |paleolat| : rho={r2:+.3f}  p={p2:.3f}  (n={len(m)})")
+    a=m.loc[m.abspaleolat<30,'Mn_Fe']; b=m.loc[m.abspaleolat>=30,'Mn_Fe']
+    pu=mannwhitneyu(a,b).pvalue
+    L.append(f"  tropical (<30) median {a.median():.2f} (n={len(a)}) vs extratropical {b.median():.2f} (n={len(b)}); Mann-Whitney p={pu:.2f}")
+    sg=s.groupby('supergene').Mn_Fe.median()
+    L.append(f"supergene overprint (sediment-hosted): median {sg.get(True,float('nan')):.2f} vs {sg.get(False,float('nan')):.2f} unaltered")
+    txt="\n".join(L); print(txt); (DATA/"mnfe_stats.txt").write_text(txt+"\n")
+mnfe_stats()
+
 # supercontinent assembly windows (Ma)
 assembly=[(250,340),(500,650),(900,1100),(1500,1900)]
 db['phase']=db.age_Ma.apply(lambda a:'assembly' if any(x<=a<y for x,y in assembly) else 'dispersal/other')
