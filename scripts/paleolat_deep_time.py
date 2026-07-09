@@ -2,9 +2,12 @@
 """
 04 - Paleolatitude of the >1.8 Ga Mn giants from the GPMDB (model-free, self-contained).
 Reads the Global Paleomagnetic Database (Pisarevsky et al. 2022, gpmdb.net) as a
-flat CSV export and, for each deposit >1.8 Ga, averages same-craton (site within
-15 deg) + coeval (+/-150 Myr) poles to get paleolatitude = 90 - angular
-distance(site, mean pole). The 2022 export already carries the Van der Voo (1990)
+flat CSV export and, for each deposit >1.8 Ga, averages nearby (site within 15 deg)
++ coeval (+/-150 Myr) poles to get paleolatitude = 90 - angular
+distance(site, mean pole). Site proximity is a PROXY for a shared cratonic block,
+not a craton test: a few deposits draw on poles from an adjacent block (e.g.
+Ravensthorpe/Yilgarn on Pilbara poles). The GPMDB `Terrane` of every pole used is
+exported so this can be audited. The 2022 export already carries the Van der Voo (1990)
 quality factor as QSUM (sum of Q1..Q7); we use it directly (Q>=3). Paleomag gives
 latitude only; hemisphere is ambiguous in deep time, so |paleolatitude| is
 reported. Pre-1.8 Ga poles are sparse - many deposits get few/no poles.
