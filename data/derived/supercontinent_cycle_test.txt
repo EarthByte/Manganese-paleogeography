@@ -1,0 +1,42 @@
+Assembly vs dispersal: counts, rates and exact binomial test
+======================================================================
+windows: Kenorland A 2680-2760 / D 2400-2500; Nuna A 1460-1650 / D 1200-1400; Rodinia A 930-1200 / D 700-860; Pannotia A 580-650 / D 500-560; Pangea A 200-300 / D 0-180
+
+[sediment-hosted]
+  cycle                       nA  nD  rateA  rateD  ratio  p_exact  p_perm
+  Kenorland                    2   0    2.5    0.0   0.00   1.0000  1.0000
+  Nuna                         0   0    0.0    0.0      -        -       -
+  Rodinia                      2   6    0.7    3.8   5.06   0.0346  0.0323
+  Pannotia                     2   6    2.9   10.0   3.50   0.0997  0.1013
+  Pangea                       4  16    4.0    8.9   2.22   0.1057  0.1048
+  Rodinia+Pannotia+Pangea      8  28    1.8    7.0   3.85   0.0002  0.0001
+
+[volcanic-hosted]
+  cycle                       nA  nD  rateA  rateD  ratio  p_exact  p_perm
+  Kenorland                    2   0    2.5    0.0   0.00   1.0000  1.0000
+  Nuna                         2   0    1.1    0.0   0.00   1.0000  1.0000
+  Rodinia                      0   2    0.0    1.2      -   0.1385  0.1394
+  Pannotia                     0   1    0.0    1.7      -   0.4615  0.4572
+  Pangea                       2  24    2.0   13.3   6.67   0.0012  0.0008
+  Rodinia+Pannotia+Pangea      2  27    0.5    6.8  14.85   0.0000  0.0000
+
+[karst-hosted]
+  cycle                       nA  nD  rateA  rateD  ratio  p_exact  p_perm
+  Kenorland                    0   0    0.0    0.0      -        -       -
+  Nuna                         0   0    0.0    0.0      -        -       -
+  Rodinia                      0   0    0.0    0.0      -        -       -
+  Pannotia                     0   1    0.0    1.7      -   0.4615  0.4598
+  Pangea                       0   1    0.0    0.6      -   0.6429  0.6420
+  Rodinia+Pannotia+Pangea      0   2    0.0    0.5      -   0.2268  0.2251
+
+rates are deposits per 100 Myr; p_exact = one-sided exact binomial P(n_D >= observed | uniform in time);
+p_perm = same null by 20,000 Monte Carlo draws. Pooled row = Rodinia+Pannotia+Pangea (well-sampled).
+
+Age-uncertainty sensitivity (sediment-hosted; ages drawn uniformly within Table S3 ranges, 2000 draws)
+----------------------------------------------------------------------
+  pooled  : point-age p=0.0002 | draws: p<0.05 in 83%, median p=0.0172, median rate ratio=2.0 (IQR 1.8-2.3)
+  pooled  : all ages at range minimum  nA=15 nD=36 p=0.0008
+  pooled  : all ages at range maximum  nA=13 nD=27 p=0.0089
+  Rodinia : point p=0.035 | draws: p<0.05 in 14%, dispersal>assembly rate in 94% | extremes 2:1 and 7:6
+  Pannotia: point p=0.100 | draws: p<0.05 in 0%, dispersal>assembly rate in 21% | extremes 9:14 and 1:5
+  Pangea  : point p=0.106 | draws: p<0.05 in 35%, dispersal>assembly rate in 100% | extremes 4:21 and 5:16

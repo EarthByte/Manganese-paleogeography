@@ -25,13 +25,8 @@ DB=REPO/"data"/"derived"/"mn_deposit_database.csv"
 OCC=REPO/"data"/"source"/"Mn_occurrences_classified.xlsx"
 OUT=REPO/"figures"; OUT.mkdir(exist_ok=True)
 
-# nominal assembly / dispersal windows (Ma) — edit here (uncertain)
-CYC={'Kenorland':{'assembly':(2680,2760),'dispersal':(2400,2500)},
-     'Nuna'     :{'assembly':(1460,1650),'dispersal':(1200,1400)},
-     'Rodinia'  :{'assembly':(930,1200), 'dispersal':(700,860)},
-     'Pannotia' :{'assembly':(580,650),  'dispersal':(500,560)},
-     'Pangea'   :{'assembly':(200,300),  'dispersal':(0,180)}}
-ORDER=list(CYC)
+# nominal assembly / dispersal windows (Ma) — defined ONCE in supercontinent_windows.py
+from supercontinent_windows import CYCLES as CYC, ORDER
 
 db=pd.read_csv(DB); sed=db[db.deposit_type=='sediment-hosted']
 cl=pd.read_excel(OCC).dropna(subset=['age_mid','Minerals'])

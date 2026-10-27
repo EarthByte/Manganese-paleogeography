@@ -31,6 +31,8 @@ if [[ $FIGS_ONLY -eq 0 ]]; then
   run paleolat_deep_time.py              # >1.8 Ga paleomagnetic paleolatitudes  (Fig. 3c)
   run latitude_null_test.py              # continental-availability null           (Fig. 3b)
   run occurrence_corroboration.py        # declustered occurrence test             (Fig. 3d)
+  run 03_add_age_ranges.py               # age bounds for Table S3 (Maynard ranges / ICS stages)
+  run supercontinent_cycle_test.py       # assembly-vs-dispersal exact test         (Fig. 4, Table S2)
 fi
 
 echo "== figures =="

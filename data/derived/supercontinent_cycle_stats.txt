@@ -1,0 +1,17 @@
+Supercontinent-cycle breakdown of the Mn record
+============================================================
+
+cycle      dep A dep D   d:a occ A/100 occ D/100   d:a 1stapp d:a
+Kenorland      2     0  0.00      22.5      13.0  0.58       0.33
+Nuna           0     0   nan      32.1      27.0  0.84       0.47
+Rodinia        2     6  5.06     165.9      14.4  0.09       0.00
+Pannotia       2     6  3.50     100.0     218.3  2.18       1.00
+Pangea         4    16  2.22     749.0    1388.3  1.85       1.81
+
+d:a = dispersal:assembly RATE ratio (>1 favours dispersal). dep=sedimentary deposits.
+occ=all Mn mineral occurrences; 1stapp=first-appearances of Mn mineral species.
+
+Well-sampled cycles (Rodinia+Pannotia+Pangea):
+  sedimentary deposits      : assembly    1.82/100Myr  dispersal    7.00/100Myr  disp:asm=3.85
+  mineral occurrences       : assembly  287.95/100Myr  dispersal  663.25/100Myr  disp:asm=2.30
+  mineral first-appearances : assembly   22.73/100Myr  dispersal   23.50/100Myr  disp:asm=1.03

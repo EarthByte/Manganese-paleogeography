@@ -17,14 +17,14 @@ Manganese-paleogeography/
 ├── make_all_figures.sh        ← one-command runner: data prep + Figs 1–4
 ├── CITATION.cff, .zenodo.json ← archive metadata
 ├── LICENSE                    ← MIT (applies to the entire repo: code and data)
-├── assets/                    ← the Fig. 4b restricted-basin sketch (figure input)
+├── assets/                    ← restricted-basin sketch (not used in the current figures)
 ├── data/
 │   ├── raw/                   ← third-party files YOU download (gitignored; see data/README.md)
 │   ├── source/                ← Mn occurrence compilation (co-author contribution, included)
 │   │   ├── Mn_occurrences_classified.xlsx
 │   │   └── Mn_mineral_coordinates.xlsx
 │   └── derived/               ← compiled products (redistributable, attributed)
-│       ├── mn_deposit_database.csv               140 dated deposits (Maynard host class + supergene flag)
+│       ├── mn_deposit_database.csv               140 dated deposits (Maynard host class, supergene flag, depositional-age range)
 │       ├── mn_deposit_geochemistry.csv           per-deposit bulk geochemistry (Maynard)
 │       ├── mn_deposits_reconstructed_geochem.csv 0–1.8 Ga deposits, paleo-coords (107 of 140)
 │       ├── mn_deeptime_paleolat_Q3.csv           >1.8 Ga deposit paleolatitudes + craton
@@ -37,6 +37,9 @@ Manganese-paleogeography/
 │       ├── occurrence_null_sample.csv            continental null at occurrence ages
 │       ├── contarc_null_sample.csv               continental-arc availability null
 │       ├── arc_latitude_null_results.txt         arc-null test statistics (Fig. S1)
+│       ├── supercontinent_cycle_test.csv         assembly vs dispersal counts, rates, exact p (Fig. 4, Table S2)
+│       ├── supercontinent_cycle_test.txt         the same, printed, + age-uncertainty sensitivity
+│       ├── supercontinent_cycle_stats.txt        per-cycle rates (diagnostic)
 │       ├── deposit_counts_5Myr.csv               deposit counts, 5 Myr bins
 │       └── deposit_counts_10Myr.csv              deposit counts, 10 Myr bins
 ├── scripts/                   ← see below
@@ -49,6 +52,7 @@ Manganese-paleogeography/
 |---|---|
 | `01_build_database_from_maynard.py` | Maynard raw → deposit database + geochemistry |
 | `02_fill_coordinates.py` | assign deposit coordinates (`_coords_dict.py` holds the lookup table) |
+| `03_add_age_ranges.py` | depositional-age range + basis per deposit, from the Maynard supplement / ICS 2023 (Table S3) |
 | `geocode_deposits_mindat.py` | optional: refine coordinates via the mindat API |
 | `00a_build_occurrence_table.py` | raw occurrence files → occurrence table (+ coordinates) |
 | `00b_reconstruct_occurrences.py` | reconstruct occurrences (Cao 2024); tags `occ_class` |
@@ -59,7 +63,9 @@ Manganese-paleogeography/
 | `arc_latitude_null.py` | continental-arc availability null test (Fig. S1) |
 | `fig1_database.py` … `fig4_controls.py` | figure generation (pyGMT) |
 | `deposit_timeseries.py` | deposit time-series diagnostics |
-| `supercontinent_cycle_analysis.py` | assembly vs dispersal deposition rates |
+| `supercontinent_windows.py` | the ONE definition of the assembly/dispersal windows (imported by the figure, the test and the analysis) |
+| `supercontinent_cycle_test.py` | exact binomial assembly-vs-dispersal test per cycle and host class + age-uncertainty sensitivity (Fig. 4, Table S2) |
+| `supercontinent_cycle_analysis.py` | assembly vs dispersal deposition rates (diagnostic; same windows) |
 | `make_reconstruction_video.py` | supplementary video (1.8 Ga→0, 1 Myr) |
 
 (The manuscript text, captions, and figure plan are maintained separately and are not
@@ -81,6 +87,7 @@ conda env create -f environment.yml && conda activate gplately-pygmt
 # Deposit chain (Maynard):
 python scripts/01_build_database_from_maynard.py
 python scripts/02_fill_coordinates.py
+python scripts/03_add_age_ranges.py            # age_min/age_max/age_basis columns (Table S3)
 # Reconstruction + paleolatitudes:
 python scripts/00b_reconstruct_occurrences.py  # occurrences via Cao 2024 (needs internet)
 python scripts/reconstruct_mn_deposits.py      # deposits via Cao 2024   (needs internet)
@@ -89,6 +96,7 @@ python scripts/paleolat_deep_time.py           # needs data/raw/gpmdb_2022.csv (
 python scripts/latitude_null_test.py           # continental availability
 python scripts/occurrence_corroboration.py     # declustered occurrences
 python scripts/arc_latitude_null.py            # continental-arc availability (Fig. S1)
+python scripts/supercontinent_cycle_test.py    # assembly vs dispersal, exact test + sensitivity (Fig. 4, Table S2)
 # 2. figures
 python scripts/fig1_database.py
 python scripts/fig2_paleomaps.py
@@ -133,12 +141,21 @@ raw sources (only steps that read `data/raw/` need them).
   from an adjacent block (Ravensthorpe, on the Yilgarn craton, by Pilbara poles;
   Kisenge-Kamata-Kapolo, on the Congo craton, by Kaapvaal poles). The GPMDB `Terrane` of
   every pole used is exported to `deeptime_poles_used.csv` so this can be audited, and the
-  craton each deposit sits on is given in `mn_deeptime_paleolat_Q3.csv`
+  craton on which each deposit lies is given in `mn_deeptime_paleolat_Q3.csv`
   (`craton`, `craton_code`).
 - **Null tests**: observed paleolatitudes are compared not against a uniform sphere but
   against availability nulls — random points on the continents present at each deposit age
   (`latitude_null_test.py`), and, for volcanic-hosted deposits, trench segments within
   300 km of a reconstructed continent, weighted by trench length (`arc_latitude_null.py`).
+  Two tests are reported for each class: a two-sample Kolmogorov–Smirnov test (any difference
+  in distribution) and a Monte Carlo test of the fraction within 30° of the equator (a
+  directional test for a low-latitude preference).
+- **Supercontinent cycle**: assembly and dispersal/breakup windows are defined once, in
+  `supercontinent_windows.py` (with references). Deposits are counted per window and a
+  dispersal excess is tested with a one-sided exact binomial test conditional on window
+  durations (`supercontinent_cycle_test.py`). The same script repeats the test with every
+  deposit age drawn uniformly within its depositional-age range (`age_min_Ma`–`age_max_Ma`,
+  added by `03_add_age_ranges.py`), so the sensitivity to age uncertainty is reproducible.
 
 ## Citation
 
