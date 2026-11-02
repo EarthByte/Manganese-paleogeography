@@ -4,8 +4,8 @@ A global, georeferenced database of manganese ore deposits and manganese mineral
 occurrences through deep time, and their paleogeographic reconstruction (0–1.8 Ga via
 the Cao et al. 2024 plate model; >1.8 Ga via paleomagnetic paleolatitudes). This
 repository holds only the data and the analysis/figure code and is related to the paper:
-Müller, R.D., Bermanec, M., Li, Y., Boulila, S., Dutkiewicz, A., and Hazen, R.M., Basin 
-redox, not climate, controlled manganese deposition over 1.8 billion years, Geology, in review.
+Müller, R.D., Bermanec, M., Li, Y., Boulila, S., Dutkiewicz, A., and Hazen, R.M.,
+Supercontinent breakup paced manganese deposition over 1.8 billion years, submitted to Geology.
 
 ## What's here
 

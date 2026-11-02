@@ -8,8 +8,8 @@ abstract: >-
   figure-generation code. Supports the accompanying manuscript.
 type: dataset
 license: MIT
-version: "1.0.0"
-date-released: "2026-07-17"
+version: "1.1.0"
+date-released: "2026-11-03"
 repository-code: "https://github.com/EarthByte/Manganese-paleogeography"
 authors:
   - family-names: Müller
@@ -17,7 +17,7 @@ authors:
     affiliation: "EarthByte Group, School of Geosciences, The University of Sydney, NSW, Australia"
   - family-names: Bermanec
     given-names: Marko
-    affiliation: "Department of Earth Sciences, University of Graz, Austria"
+    affiliation: "NAWI Graz Geocenter, Department of Earth Sciences, University of Graz, Austria"
   - family-names: Li
     given-names: Yan
     affiliation: "SKLab-DeepMinE, MOEKLab-OBCE, School of Earth and Space Sciences, Peking University, China"
