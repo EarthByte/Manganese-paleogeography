@@ -159,9 +159,15 @@ raw sources (only steps that read `data/raw/` need them).
 
 ## Citation
 
-If you use this database or code, please cite the accompanying manuscript (once published)
-and the original data sources listed under References. Citation metadata is in
-`CITATION.cff`; a Zenodo DOI is minted on each release and will be added here.
+If you use this database or code, please cite the archive and the accompanying manuscript
+(once published), and the original data sources listed under References:
+
+Müller, R. D., Bermanec, M., Li, Y., Boulila, S., Dutkiewicz, A., & Hazen, R. M. (2026).
+Manganese paleogeography: a global deep-time manganese deposit database and its
+paleogeographic reconstruction (Version 1.1.0) [Dataset]. Zenodo.
+https://doi.org/10.5281/zenodo.23900460
+
+Citation metadata is in `CITATION.cff`; Zenodo mints a new version DOI on each release.
 
 ## References
 

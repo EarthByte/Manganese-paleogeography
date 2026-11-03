@@ -30,5 +30,4 @@ authors:
   - family-names: Hazen
     given-names: Robert M.
     affiliation: "Geophysical Laboratory, Carnegie Institution for Science, Washington, DC, USA"
-# A Zenodo DOI will be added on first release (replace the placeholder below):
-# doi: 10.5281/zenodo.XXXXXXX
+doi: 10.5281/zenodo.23900460
